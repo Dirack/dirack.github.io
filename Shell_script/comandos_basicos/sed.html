@@ -1,0 +1,115 @@
+
+    <!doctype html>
+    <html><head><meta charset="utf-8"><title>Shell script: sed</title>
+    <link rel="icon" 
+      type="image/png" 
+      href="../favicon.ico" />
+    <style type="text/css"><!--
+    TT { font-family: lucidatypewriter, lucida console, courier }
+    --></style></head><body bgcolor="#f0f0f8">
+    
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#7799ee">
+    <td valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>sed</strong></big></big></font></td
+    ><td align=right valign=bottom>
+        <font color="#ffffff" face="helvetica, arial">
+        <!--<a href="ebook.pdf" title="Ebook comandos básicos">Tutorial</a>--></font>
+        
+    </td></tr></table>
+    Editor de textos não interativo e programável. Executa uma série de comandos de edição em um texto. Seu uso clássico é trocar uma string por outra, exemplo: s/isso/aquilo/. Esse comando significa: troque 'isso' por 'aquilo'.
+    
+<!-- SINTAXE -->
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#aa55cc">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#fffff" face="helvetica, arial"><big><strong>Sintaxe</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">sed <i> [Opção] [expressão] arquivo.txt</i> </td></tr></table>
+
+
+<!-- Parâmetros -->
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Parâmetros</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+
+ <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br> Opção <strong>-i</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial"> Altera o arquivo original<br>
+</font></td></tr>
+ 
+     <tr>
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br><strong>Expressões:</strong> </font></td
+    ></tr>      
+    
+ <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt><strong>s/texto/outro/</strong> </font></td>
+<td align=right valign=bottom>
+<font color="#000000" face="helvetica, arial">Troca um 'texto' por 'outro' <br>
+</font></td>
+
+</tr>
+    
+ <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt><strong>s/a/b/g</strong> </font></td>
+<td align=right valign=bottom>
+<font color="#000000" face="helvetica, arial">Troca um 'a' por 'b' em todas as ocorrências <br>
+</font></td>
+</tr>
+
+</table>
+    
+</td></tr></table>
+
+<!-- EXEMPLOS E DICAS -->
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#11aadd">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#fffff" face="helvetica, arial"><big><strong>Exemplos e dicas</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>* O comando SED é extremamente versátil, por isso compilamos vários exemplos de uso no seguinte ebook:</strong></td></tr>
+ <tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"> <a href="ebook_sed.zip" title="Exemplos_SED.zip">Ebook_SED.pdf</a></td></tr>
+
+</table>
+
+<!-- Exemplos de uso e tutoriais-->
+   <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#eeaa77">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Tutoriais</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>Ebook</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+			 <a href="ebook.pdf">comandos_básicos.pdf</a><br>
+                        
+  
+                    
+                        </td></tr></table>
+    <div style='text-align: right;position: fixed;z-index:9999999;bottom: 0; width: 100%;cursor: pointer;line-height: 0;display:block !important;'><a title="000webhost logo" rel="nofollow" target="_blank" href="https://www.000webhost.com/?utm_source=000webhostapp&amp;utm_campaign=000_logo&amp;utm_campaign=ss-footer_logo&amp;utm_medium=000_logo&amp;utm_content=website"><img src="https://cdn.rawgit.com/000webhost/logo/e9bd13f7/footer-powered-by-000webhost-white2.png" alt="000webhost logo"></a></div></body></html>

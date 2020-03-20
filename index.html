@@ -1,0 +1,175 @@
+<!doctype html>
+<!--
+    Página Principal do site Dirack's Lounge: HOME
+    
+    Objetivo: Site para a divulgação de códigos fonte de programação para
+    as turmas de Geofísica da UFPA (Repositório de códigos) e para o ensino
+    da programação.
+    
+    Linguagens ensinadas:
+    
+        -C/C++
+        -Python
+        -Java
+        -Shell Script
+        -Fortran
+    
+    Autor: Rodolfo A. C. Neves  15/03/2018
+	
+    Email: rodolfo_profissional@hotmail.com
+
+-->
+<html>
+<head>
+<meta charset="utf-8">
+<title>Dirack's Lounge</title>
+
+<!--{ Ícone do site }-->
+<link rel="icon" 
+      type="image/png" 
+      href="icon.ico" />
+
+<!-- CSS's mobile é adaptado para tela de celular, lounge.css é para o computador -->
+<link type="text/css" rel="stylesheet" href="mobile.css" media="screen and (max-device-width: 481px) and (orientation: portrait)">
+<link type="text/css" rel="stylesheet" href="mobile.css" media="screen and (max-device-width: 640px) and (orientation: landscape)">
+<link type="text/css" rel="stylesheet" href="lounge.css" media="screen and (min-device-width: 640px)">
+
+<!-- Funções JS do Menu de Navegação -->
+<script type="text/javascript" src="navegacao.js"></script>
+
+<!-- Funções AJAX alimentar a página -->
+<script type="text/javascript" src="ajax.js"></script>
+
+<!-- JQUERY -->
+<script type="text/javascript" src="login/jquery-3.3.1.min.js"></script>
+
+<!-- menu responsivo -->
+<script type="text/javascript" src="mobile.js"></script>
+
+</head>
+
+<body onload="ajax();"> 
+
+	<!-- Menu de Navegação principal do site-->
+	<!-- Classe selected são os botões do menu de navegação -->
+	<nav id="menu" onmouseover="onMenu()" onmouseout="offMenu()">
+		<ul id="homebotao">
+		<li class="selected"><a href="index.html#canvas" background="#a0a0a0">HOME</a></li>
+		<li class="selected"><a href="artigos/index.html#canvas">BLOG</a></li>
+		<li class="selected"><a href="tutoriais.html#canvas">TUTORIAIS</a></li>
+		<li class="selected"><a href="about/contato.html">QUEM SOMOS</a></li>
+		<li class="selected"><a href="about/biografia.html#canvas">O AUTOR</a></li>
+		<li class="selected"><a href="jogos/listajogos.html">JOGOS</a></li>
+		<li class="selected"><a href="login/login.html">LOGIN</a></li>
+		<li>
+			<!-- Buscador freefind search box html -->
+			<form id="busca" style="margin:0px 0px 0px 100px;" action="https://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
+					<input type="hidden" name="si" value="58715449">
+					<input type="hidden" name="pid" value="r">
+					<input type="hidden" name="n" value="0">
+					<input type="hidden" name="_charset_" value="">
+					<input type="hidden" name="bcd" value="&#247;">
+					<input type="text" name="query" size="15"> 
+					<input id="botao" type="submit" value="Pesquisar">
+			</form>
+		</li>
+		</ul>
+		
+	</nav>
+
+<!-- Foto de um vulcão: Banner entre o menu de navegação e o corpo da página --> 
+<div id="preheader">	
+
+	<!-- Título do site sobre a imagem do banner -->
+	<div id="titulo">
+		<img id="logoMobile" src="images/logoMobile.jpg">
+		<h1>Dirack's Lounge</h1>
+		<h3>Programação aplicada à Geofísica</h3>
+	</div>
+
+	<!-- Menu do site para celular -->
+	<div id="menuMobile">
+	<img id="menuMobileImg" src="images/plus.png">
+	<nav>
+		<ul id="homebotao">
+		<li class="selected"><a href="index.html#canvas" background="#a0a0a0">HOME</a></li>
+		<li class="selected"><a href="artigos/index.html#canvas">BLOG</a></li>
+		<li class="selected"><a href="tutoriais.html#canvas">TUTORIAIS</a></li>
+		<li class="selected"><a href="about/contato.html">QUEM SOMOS</a></li>
+		<li class="selected"><a href="about/biografia.html#canvas">O AUTOR</a></li>
+		<li class="selected"><a href="jogos/listajogos.html">JOGOS</a></li>
+		<li class="selected"><a href="login/login.html">LOGIN</a></li>
+		</ul>
+		
+	</nav>
+
+
+	</div>
+
+	<!-- Página oculta que aparece quando clicado no botão de mais à esquerda -->
+	<!-- Exibe um menu adicional de redes socias -->	
+	<div id="plus-on" style="display: none;">
+
+	<h1>Me siga nas minhas redes sociais:</h1>
+
+	<ul>
+		<li><img src="images/linkedin.png" onclick="goTo('https://www.linkedin.com/in/rodolfo-andr%C3%A9-cardoso-neves-49a0778b/');"></li>
+		<li><img src="images/twitter.png" onclick="goTo('https://twitter.com/RodolfoDirack');"></li>
+		<li><img src="images/instagram.png" onclick="goTo('https://www.instagram.com/rodolfodirack/?hl=pt-br');"></li>
+		<li><img src="images/face.png" onclick="goTo('https://www.facebook.com/rodolfo.neves.925');"></li>
+	</ul>
+</div>
+
+	<div id="redes">
+	<ul>
+		<li><a target="_blank" href="https://www.youtube.com/channel/UCi5XD5PCQtPrIRD0H_GJvag" title="Geofisicando: Youtube"><img id="youtube" src="images/youtube.png"></a></li>
+		<li><a target="_blank" href="https://github.com/Geofisicando" title="Repositório Github"><img id="git" src="images/git.png"></a></li>
+		<li><img id="face" src="images/email.png" onclick="alert('Opção ainda não disponível')"></li>
+
+		<li><img id="plus" src="images/plus.png" onclick="onPlus();"></li>
+	</ul>
+	</div>
+	
+</div>
+
+<!-- Barra lateral à direita -->
+<div id="posts">
+
+	<div style="text-align: left; margin-top: 50px;">
+	<h3>Tópicos principais:</h3>
+
+		<ul>
+			<li><a href="Shell_script/index.html">Tutoriais Shell Script</a></li>
+			<li><a href="https://www.youtube.com/watch?v=AlmjeDzNa84">Biblioteca input.h</a></li>
+			<li><a href="http://www.geofisica.ufpa.br/" title="curso de graduação em Geofísica (UFPA)">FAGEOF</a></li>
+			<li><a href="http://www.cpgf.ufpa.br" title="programa de pós graduação em Geofísica (UFPA)">CPGF</a></li>
+			<li><a href="about/contato.html" title="Grupo de Programação Aplicada à Geofísica (UFPA)">GPGEOF</a></li>
+		</ul>
+	</div>
+    
+</div>
+
+
+<!-- Folha de texto à esquerda, onde fica um vídeo e posts recentes -->
+<div id="canvas" >
+
+	<h2>Posts recentes:</h2>
+
+	<!-- 
+		Aqui serão exibidas as postagens recentes, alimentadas pelo arquivo posts.xml, 
+		e obtidas através de solicitação AJAX, em uma função de ajax.js
+	-->
+	<div id="postagens">
+
+	</div>
+
+
+</div>
+
+<!-- Rodapé da Página -->
+<div id="rodape">
+&copy; 2018, Rodolfo Dirack. Todos os direitos reservados.
+</div>
+
+</body>
+</html>

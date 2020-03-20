@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<postagem>
+	<titulo>Compilação facilitada com arquivos Makefile</titulo>
+	<autor> Rodolfo Dirack </autor>
+	<data>2018-04-24</data>
+	<video>https://www.youtube.com/embed/c-nXRSaY2Js</video>
+	<p1>
+Os arquivos Makefile facilitam muito a compilação dos códigos fonte de várias linguagens de programação. 
+Não será mais necessário digitar os comandos de compilação várias vezes durante a fase de testes do programa. 
+Basta digitar o comando 'make' no terminal para realizar a compilação de maneira automática. Além disso, o arquivo
+ Makefile permite a compilação apenas do código fonte que foi alterado, não sendo necessária a recompilação de todos os
+ arquivos que farão parte do programa. Isso é muito útil quando há um programa formado por diversos módulos de funções 
+e desejamos alterar apenas um dos módulos ou somente o programa principal.
+	</p1>
+
+	<sub>
+	<subtitulo>Qual a estrutura do arquivo Makefile?</subtitulo>
+		<p2>		
+O arquivo Makefile funciona com base em uma estrutura de 'alvo', 'dependência' e 'regra': 
+O 'alvo' é o resultado do processo de compilação, a 'dependência' é o código fonte ou objeto necessário 
+para produzir o 'alvo'. 
+A 'regra' é o comando utilizado para a partir da 'dependência' obter o 'alvo'.
+		</p2>
+
+		<p2>
+Exemplo, iremos produzir um arquivo executável chamado 'teste' a partir de um código fonte em Fortran 90
+chamado 'teste.f90'. 
+Os comandos de compilação que serão digitados no terminal são os 
+seguintes ('bash$' repersenta o console do terminal):
+		</p2>
+
+		<p2>
+§bash$ gfortran -c teste.f90
+		</p2>
+		<p2>
+§bash$ gfortran teste.o -o teste 
+		</p2>
+
+		<p2>
+Neste exemplo a compilação se dá em duas etapas: Primeiro, a verificação da sintaxe de 'teste.f90'
+ e a produção do arquivo objeto 'teste.o'. Segundo, a montagem do arquivo executável 'teste' a partir de 'teste.o'.
+O 'alvo', a 'dependência' e a 'regra' de cada etapa são:
+		</p2>
+
+<p2>Primeira etapa (gfortran -c teste.f90):</p2>
+<p2>§teste.o (alvo, produzido a partir de teste.f90)</p2>
+<p2>§teste.f90 (depêndencia, arquivo necessário para produzir o alvo)</p2>
+<p2>§gfortran -c teste.f90 (regra para gerar teste.o a patir de teste.f90)</p2>
+
+<p2>Segunda etapa (gfortran teste.o -o teste ):</p2>
+<p2>§teste (alvo, executável produzido a partir de teste.o)</p2>
+<p2>§teste.o (depêndencia, arquivo necessário para produzir o alvo)</p2>
+<p2>§gfortran teste.o -o teste (regra para gerar teste a patir de teste.o)</p2>
+
+<p2>Esta mesma estrutura será replicada no arquivo Makefile na seguinte forma:</p2>
+<p2>§alvo:§dependência</p2>
+<p2>§§§§regra</p2>
+
+<p2>Nos arquivos Makefile a execução é feita de baixo para cima. A ordem de escrita no arquivo será
+a segunda etapa, depois a primeira etapa. O arquivo Makefile para compilar 'teste.f90' será:</p2>
+<p2>§teste:§teste.o</p2>
+<p2>§§§gfortran teste.o -o teste</p2>
+<p2>§teste.o:§teste.f90</p2>
+<p2>§§§gfortran -c teste.f90</p2>
+
+<p2>
+compare o arquivo Makefile acima com a estrutura alvo, dependência, regra anteriormente descrita. 
+Cada etapa é executada em duas linhas do arquivo: A primeira linha é o 'alvo' 'teste' separado da dependência
+'teste.o' pelo caractere ':' e a segunda linha é a 'regra' para produzir o 'alvo' 'teste' a partir de
+'teste.o'. Da mesma forma, a terceira linha é o 'alvo' 'teste.o' separado da 'dependência'
+'teste.f90' pelo caractere ':'. E a quarta linha é a 'regra' para produzir o 'alvo' 'teste.o' a partir de
+'teste.f90'.
+Basta salvar o arquivo acima com o nome de Makefile. E quando precisar compilar 'teste.f90', executar
+o comando 'make' no terminal.</p2>
+
+	</sub>
+
+	<sub>
+	<subtitulo>Afinal oque é compilação?</subtitulo>
+		<p2>
+A linguagem FORTRAN é uma linguagem compilada. Ou seja, o programador escreve um código fonte na linguagem FORTRAN 
+e um software, chamado compilador, verifica a sintaxe e traduz o código para a linguagem de máquina
+ (binário). O resultado da compilação é o arquivo binário ou executável que será utilizado pelo computador para 
+executar os comandos programados a partir do código fonte.
+		</p2>
+	</sub>
+
+	<sub>
+	<subtitulo>Como compilo esse programa mesmo?</subtitulo>
+		<p2>
+Os arquivos Makefile não precisam ser compilados. Na verdade, estes são scripts do Shell para a compilação de outros
+ arquivos a partir de regras para compilação na sua estrutura. Basta digitar 'make' no terminal 
+para executar o arquivo Makefile diretamente.
+		</p2>
+	</sub>
+</postagem>

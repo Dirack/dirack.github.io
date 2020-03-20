@@ -1,0 +1,138 @@
+<!doctype html>
+<!--
+	Tutoriais.html
+
+	Objetivo: Menu de tutoriais do dirackslounge.
+
+	Email: rodolfo_profissional@hotmail.com
+
+	Programador: Rodolfo A. C. Neves (Dirack) 24/12/2018
+
+	Licensa: http://www.dirackslounge.online/licensa.html
+-->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Tutoriais</title>
+
+<!--{ Ícone do site }-->
+<link rel="icon" 
+      type="image/png" 
+      href="icon.ico" />
+
+<!-- TODO (alterar) Folha de estilo CSS para celular modo retrato (em pé) -->
+<link type="text/css" rel="stylesheet" href="../mobile.css" media="screen and (max-device-width: 481px) and (orientation: portrait)">
+<!-- TODO (alterar) Folha de estilo CSS para celular modo paisagem (deitado) -->
+<link type="text/css" rel="stylesheet" href="../mobile.css" media="screen and (max-device-height: 640px) and (orientation: landscape)">
+<!-- Folha de estilo CSS para desktop -->
+<link type="text/css" rel="stylesheet" href="lounge.css" media="screen and (min-device-width: 1200px)">
+
+<!-- Funções JS do Menu de Navegação -->
+<script type="text/javascript" src="navegacao.js"></script>
+
+</head>
+
+<body>
+    
+	<!-- Menu de Navegação principal do site-->
+	<!-- Classe selected são os botões do menu de navegação -->
+	<nav id="menu" onmouseover="onMenu()" onmouseout="offMenu()">
+		<ul>
+		<li class="selected"><a href="index.html#canvas" title="Voltar para Home?">HOME</a></li>
+		</ul>
+	</nav>
+
+<!-- Foto do Planeta TERRA: Barra entre o menu de navegação e o corpo da página --> 
+<div id="preheader">	
+	<!-- Título do site sobre a imagem do banner -->
+	<div id="titulo"><h1>Dirack's Lounge</h1><h3>Programação aplicada à Geofísica</h3></div>
+
+	<!-- Página oculta que aparece quando clicado no botão de mais à esquerda -->
+	<!-- Exibe um menu adicional de redes socias -->	
+	<div id="plus-on" style="display: none;">
+
+	<h1>Me siga nas minhas redes sociais:</h1>
+
+	<ul>
+		<li><img src="images/linkedin.png" onclick="goTo('https://www.linkedin.com/in/rodolfo-andr%C3%A9-cardoso-neves-49a0778b/');"></li>
+		<li><img src="images/twitter.png" onclick="goTo('https://twitter.com/RodolfoDirack');"></li>
+		<li><img src="images/instagram.png" onclick="goTo('https://www.instagram.com/rodolfodirack/?hl=pt-br');"></li>
+		<li><img src="images/face.png" onclick="goTo('https://www.facebook.com/rodolfo.neves.925');"></li>
+	</ul>
+</div>
+
+	<div id="redes">
+	<ul>
+		<li><a target="_blank" href="https://www.youtube.com/channel/UCi5XD5PCQtPrIRD0H_GJvag" title="Geofisicando: Youtube"><img id="youtube" src="images/youtube.png"></a></li>
+		<li><a target="_blank" href="https://github.com/Geofisicando" title="Repositório Github"><img id="git" src="images/git.png"></a></li>
+		<li><img id="face" src="images/email.png" onclick="alert('Opção ainda não disponível')"></li>
+
+		<li><img id="plus" src="images/plus.png" onclick="onPlus();"></li>
+	</ul>
+	</div> 
+</div>
+
+<div id="posts">
+
+<h3>Licença de uso livre</h3>
+    
+     <p>
+      Os Tutoriais ao lado são ferramentas de aprendizagem. Qualquer pessoa pode utilizar (aluno ou professor),
+      desde que dados os devidos créditos ao autor. <br>
+     </p>
+     <p>
+	O foco é ensinar como os programas e comandos das linguagens funcionam, 
+	de maneira simplificada. E como podem ser operados por usuários iniciantes. 
+	É uma ferramenta rápida de consulta para usuários mais avançados, pois
+	possue links com ebooks de resumos, exercícios resolvidos e exemplos de uso.
+  </p>
+
+</div>
+
+<div id="canvas">
+
+	<div id="principal">
+
+	<br>
+	<br> 
+	 <!-- Tabela de Tutoriais-->
+	 <table align="center">
+		
+		<!--Linha 1: TUTORIAIS-->
+		<tr>
+		   <td><div class="conteinerfoto"><a id="galeria" href="manutencao.html" title="Elementos básicos da linguagem Fortran"><img class="thumb" src="thumbs/fortran.png" ></a><br><span>Fortran <br>(Básico)</span></div></td>
+		   
+		   <td><div class="conteinerfoto"><a id="galeria" href="manutencao.html" title="Métodos Computacionais aplicados a geofísica"><img class="thumb" src="thumbs/metodos_computacionais.png"/></a><br /><span>Métodos<br>Computacionais</span></div></td>
+		   
+		   <td><div class="conteinerfoto"><a id="galeria" href="Shell_script/index.html" title="Programação em Shell Script"><img class="thumb" src="thumbs/shell_script.png"/></a><br /><span>Shell Script</span></div></td>
+		   
+		   <td><div class="conteinerfoto"><a id="galeria" href="manutencao.html" title="Fortran (Avançado): Tipos derivados, classe, orientação a objetos"><img class="thumb" src="thumbs/fortran_avancado.png"/></a><br /><span>Fortran <br>(Avançado)</span></div></td>
+		   
+		    <td><div class="conteinerfoto"><a id="galeria" href="manutencao.html" title="Programação na linguagem Java"><img class="thumb" src="thumbs/java.png"/></a><br /><span>Java</span></div></td>
+
+		</tr>
+
+		<!--Linha 2: TUTORIAIS-->
+		<tr>
+		       <td align="center"><div class="conteinerfoto"><a id="galeria" href="manutencao.html" title="Programação em Python"><img class="thumb" src="thumbs/python.png"/></a><br /><span>Python</span></div></td>
+		       
+		   <td align="center"><div class="conteinerfoto"><a id="galeria" href="Madagascar/index.html" title="Pacote de processamento sísmico Madagascar"><img class="thumb" src="thumbs/madagascar.jpg"/></a><br /><span>Madagascar</span></div></td>
+		   
+		    <td><div class="conteinerfoto"><a id="galeria" href="manutencao.html" title="Programação em C++"><img class="thumb" src="thumbs/c++.png"/></a><br /><span>C++</span></div></td>
+		    
+		    <td><div class="conteinerfoto"><a id="galeria" href="C/index.html" title="Programação em C"><img class="thumb" src="thumbs/c.png"/></a><br /><span>C</span></div></td>
+		    
+		     <td><div class="conteinerfoto"><a id="galeria" href="manutencao.html" title="Disciplinas Geofísica"><img class="thumb" src="thumbs/geof.png"/></a><br /><span>Geofísica</span></div></td>
+		   
+		</tr>
+
+	</table>
+	</div>
+</div>
+
+<div id="rodape">
+	&copy; 2018, Rodolfo Dirack. Todos os direitos reservados.
+</div>
+    
+</body>
+</html>

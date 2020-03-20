@@ -1,0 +1,136 @@
+<!doctype html>
+<!--
+	Bibliografia.html
+
+	Objetivo: Biografia sobre o autor do dirack's lounge e do geofisicando, 
+	Rodolfo A. C. Neves (Dirack).
+
+	Email: rodolfo_profissional@hotmail.com
+
+	Programador: Rodolfo A. C. Neves (Dirack) 24/12/2018
+
+	Licensa: http://www.dirackslounge.online/licensa.html
+-->
+<html>
+<head>
+<meta charset="utf-8">
+<title>Biografia</title>
+
+<!--{ Ícone do site }-->
+<link rel="icon" 
+      type="image/png" 
+      href="../icon.ico" />
+
+<!-- TODO (alterar) Folha de estilo CSS para celular modo retrato (em pé) -->
+<link type="text/css" rel="stylesheet" href="../mobile.css" media="screen and (max-device-width: 481px) and (orientation: portrait)">
+<!-- TODO (alterar) Folha de estilo CSS para celular modo paisagem (deitado) -->
+<link type="text/css" rel="stylesheet" href="../mobile.css" media="screen and (max-device-height: 640px) and (orientation: landscape)">
+<!-- Folha de estilo CSS para desktop -->
+<link type="text/css" rel="stylesheet" href="../lounge.css" media="screen and (min-device-width: 1200px)">
+
+<!-- Folha de estilo CSS para o álbum de fotos desta página -->
+<link type="text/css" rel="stylesheet" href="fotos.css" media="screen and (min-device-width: 1200px)">
+
+<!-- Funções JS do Menu de Navegação -->
+<script type="text/javascript" src="../navegacao.js"></script>
+
+</head>
+
+<body>
+
+	<!-- Menu de Navegação principal do site-->
+	<!-- Classe selected são os botões do menu de navegação -->
+	<nav id="menu" onmouseover="onMenu()" onmouseout="offMenu()">
+		<ul>
+			<li class="selected"><a href="../index.html#canvas" title="Voltar para Home?">HOME</a></li>
+		</ul>
+	</nav>
+
+<!-- Foto de um vulcão: Banner entre o menu de navegação e o corpo da página --> 
+<div id="preheader">	
+	<!-- Título do site sobre a imagem do banner -->
+	<div id="titulo"><h1>Dirack's Lounge</h1><h3>Programação aplicada à Geofísica</h3></div>
+
+	<!-- Página oculta que aparece quando clicado no botão de mais à esquerda -->
+	<!-- Exibe um menu adicional de redes socias -->	
+	<div id="plus-on" style="display: none;">
+
+	<h1>Me siga nas minhas redes sociais:</h1>
+
+	<ul>
+		<li><img src="../images/linkedin.png" onclick="goTo('https://www.linkedin.com/in/rodolfo-andr%C3%A9-cardoso-neves-49a0778b/');"></li>
+		<li><img src="../images/twitter.png" onclick="goTo('https://twitter.com/RodolfoDirack');"></li>
+		<li><img src="../images/instagram.png" onclick="goTo('https://www.instagram.com/rodolfodirack/?hl=pt-br');"></li>
+		<li><img src="../images/face.png" onclick="goTo('https://www.facebook.com/rodolfo.neves.925');"></li>
+	</ul>
+</div>
+
+	<div id="redes">
+	<ul>
+		<li><a target="_blank" href="https://www.youtube.com/channel/UCi5XD5PCQtPrIRD0H_GJvag" title="Geofisicando: Youtube"><img id="youtube" src="../images/youtube.png"></a></li>
+		<li><a target="_blank" href="https://github.com/Geofisicando" title="Repositório Github"><img id="git" src="../images/git.png"></a></li>
+		<li><img id="face" src="../images/email.png" onclick="alert('Opção ainda não disponível')"></li>
+
+		<li><img id="plus" src="../images/plus.png" onclick="onPlus();"></li>
+	</ul>
+	</div>
+	 
+</div>
+
+<!-- Barra lateral à direita -->
+<div id="posts">
+
+	<ul id="foto-perfil">
+		<li id="foto00"><span>Rodolfo Dirack</span></li>
+	</ul>
+
+	<h3>Rodolfo André Cardoso Neves (Dirack): </h3>
+
+	<p>
+		Formou-se bacharel em geofísica em 2015 pela Universidade Federal do Pará (UFPA), 
+		lá também adquiriu o grau de mestre em geofísica em 2017 e, atualmente,
+		é onde cursa o doutorado, com ênfase em modelagem e inversão de dados sísmicos. 
+		Nascido em 1992 e criado em Belém do Pará, 
+		tem a música como hobbie
+		e cursa <a target="_blank" href="https://www.youtube.com/watch?v=5Toe2YWXZpk" 
+		title="Quer ver o Dirack tocando?">Violão Clássico</a> 
+		no conservatório Carlos Gomes.
+	</p>
+
+	<h3>Curiosidade: Dirack?</h3>
+
+	<p>
+		O apelido 'Dirack' foi dado pelos seus amigos de universidade: 
+		Victor Barros (Mordekai) e Jeferson Afonso (Cerberuss). É uma referência ao 
+		físico e matemático Paul Dirac um dos pais da mecânica quântica.
+	</p>
+
+</div>
+
+<!-- Coluna principal à esquerda -->
+<div id="canvas">
+<br>
+<q>A Geofísica é uma ciência que te permite fazer grandes amigos e viver muitas aventuras.
+</q>
+
+	<!-- Album de fotos de Rodolfo Dirack -->
+	<ul id="album-fotos">
+		<li id="foto01"><span>Saindo às 5 da manhã</span></li>
+		<li id="foto02"><span>Montes claros - MG</span></li>
+		<li id="foto03"><span>Salinópolis - PA</span></li>
+		<li id="foto04"><span>Alcântara - MA</span></li>
+		<li id="foto05"><span>Tucuruí - PA</span></li>
+		<li id="foto06"><span>SEV Oriximiná -PA</span></li>
+		<li id="foto07"><span>Oriximiná - PA</span></li>
+		<li id="foto08"><span>Slingram Oriximiná -PA</span></li>
+		<li id="foto09"><span>Geofísica UFPA 2010 </span></li>
+	</ul>
+	
+</div>
+
+<div id="rodape">
+	&copy; 2018, Rodolfo Dirack. Todos os direitos reservados.
+</div>
+
+</body>
+</html>

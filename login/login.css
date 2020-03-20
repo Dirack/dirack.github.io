@@ -1,0 +1,124 @@
+/*
+ * Folha de estilo CSS para login.html
+ * 
+ * Página de login do site.
+ * 
+ * Programador: Rodolfo A. C. Neves (Dirack) 29/01/2019 
+ * 
+ */
+
+body{
+  margin: 100px 200px 50px 450px;
+  background-image: url("../images/vulcano.jpg"); 
+  background-position: 50% 50%; 
+}
+
+#caixa-login{
+  border: 1px solid black;
+  text-align: center;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  background-image: linear-gradient(to bottom, #ffffff,#cf2b4f);
+  color:#000000;
+}
+
+div.linha input#login, div.linha input#senha{
+	width: 250px;
+  margin: 0px 20px 0px 0px;
+}
+
+div.linha p{
+  margin: 20px;
+}
+
+div.linha{
+	display: table-row;
+}
+
+#menu {
+  position:absolute; 
+  top:0px;
+  left:0px;
+}
+
+
+/* BotÃµes de navegaÃ§Ã£o #0F92C6*/
+nav ul li.selected {
+    background-image: linear-gradient(to bottom, #545454, #000000);
+    border-radius: 5px;
+}
+
+/* BOTÃƒO: FlutuaÃ§Ã£o */
+li.selected:hover{
+    background-image: linear-gradient(to bottom, #cf2b4f, #bdb1c2);
+    border-radius: 5px;
+}
+
+/* BOTÃƒO: FlutuaÃ§Ã£o */
+li.atual{
+    background: #bdb1c2;
+}
+
+nav {
+    opacity:0;
+    background-image: linear-gradient(to bottom, #545454, #000000);
+    margin: 0px 0px 0px 0px;
+    width: 1400px;
+    position: fixed;
+    z-index: 1;
+    -webkit-transition: all .6s ease-in;
+}
+
+nav:hover {
+	opacity: 1;
+}
+
+nav ul {
+    margin: 0px;
+    list-style-type: none;
+    padding: 5px 20px 5px 20px;
+}
+
+nav ul li {
+    display: inline;
+    padding: 5px 20px 5px 20px;
+}
+
+nav ul li form {
+    display: inline;
+    padding: 5px 20px 5px 20px;
+}
+
+nav ul li form {
+	background-image: linear-gradient(to bottom, #545454, #000000);
+}
+
+#botao {
+	background-image: linear-gradient(to bottom, #00a000, #00a000);
+	color: white;
+}
+
+#navegacao ul {
+    margin: 0px;
+    list-style-type: none;
+    padding: 0px 20px 5px 20px;
+}
+
+#navegacao ul li{
+        display: inline;
+        padding: 0px 2px 5px 2px;
+        margin: 0px 10px 0px 0px;
+}
+
+#navegacao ul li a:link, #navegacao ul li a:visited {
+    color: white;
+    border-bottom: none;
+    font-weight: bold;
+}
+
+nav ul li a:link, nav ul li a:visited {
+    color: white;
+    border-bottom: none;
+    font-weight: bold;
+}

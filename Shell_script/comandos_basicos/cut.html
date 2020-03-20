@@ -1,0 +1,207 @@
+
+    <!doctype html>
+    <html><head><meta charset="utf-8"><title>Shell script: cut</title>
+    <link rel="icon" 
+      type="image/png" 
+      href="../favicon.ico" />
+    <style type="text/css"><!--
+    TT { font-family: lucidatypewriter, lucida console, courier }
+    --></style></head><body bgcolor="#f0f0f8">
+    
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#7799ee">
+    <td valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>cut</strong></big></big></font></td
+    ><td align=right valign=bottom>
+        <font color="#ffffff" face="helvetica, arial">
+        <!--<a href="ebook.pdf" title="Ebook comandos básicos">Tutorial</a>--></font>
+        
+    </td></tr></table>
+    Extrair campo ou trecho de uma sequência de caracteres
+    
+<!-- SINTAXE -->
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#aa55cc">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#fffff" face="helvetica, arial"><big><strong>Sintaxe</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">cut  <i>[Opção]</i> <i>mensagem</i></td></tr></table>
+
+
+<!-- Parâmetros -->
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Parâmetros</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+        
+        
+ <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br> Opção  <strong>-c</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Extrair caracteres, exemplo -c 1 para extrair o primeiro caractere <br>
+</font></td></tr>
+ 
+     <tr>
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br> Opção  <strong>-d</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Escolhe o delimitador (o padrão é o TAB)<br>
+</font></td></tr>       
+
+     <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br> Opção  <strong>-f</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Escolhe o campo<br>
+</font></td></tr>      
+        
+    <tr>
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>   <strong>mensagem</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	sequência de caracteres da qual se deseja extrair uma parte (é conveniente estar entre aspas) <br>
+</font></td></tr>
+
+<tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br> <strong>Combine as opções com os descritores abaixo:</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	 <br>
+</font></td></tr>
+
+<tr>
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br> 2,5 </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Extrair o segundo E o quinto <br>
+</font></td></tr>
+ 
+     <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br> 2-5 </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Extrair do segundo AO quinto<br>
+</font></td></tr>       
+
+     <tr>
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br> 2- </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Do segundo em diante<br>
+</font></td></tr>      
+        
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>  -5 </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Até o quinto <br>
+</font></td></tr>
+
+    <tr>
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>  2,5- </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	O segundo e do quinto em diante <br>
+</font></td></tr>
+
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>  2,3,5-8 </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	O segundo, o terceiro e do quinto ao oitavo <br>
+</font></td></tr>
+
+</table>
+    
+<!--
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>x0=m0</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	CMP central <br>
+</font></td></tr></table>
+
+-->
+    
+</td></tr></table>
+
+<!-- EXEMPLOS E DICAS -->
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#11aadd">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#fffff" face="helvetica, arial"><big><strong>Exemplos e dicas</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>$ echo "1:2:3:4:5" | cut -d : -f 2-4</strong></td></tr>
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">2:3:4</td></tr>
+
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>$ echo "1:2:3:4:5" | cut -d : -f 2,3,4</strong></td></tr>
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">2:3:4</td></tr>
+
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>$ echo "1:2:3:4:5" | cut -d : -f 2-</strong></td></tr>
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">2:3:4:5</td></tr>
+
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>$ echo "um:dois:três:quatro:cinco" | cut -c 1-10</strong></td></tr>
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">um:dois:tr</td></tr>
+
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>$ echo "um:dois:três:quatro:cinco" | cut -c 4-9</strong></td></tr>
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">dois:t</td></tr>
+
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>* Combine com o REV para obter os últimos caracteres ou campos:</strong></td></tr>
+
+
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>$ echo "um:dois:três:quatro:cinco" | rev | cut -d : -f 1 | rev</strong></td></tr>
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">cinco</td></tr>
+
+
+
+</table>
+
+<!-- Exemplos de uso e tutoriais-->
+   <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#eeaa77">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Tutoriais</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>Ebook</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="ebook.pdf">comandos_básicos.pdf</a><br>
+                        
+  
+                    
+                        </td></tr></table>
+    </body></html>

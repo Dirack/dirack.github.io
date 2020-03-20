@@ -1,0 +1,147 @@
+<!doctype html>
+<!--
+	Página 'Quem somos nós' do site Dirack's Lounge
+    
+	Objetivo: Fornecer informações sobre o Grupo de Programação Aplicada à Geofísica (GPGEOF)
+	sobre o site Dirack's Lounge e sobre o Canal no Youtube, o Geofisicando.
+    
+	Autor: Rodolfo A. C. Neves  15/03/2018
+	
+	Email: rodolfo_profissional@hotmail.com
+
+-->
+<html>
+<head>
+<meta charset="utf-8">
+<title>Quem somos nós</title>
+
+<!--{ Ícone do site }-->
+<link rel="icon" 
+      type="image/png" 
+      href="../icon.ico" />
+
+<link type="text/css" rel="stylesheet" href="../mobile.css" media="screen and (max-device-width: 481px) and (orientation: portrait)">
+<link type="text/css" rel="stylesheet" href="../mobile.css" media="screen and (max-device-height: 640px) and (orientation: landscape)">
+<link type="text/css" rel="stylesheet" href="../lounge.css" media="screen and (min-device-width: 1200px)">
+
+<!-- Funções JS do Menu de Navegação -->
+<script type="text/javascript" src="../navegacao.js"></script>
+
+</head>
+
+<body>
+
+	<!-- Menu de Navegação principal do site-->
+	<!-- Classe selected são os botões do menu de navegação -->
+	<nav id="menu" onmouseover="onMenu()" onmouseout="offMenu()">
+		<ul>
+			<li class="selected"><a href="../index.html#canvas" title="Voltar para Home?">HOME</a></li>
+		</ul>
+	</nav>
+
+<!-- Barra lateral à direita -->
+<div id="posts">
+<div id="plus-on" style="display: none;">
+
+	<h1>Me siga nas minhas redes sociais:</h1>
+
+	<ul>
+		<li><img src="../images/linkedin.png" onclick="goTo('https://www.linkedin.com/in/rodolfo-andr%C3%A9-cardoso-neves-49a0778b/');"></li>
+		<li><img src="../images/twitter.png" onclick="goTo('https://twitter.com/RodolfoDirack');"></li>
+		<li><img src="../images/instagram.png" onclick="goTo('https://www.instagram.com/rodolfodirack/?hl=pt-br');"></li>
+		<li><img src="../images/face.png" onclick="goTo('https://www.facebook.com/rodolfo.neves.925');"></li>
+	</ul>
+</div>
+
+	<div id="redes">
+	<ul>
+		<li><a target="_blank" href="https://www.youtube.com/channel/UCi5XD5PCQtPrIRD0H_GJvag" title="Geofisicando: Youtube"><img id="youtube" src="../images/youtube.png"></a></li>
+		<li><a target="_blank" href="https://github.com/Geofisicando" title="Repositório Github"><img id="git" src="../images/git.png"></a></li>
+		<li><img id="face" src="../images/email.png" onclick="alert('Opção ainda não disponível')"></li>
+
+		<li><img id="plus" src="../images/plus.png" onclick="onPlus();"></li>
+	</ul>
+	</div>
+
+	<div id="logo" style="text-align:center; margin: 100px 20px 20px 20px;">
+		<img src="../images/logo.png">
+	</div>
+
+	<div style="text-align:center;">
+	<h3>Bem Vindo ao Dirack's Lounge</h3>
+
+	<p style="text-align: justify; margin-left:20px; margin-bottom:300px;">
+	Nossa missão é compartilhar conhecimento sobre programação aplicada à Geofísica. 
+	Fornecemos vários minicursos e tutoriais de programação em FORTRAN, Python, c/c++, Java, 
+	Shell Script e sobre o pacote de para  processamento sísmico, 
+	Madagascar.
+	</p>
+
+	</div>
+
+	<div id="logo" style="text-align:center;">
+		<img src="../images/logo2.png" style="width: 250px;";>
+	</div>
+</div>
+
+<!-- Folha de texto à esquerda com albúm de fotos -->
+<div id="canvas">
+
+	<h3>Grupo de Programação Apliacada à Geofísica (GPGEOF)</h3>
+	<p>
+	O nosso Grupo de programação aplicada foi criado em 01/10/2018 por Rodolfo André Cardoso Neves (Dirack),
+com o intuito de auxiliar os alunos de Geofísica no estudo da programação. Inspirado nos desenvolvedores dos pacotes
+ de processamento sísmico de uso livre e gratuito, MADAGASCAR e SEISMIC UNIX, e nos trabalhos de Sergey Fomel e John
+ Claerbout, tem por princípio o compartilhamento de conhecimento e desenvolvimento 'open source'.
+Está vinculado ao PET-Geofísica (UFPA).
+	</p><br>
+
+	<h3>O Dirack's Lounge</h3>
+
+	<p> É um site de divulgação científica com o intuito de compartilhar informações
+	sobre programação aplicada à geofísica.
+	Faz parte de um projeto liderado pelo Grupo de Programação Apliacada à Geofísica (GPGEOF) 
+	e coordenado pelo Programa de Pós graduação em Geofísica (CPGF) da Universidade Federal 
+	do Pará (UFPA), sob a supervisão dos professores Doutores Cícero Régis e Daniel Leal.</p>
+
+	<!-- Vídeo de apresentação do canal Geofisicando e do site --> 
+	<br>
+	<div id="video" style="margin-right: 125px;">
+		<p>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/Ht5yV3zGfuw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</p>
+	</div>
+
+	<br>
+	<h3>O geofisicando</h3>
+
+	<p>
+	É o nosso canal de divulgação científica no Youtube. Lá postamos video-aulas de tópicos
+	variados sobre programação, exercícios resolvidos, disponibilizamos informações
+	sobre o curso de graduação e pós graduação em geofísica na UFPA e sobre a profissão
+	de Geofísico. 
+	O Geofisicando possui um repositório de códigos no Github, de modo que todos possam
+	contribuir para os nossos projetos 'open source'.
+	</p>
+
+	<br>
+	<div id="video" style="margin-right: 125px;">
+		<p>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/AlmjeDzNa84" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+
+	<br><br><br>
+
+
+
+
+</div>
+
+
+<div id="rodape">
+	&copy; 2018, Rodolfo Dirack. Todos os direitos reservados.
+</div>
+
+
+</body>
+</html>

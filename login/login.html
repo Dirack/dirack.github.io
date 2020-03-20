@@ -1,0 +1,49 @@
+<!doctype html>
+<!-- 
+	login.html (HTML) - Página de login do site Dirack's Lounge
+    
+	Objetivo: Formulário de login e senha do site. Conectado a um banco de dados
+	através do PHP que verifica se usuário e senha estão corretos e abre a sessão.
+	Autor: Rodolfo A. C. Neves (Dirack)  29/01/2019
+	
+	Email: rodolfo_profissional@hotmail.com
+-->
+
+<head>
+	<meta charset="utf-8">
+	<title>Login do Dirack's</title>
+	<!--{ Ícone do site }-->
+	<link rel="icon" 
+	      type="image/png" 
+	      href="../icon.ico" />
+
+	<!-- Folha de estilo CSS -->
+	<link rel="stylesheet" type="text/css"  href="login.css" />
+	
+	<!-- Funções JS do Menu de Navegação -->
+<script type="text/javascript" src="../navegacao.js"></script>
+</head>
+
+<body>
+    
+    <!-- Menu de Navegação principal do site-->
+	<!-- Classe selected são os botões do menu de navegação -->
+	<nav id="menu" onmouseover="onMenu()" onmouseout="offMenu()">
+		<ul id="homebotao">
+		<li class="selected"><a href="../index.html#canvas" background="#a0a0a0" style="text-decoration:none;">HOME</a></li>
+		</ul>
+		
+	</nav>
+
+	<!-- Menu de login do site -->
+	<div id="caixa-login" class="linha">
+		<h1>Login</h1>
+			<form action="login.php" method="POST">
+			<p>Login: <input type="text" name="login" id="login"></p>
+			<p>Senha: <input type="password" name="senha" id="senha"></p>
+			<p><button type="submit" name="botao"> Entrar </button></p>
+		</form>
+	</div>
+
+</body>
+</html>

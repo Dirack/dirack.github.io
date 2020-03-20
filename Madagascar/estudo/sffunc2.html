@@ -1,0 +1,92 @@
+<!doctype html>
+    <html><head><meta charset="utf-8"><title>RSF: sffunc2</title>
+    <link rel="icon" 
+      type="image/png" 
+      href="../favicon.ico" />
+    <style type="text/css"><!--
+    TT { font-family: lucidatypewriter, lucida console, courier }
+    --></style></head><body bgcolor="#f0f0f8">
+    
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#7799ee">
+    <td valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>sffunc2</strong></big></big> (2.0)</font></td
+    ><td align=right valign=bottom
+    ><font color="#ffffff" face="helvetica, arial"><a href="https://github.com/Geofisicando/Madagascar-APIs/blob/master/Mfunc2.c">Download</a></font></td></tr></table>
+    Versão 2.0 - Sem arquivo de entrada
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#aa55cc">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#fffff" face="helvetica, arial"><big><strong>Synopsis</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">sffunc2 > out.rsf verb=0 n1= d1= o1=</td></tr></table><br>
+Calcula o valor de y(t) dada pela inequação:<br>
+<br>
+y(t)= -3t^2+5 t>=0<br>
+y(t)= 3t^2+5 t<0<br>
+<br>
+Defina a janela de amostragem a partir dos parâmetros n1, o1, d1<br>
+<br>
+Exemplo de uso:<br>
+		sffunc2 n1=51 o1=-25 d1=1 > func.rsf<br>
+		func.rsf < sfgraph > func.vpl<br>
+		sfpen < func.vpl<br>
+<br>
+Programador: Rodolfo A. C. Neves 01/11/2018<br>
+<br>
+Acesse conteúdo exclusivo e tire dúvidas no nosso site:<br>
+	<a href="http://www.dirackslounge.com">http://www.dirackslounge.com</a><br>
+<br>
+
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Parameters</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>d1=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	intervalo de amostragem <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>int     <strong>n1=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	número de amostras <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>o1=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	origem <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>bool    <strong>verb=0</strong> [y/n]</font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Modo= 1: modo ativo;	0: modo silencioso <br>
+</font></td></tr></table>
+    
+</td></tr></table>
+    </body></html>

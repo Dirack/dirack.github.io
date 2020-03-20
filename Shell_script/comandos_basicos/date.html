@@ -1,0 +1,248 @@
+
+    <!doctype html>
+    <html><head><meta charset="utf-8"><title>Shell script: date</title>
+    <link rel="icon" 
+      type="image/png" 
+      href="../favicon.ico" />
+    <style type="text/css"><!--
+    TT { font-family: lucidatypewriter, lucida console, courier }
+    --></style></head><body bgcolor="#f0f0f8">
+    
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#7799ee">
+    <td valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>date</strong></big></big></font></td
+    ><td align=right valign=bottom>
+        <font color="#ffffff" face="helvetica, arial">
+        <!--<a href="ebook.pdf" title="Ebook comandos básicos">Tutorial</a>--></font>
+        
+    </td></tr></table>
+    Mostrar data em um formato específico
+    
+<!-- SINTAXE -->
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#aa55cc">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#fffff" face="helvetica, arial"><big><strong>Sintaxe</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">date <i>[Opção]</i> <i>[formato]</i> </td></tr></table>
+
+
+<!-- Parâmetros -->
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Parâmetros</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+        
+        
+ <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br> Opção  <strong>-d</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Especificar a data<br>
+</font></td></tr>
+ 
+     <tr>
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br> Opção  <strong>+%?</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Exibir data em um formato específico<br>
+</font></td></tr>       
+
+<tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br> <strong>Caracteres de formatação:</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	 <br>
+</font></td></tr>
+
+<tr>
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br> %a </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Nome do dia da semana abreviado (Dom..Sáb) <br>
+</font></td></tr>
+ 
+     <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br> %A </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Nome do dia da semana (Domingo..Sábado)<br>
+</font></td></tr>       
+
+     <tr>
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br> %b </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Nome do mês abreviado (Jan..Dez)<br>
+</font></td></tr>      
+        
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>  %B </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial"> Nome do mês (Janeiro..Dezembro) <br>
+</font></td></tr>
+
+    <tr>
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>  %c </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Data completa <br>
+</font></td></tr>
+
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>  %y </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Ano (dois dígitos) <br>
+</font></td></tr>
+
+<tr>
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br> %Y </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Ano (quatro dígitos) <br>
+</font></td></tr>
+ 
+     <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br> %m </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Mês (1..12)<br>
+</font></td></tr>       
+
+     <tr>
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br> %d </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Dia (01..31)<br>
+</font></td></tr>      
+        
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>  %j </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial"> Dia do ano (001..366) <br>
+</font></td></tr>
+
+    <tr>
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>  %H </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Hora (00..23) <br>
+</font></td></tr>
+
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>  %M </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Minutos (00..59) <br>
+</font></td></tr>
+
+    <tr>
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>  %S </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Segundos (00..60) <br>
+</font></td></tr>
+
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>  %s </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Segundos desde 1° de Janeiro de 1970 <br>
+</font></td></tr>
+
+    <tr>
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>  %% </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Porcento literal <br>
+</font></td></tr>
+
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>  %t </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Um TAB <br>
+</font></td></tr>
+
+    <tr>
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>  %n </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Quebra de linha <br>
+</font></td></tr>
+
+</table>
+    
+
+</td></tr></table>
+
+<!-- EXEMPLOS E DICAS -->
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#11aadd">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#fffff" face="helvetica, arial"><big><strong>Exemplos e dicas</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>$ date</strong></td></tr>
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">seg nov  5 16:20:51 -03 2018</td></tr>
+
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>$ date -d yesterday</strong></td></tr>
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">dom nov  4 16:21:53 -03 2018</td></tr>
+
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>$ date -d '4 weeks ago'</strong></td></tr>
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">seg out  8 16:24:58 -03 2018</td></tr>
+
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>$ date +%d/%m/%Y</strong></td></tr>
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">05/11/2018</td></tr>
+
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>$ date +%H:%M:%S</strong></td></tr>
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">16:24:58</td></tr>
+
+</table>
+
+<!-- Exemplos de uso e tutoriais-->
+   <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#eeaa77">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Tutoriais</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>Ebook</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="ebook.pdf">comandos_básicos.pdf</a><br>
+                        
+  
+                    
+                        </td></tr></table>
+    </body></html>

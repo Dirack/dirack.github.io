@@ -1,0 +1,196 @@
+
+    <!doctype html>
+    <html><head><meta charset="utf-8"><title>Shell script: sort</title>
+    <link rel="icon" 
+      type="image/png" 
+      href="../favicon.ico" />
+    <style type="text/css"><!--
+    TT { font-family: lucidatypewriter, lucida console, courier }
+    --></style></head><body bgcolor="#f0f0f8">
+    
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#7799ee">
+    <td valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>sort</strong></big></big></font></td
+    ><td align=right valign=bottom>
+        <font color="#ffffff" face="helvetica, arial">
+        <!--<a href="ebook.pdf" title="Ebook comandos básicos">Tutorial</a>--></font>
+        
+    </td></tr></table>
+    Ordenar as linhas de um texto, alfabética ou numericamente
+    
+<!-- SINTAXE -->
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#aa55cc">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#fffff" face="helvetica, arial"><big><strong>Sintaxe</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">sort  <i>[Opção]</i> <i>arquivo.txt</i></td></tr></table>
+
+
+<!-- Parâmetros -->
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Parâmetros</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+        
+        
+ <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br> <strong>arquivo.txt</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Arquivo a ser ordenado <br>
+</font></td></tr>
+ 
+     <tr>
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br> Opção  <strong>-n</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Ordena numericamente (o padrão é alfabeticamente)<br>
+</font></td></tr>       
+
+     <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br> Opção  <strong>-r</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Reverte a ordenação (de Z para A, de 9 para 0)<br>
+</font></td></tr>      
+        
+    <tr>
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>  Opção <strong>-f</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Ignora a diferença entre maiúsculas e minúsculas <br>
+</font></td></tr>
+
+<tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br> Opção <strong>-k</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Ordena pela coluna N (a primeira é 1) <br>
+</font></td></tr>
+
+<tr>
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br> Opção <strong>-t</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Escolhe o separador para o -k (o padrão é TAB) <br>
+</font></td></tr>
+ 
+     <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br> Opção <strong>-o</strong></font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Grava a saída no arquivo especificado<br>
+</font></td></tr>       
+
+
+</table>
+    
+<!--
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>x0=m0</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	CMP central <br>
+</font></td></tr></table>
+
+-->
+    
+</td></tr></table>
+
+<!-- EXEMPLOS E DICAS -->
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#11aadd">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#fffff" face="helvetica, arial"><big><strong>Exemplos e dicas</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>$ echo -e "um\ndois\ntrês\nquatro\ncinco" > arquivo.txt</strong></td></tr>
+        <tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>$ sort arquivo.txt</strong></td></tr>
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">cinco<br>
+dois<br>
+quatro<br>
+três<br>
+um
+</td></tr>
+
+        <tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>$ cat -n arquivo.txt | sort -k 2</strong></td></tr>
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt>5 cinco<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt>2 dois<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt>4 quatro<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt>3 três<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt>1 um
+</td></tr>
+
+
+
+       <tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>$ echo -e "1\n10\n100\n2\n20\n200" | sort </strong></td></tr>
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">1<br>
+10<br>
+100<br>
+2<br>
+20<br>
+200
+</td></tr>
+
+
+       <tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>$ echo -e "1\n10\n100\n2\n20\n200" | sort -n</strong></td></tr>
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">1<br>
+2<br>
+10<br>
+20<br>
+100<br>
+200
+</td></tr>
+
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>* Usando a opção -o é possível ordenar um arquivo e gravar o resultado nele mesmo:</strong></td></tr>
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>$ sort arquivo.txt -o arquivo.txt</strong></td></tr>
+
+</table>
+
+<!-- Exemplos de uso e tutoriais-->
+   <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#eeaa77">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Tutoriais</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>Ebook</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="ebook.pdf">comandos_básicos.pdf</a><br>
+                        
+  
+                    
+                        </td></tr></table>
+    </body></html>

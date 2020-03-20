@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<postagem>
+	<titulo>Compilação facilitada com arquivos Makefile</titulo>
+	<autor> Rodolfo Dirack </autor>
+	<data>2019-01-22</data>
+	<video>https://www.youtube.com/embed/yHHSgT3ik1o</video>
+
+	<p1>
+Os programas do Shell do linux ubuntu recebem argumentos através da linha de comandos que modificam a sua atuação.
+Por exemplo o '-l' do comando 'ls -l' que modifica a atuação do comando 'ls' para que este liste também as permissões
+ dos arquivos no diretório atual. Estes argumentos são chamados de 'Flags' ou 'Keys' e funcionam como chaves seletoras
+ que mudam o comportamento do programa. 
+	</p1>
+
+<sub>
+
+	<subtitulo>Passe os parâmetros através de subrotinas intrínsecas do Fortran</subtitulo>
+	<p2>
+A linguagem FORTRAN possui subrotinas e funções intrínsecas que permitem passar argumentos a um programa através da
+ linha de comandos do terminal na própria chamada de execução do programa. Estas subrotinas também permitem a execução
+de um comando do shell durante execução do programa em Fortran. Exemplo, se chamarmos a subrotina a seguir com o a
+ expressão 'CALL' dentro do nosso programa em Fortran, esta executará o comando entre aspas:
+	</p2>
+
+	<p2>
+ CALL EXECUTE_COMMAND_LINE("echo 'oi shell'")
+	</p2>
+
+ 	<p2>
+A subrotina EXECUTE_COMMAND_LINE recebe um comando do Shell entre aspas duplas e executa. No exemplo, o comando 'echo
+ oi shell' escreve a mensagem 'oi shell' na tela do terminal.
+	</p2>
+
+<p2>
+Também é possível contar o número de argumentos passados pela linha de comandos. A função COMMAND_ARGUMENT_COUNT, a 
+seguir conta o número de argumentos e atribui a uma variável do tipo INTEGER.
+</p2>
+	<p2>
+	contador=COMMAND_ARGUMENT_COUNT()
+	</p2>
+	<p2>
+A subrotina mais importante para a passagem de argumentos é a GET_COMMAND_ARGUMENT. Esta recebe o argumento número
+ 'i' passado pela linha de comando e atribui à uma variável 'arg' do tipo CHARACTER. 
+	</p2>
+
+<p2>CALL GET_COMMAND_ARGUMENT(i,arg)</p2>
+
+<p2> 
+O argumento 'i=0' é sempre o nome
+ do programa, o argumento i=1 é o primeiro argumento passado pela linha de comando, e assim sucessivamente. Como
+no exemplo chamando o programa 'fortran2shell' no terminal ('bash$' representa o console do terminal):
+</p2>
+
+<p2>bash$ ./fortran2shell -a -b -c </p2>
+
+<p2>o argumento i=0 é './fortran2shell'</p2>
+<p2>o argumento i=1 é '-a'</p2>
+<p2>o argumento i=2 é '-b'</p2>
+<p2>o argumento i=3 é '-c'.</p2>
+
+</sub>
+</postagem>

@@ -1,0 +1,66 @@
+/*
+	 mobile.css (CSS)
+	 
+	 Objetivo: Design responsivo da página do site Dirack's Lounge.
+	 
+	 Versão 1.0
+	 
+	 Site: http://www.dirackslounge.online
+	 
+	 Programador: Rodolfo A. C. Neves (Dirack) 28/03/2019
+	 
+	 Email: rodolfo_profissional@hotmail.com
+	 
+	 Licença: Software de uso livre e código aberto.
+*/
+
+body{
+	margin: 0px;
+}
+
+#menu, #posts, #redes{
+	display: none;
+}
+
+#preheader{
+	text-align: center;
+}
+
+#rodape{
+	font-size: 15px;
+	text-align: center;
+	background-color: #303030;
+	color: #ffffff;
+}
+
+#titulo h1{
+	line-height: 1px;
+}
+
+#titulo{
+	margin-top: 10px;
+}
+
+#menuMobileImg{
+	width: 30px;
+}
+#canvas{
+	margin: 15px;
+	text-align: left;
+}
+
+#postagens p{
+	text-align: left;
+}
+
+#menuMobile nav{
+	display: none;
+	text-align: left;
+}
+
+#menuMobileImg{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+

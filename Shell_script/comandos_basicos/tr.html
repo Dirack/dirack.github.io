@@ -1,0 +1,171 @@
+
+    <!doctype html>
+    <html><head><meta charset="utf-8"><title>Shell script: tr</title>
+    <link rel="icon" 
+      type="image/png" 
+      href="../favicon.ico" />
+    <style type="text/css"><!--
+    TT { font-family: lucidatypewriter, lucida console, courier }
+    --></style></head><body bgcolor="#f0f0f8">
+    
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#7799ee">
+    <td valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>tr</strong></big></big></font></td
+    ><td align=right valign=bottom>
+        <font color="#ffffff" face="helvetica, arial">
+        <!--<a href="ebook.pdf" title="Ebook comandos básicos">Tutorial</a>--></font>
+        
+    </td></tr></table>
+    Transforma, espreme e apaga carcteres, funcionando como um filtro. Reconhece os mesmos escapes do comando echo
+    
+<!-- SINTAXE -->
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#aa55cc">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#fffff" face="helvetica, arial"><big><strong>Sintaxe</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">O tr funciona a partir de passagem de argumentos através de um pipe (veja os exemplos e dicas)</i></td></tr>
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><i>Comando | tr [Opção] [Argumentos] </i></td></tr>
+</table>
+
+
+<!-- Parâmetros -->
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Parâmetros</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+<tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br> Opção  <strong>-s</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">Espreme caracteres iguais consecutivos em apenas um <br>
+</font></td></tr>
+ 
+     <tr>
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br> Opção  <strong>-d</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">Apaga todos os caracteres listados<br>
+</font></td></tr>       
+
+     <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>  <strong>Argumentos:</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial"><br>
+</font></td></tr> 
+
+     <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br> abc </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">"a" e "b" e "c"<br>
+</font></td></tr>    
+
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br> a7z</font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">"a" e "7" e "z"<br>
+</font></td></tr> 
+
+   <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>a-z</font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">de "a" até "z"<br>
+</font></td></tr> 
+
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br> 0-7 </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">de zero a sete<br>
+</font></td></tr> 
+
+          
+       
+</table>
+    
+</td></tr></table>
+
+<!-- EXEMPLOS E DICAS -->
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#11aadd">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#fffff" face="helvetica, arial"><big><strong>Exemplos e dicas</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>$ echo "O tr é muito versátil!" | tr ' ' '\t'</strong></td></tr>
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">O<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt>tr<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt>é<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt>muito<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt>versátil<br>
+</td></tr>
+
+    <tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>$ echo "O tr é muito versátil!" | tr a-z A-Z</strong></td></tr>
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">O TR é MUITO VERSáTIL<br>
+</td></tr>
+
+    <tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>$ echo "O tr é muito versátil!" | tr a-zéá A-ZÉÁ</strong></td></tr>
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">O TR É MUITO VERSÁTIL<br>
+</td></tr>
+
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>$ echo "O tr é muito versátil!" | tr -d aeiouéá</strong></td></tr>
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">O TR MT VRSTL<br>
+</td></tr>
+
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>$ echo "muitos<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt> espaços" | tr -s ' '</strong></td></tr>
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">muitos espaços<br>
+</td></tr>
+
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>$ echo -e "6\n7\n8\n9\n10" > numeros.txt</strong></td></tr>
+ <tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>$ cat numeros.txt | tr '\n' ,</strong></td></tr>
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">6,7,8,9,10</td></tr>
+
+</table>
+
+<!-- Exemplos de uso e tutoriais-->
+   <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#eeaa77">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Tutoriais</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>Ebook</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="ebook.pdf">comandos_básicos.pdf</a><br>
+                        
+  
+                    
+                        </td></tr></table>
+    <div style='text-align: right;position: fixed;z-index:9999999;bottom: 0; width: 100%;cursor: pointer;line-height: 0;display:block !important;'><a title="000webhost logo" rel="nofollow" target="_blank" href="https://www.000webhost.com/?utm_source=000webhostapp&amp;utm_campaign=000_logo&amp;utm_campaign=ss-footer_logo&amp;utm_medium=000_logo&amp;utm_content=website"><img src="https://cdn.rawgit.com/000webhost/logo/e9bd13f7/footer-powered-by-000webhost-white2.png" alt="000webhost logo"></a></div></body></html>

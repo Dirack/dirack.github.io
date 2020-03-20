@@ -1,0 +1,35 @@
+/*
+	 jogos.css (CSS)
+	 
+	 Objetivo: Folha de estilo CSS do jogo Mestre dos pulos. 
+	 Uma canvas 2D centralizada na página.
+	 
+	 Versão 1.0
+	 
+	 Site: http://www.dirackslounge.online
+	 
+	 Programador: Rodolfo A. C. Neves (Dirack) 23/03/2019
+	 
+	 Email: rodolfo_profissional@hotmail.com
+	 
+	 Licença: Software de uso livre e código aberto.
+*/
+
+
+canvas {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin: auto;
+}
+
+body {
+text-indent: 30px;
+text-align: justify;
+margin: 0px;
+font-family: Verdana, sans-serif;
+color: #053447;
+}
+

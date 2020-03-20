@@ -1,0 +1,111 @@
+<!doctype html>
+<!--
+    Página modelo dos artigos do site Dirack's Lounge
+    
+	Objetivo: Cada artigo é alimentado a partir de um arquivo xml correspondente através
+	de uma solicitação AJAX e carregado nesta página. O arquivo xml a ser carregado 
+	aparece na URL, exemplo, para carregar esta página com o arquivo iostat.xml, a
+	URL terá no final ..artigos.html?var=iostat.   
+	As funções em ajax.js reconhecem a partir da URL a página que deverá ser carregada
+	nesta página modelo na div id="texto".
+    
+    Autor: Rodolfo A. C. Neves  20/01/2019
+	
+    Email: rodolfo_profissional@hotmail.com
+
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Artigo</title>
+
+	<!--{ Ícone do site }-->
+	<link rel="icon" 
+	      type="image/png" 
+	      href="../icon.ico" />
+
+	<!-- Folhas de estilo CSS da página -->
+	<link type="text/css" rel="stylesheet" href="../coluna_mobile.css" media="screen and (max-device-width: 481px) and (orientation: portrait)">
+	<link type="text/css" rel="stylesheet" href="../coluna_mobile.css" media="screen and (max-device-height: 640px) and (orientation: landscape)">
+	<link type="text/css" rel="stylesheet" href="../lounge.css" media="screen and (min-device-width: 1200px)">
+
+	<!-- Funções JS do Menu de Navegação -->
+	<script type="text/javascript" src="../navegacao.js"></script>
+
+	<!-- Funções AJAX alimentar a página -->
+	<script type="text/javascript" src="ajax.js"></script>
+
+	<!-- JQuery -->
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+
+	<!-- Funções AJAX alimentar comentários antigos na página -->
+	<script type="text/javascript" src="comentariosAjax.js"></script>
+
+	<!-- Funções AJAX adicionar comentário novo na página -->
+	<script type="text/javascript" src="comentar.js"></script>
+
+</head>
+
+<body onload="ajax();">
+   
+<!-- Menu de Navegação -->
+<nav id="menu" onmouseover="onMenu()" onmouseout="offMenu()">
+	<ul>
+		<li class="selected"><a href="../index.html#homebotao" title="Voltar para Home?">HOME</a></li>
+	</ul>
+</nav> 
+
+<div id="posts">
+
+	<div id="ver" style="margin-left:20px; margin-top:50px;">
+		<h3>Ver também:</h3>
+
+		<p>
+		<small>22/01/2019</small><br> Passar parâmetros através da linha de comandos em Fortran: <a class="links" href="artigos.html?var=fortran2shell" title="Ler mais?"> Fortran2shell</a>.
+		</p>
+
+		
+		<p>
+		<small>26/04/2018</small><br> Leitura e abetura correta de arquivos com o comando <a class="links" href="artigos.html?var=iostat" title="Ler mais?"> Iostat</a>.
+		</p>
+
+		<p>
+		<small>24/04/2018</small><br> Aprenda a compilar facilmente seus códigos em FORTRAN com arquivos <a class="links" href="artigos.html?var=makefile" title="Ler mais?"> Makefile</a>.
+		</p>
+	</div>
+</div>
+    
+<div id="canvas">
+
+	<!-- Texto da página a ser carregado a partir de uma solicitação AJAX -->
+	<div id="texto">
+    
+	</div>
+
+	<div id="comentarios">
+		<div id="caixa-coment">
+			<hr>
+			<h1>Comentários:</h1>
+			<form id="form" method="POST">
+			&nbsp;&nbsp;&nbsp;Nome: <input type="text" name="autor">
+			&nbsp;&nbsp;&nbsp;Email: <input type="text" name="email">
+			<button type="submit" name="botao" value="<?php echo $_GET['var']; ?>">Enviar</button><br><br>
+			Comentário: <textarea name="texto" cols="80" rows="3"></textarea><br>
+			</form><br>
+		</div>
+
+		<div id="comentariosAnteriores">
+
+		</div>
+	</div>
+
+</div>
+
+<div id="rodape">
+&copy; 2018, Rodolfo Dirack. Todos os direitos reservados.
+</div>
+
+</body>
+</html>
+
+

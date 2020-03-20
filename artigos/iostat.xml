@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<postagem>
+	<titulo>Leitura e abetura correta de arquivos com iostat</titulo>
+	<autor> Rodolfo Dirack </autor>
+	<data>2018-04-26</data>
+	<video>https://www.youtube.com/embed/8ZCqk9vXmNM</video>
+	<p1>
+O comando IOSTAT é uma maneira elegante de identificar as condições de erro de leitura e abertura de arquivos
+em Fortran, deve ser utilizado junto com os comandos OPEN e READ. É uma boa prática de programação
+ adotar o IOSTAT como padrão em programas que necessitam de input de arquivos. 
+Este comando fornece o status de execução dos comandos OPEN e READ, atribuindo um valor positivo, 
+negativo ou nulo a uma variável do tipo INTEGER, especificada pelo comando IOSTAT=variável.
+	</p1>
+
+	<sub>
+	<subtitulo>Utilização com o comando OPEN</subtitulo>
+		<p2>		
+OPEN(UNIT=11, FILE='input.dat', STATUS='old', ACTION='read', IOSTAT=ierror)
+		</p2>
+
+		<p2>
+Quando utilizado com o comando OPEN para a abertura de arquivos, 
+o IOSTAT fornece o status de execução do comando OPEN. Este informa para o programador se a abertura do 
+arquivo foi bem sucedida.
+		</p2>
+
+		<p2>
+A variável indicada por IOSTAT=variável receberá um valor nulo, se a abertura do arquivo for bem sucedida.
+Se a abertura do arquivo fracassou, a variável receberá um valor posistivo.
+Assim, no nosso exemplo acima, se o arquivo 'input.dat' não for encontrado, a execução do comando OPEN irá fracassar
+ e a variável 'ierror' receberá um valor posistivo (O valor não importa, importa se ele é posistivo ou nulo).
+		</p2>
+
+		<p2>
+Basta então utilizar uma condicional IF para verificar se o valor é positivo, se for este o caso, informar o
+usuário sobre o erro para que este possa corrigi-lo:
+		</p2>
+<p2>IF (ierror > 0) THEN</p2>
+<p2>§WRITE(*,*) "Erro de abertura do arquivo 'input.dat': Arquivo NÃO encontrado!"</p2>
+<p2>END IF</p2>
+
+	</sub>
+
+	<sub>
+	<subtitulo>Utilização com o comando READ</subtitulo>
+		<p2>
+READ(11,*,IOSTAT=ierror)
+		</p2>
+
+		<p2>
+Na sua utilização com o comando READ, iostat poderá exibir três tipos de status de execução.
+Se a leitura do arquivo foi bem sucedida, a variável assinalada por IOSTAT receberá um valor 0.
+Se a a leitura fracar, há duas possibilidades: Foi atingido o fim do arquivo, a variável assinalada em 
+IOSTAT=variável receberá um valor negativo;
+Ou o arquivo apresentou erro de formatação, está corrompido (como quando o programa tenta ler um número de uma 
+linha do arquivo, porém nesta linha contém um caractere). Nesse caso a variável receberá um valor positivo.
+		</p2>
+
+		<p2>
+Assim, podemos ler um arquivo com READ sem a necessidade do conhecimento prévio do número de linhas. Basta utilizar
+IOSTAT, enquanto fornecer à variável assinalada por IOSTAT o número zero, continue a leitura; quando fornecer um número
+ negativo ou positivo, interrompa.
+		</p2>
+<p2>! Laço de Leitura: Lê cada linha</p2>
+<p2>DO</p2>
+<p2>§READ(11,*,IOSTAT=ierror) valor</p2> 
+<p2>§IF(ierror/=0)EXIT</p2>
+<p2>§n=n+1</p2>
+<p2>END DO</p2>
+
+		<p2>
+Depois, basta verificar se a interrupção na leitura foi feita porque o programa chegou no final do arquivo (a variável 
+assinalada por IOSTAT será negativa), ou se há um problema em alguma linha do arquivo (a variável será positiva).
+		</p2>
+
+<p2>! Se ierror é positivo, o erro de leitura é no formato do arquivo</p2>
+<p2>IF(ierror>0) THEN</p2>
+<p2>§WRITE(*,*) "Erro de formato na linha: ", n+1</p2>
+<p2>§WRITE(*,*) "IERROR=", ierror</p2>
+<p2>!Sem erro? Informe o número de linhas ao usuário</p2>        
+<p2>ELSE</p2>
+<p2>§WRITE(*,*) "Número de linhas do arquivo: ", n</p2>
+<p2>§WRITE(*,*) "ierror=", ierror</p2>
+<p2>END IF</p2>
+
+	</sub>
+</postagem>

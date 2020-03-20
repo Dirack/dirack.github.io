@@ -1,0 +1,1458 @@
+
+    <!doctype html>
+    <html>
+    <head>
+    <title>Madagascar software</title>
+        <link rel="icon" 
+      type="image/png" 
+      href="favicon.ico" />
+    <style type="text/css"><!--
+    TT { font-family: lucidatypewriter, lucida console, courier }
+    --></style>
+    </head>
+    <body bgcolor="#f0f0f8">
+    
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#7799ee">
+    <td valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>Madagascar Tutoriais</strong></big></big></font></td
+    ><td align=right valign=bottom
+    ><font color="#ffffff" face="helvetica, arial">&nbsp;</font></td></tr></table>
+    <p>
+    Madagascar é um pacote de software para análise de dados multidimensionais e experimentos computacionais reproduzíveis. Sua missão é fornecer um ambiente conveniente e poderoso uma ferramenta de transferência de tecnologia conveniente.</p>
+    <p>
+    <strong>Sistema operacional:</strong> Posix<br> 
+    <strong>Licença:</strong> GNU General Public License<br>
+    <strong>Gravado em:</strong> C, C++, Python<br>
+    <br>
+    Aprenda a adicionar seus próprios programas ao pacote Madagascar 
+    <a href="estudo/index.html" title="Material Madagascar API's?">Aqui</a></p>
+  
+  <!-- [ Estudos MADAGASCAR API ] -->
+  <!--
+  Nesta pasta adiciono os programas desenvolvidos por mim a título de estudo das
+  ferramentas de programação para o Madagascar (API's do Madagascar). Estas
+  ferramentas tornam possível ao usuário adicionar ao pacote Madagascar programas
+  de sua autoria.
+  Os programas que aqui apresento foram escritos na linguagem C.
+
+  -->
+  
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Estudos Madagascar API</strong></big></font></td></tr>
+
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+
+<td width="100%"><table width="100%" summary="list">
+    
+    <tr><td width="25%" valign=top><font color="#778899">sf</font><a href="estudo/sf2d.html" title="Faz uma cópia de um arquivo rsf que seja um mapa 2D">2d</a><br></td>
+    <td width="25%" valign=top><font color="#778899">sf</font><a href="estudo/sffunc.html" title="Gera uma função y(t) definida">func</a><br></td>
+    
+<td width="25%" valign=top><font color="#778899">sf</font><a href="estudo/sffunc2.html" title="Versão 2.0 de sffunc - Sem arquivo de entrada">func2</a><br></td>
+<td width="25%" valign=top><font color="#778899">sf</font><a href="estudo/sfgauss.html" title="Gera uma função gaussiana para plot">gauss</a><br>
+</tr>
+
+<tr>
+    
+    <td width="25%" valign=top><font color="#778899">sf</font><a href="estudo/sfnorm.html" title="Faz uma cópia de um arquivo rsf que seja um mapa 2D">norm</a><br></td>
+<!--    
+    <td width="25%" valign=top><font color="#778899">sf</font><a href="estudo/sffunc.html" title="Gera uma função y(t) definida">func</a><br></td>
+    
+<td width="25%" valign=top><font color="#778899">sf</font><a href="estudo/sffunc2.html" title="Versão 2.0 de sffunc - Sem arquivo de entrada">func2</a><br></td>
+<td width="25%" valign=top><font color="#778899">sf</font><a href="estudo/sfgauss.html" title="Gera uma função gaussiana para plot">gauss</a><br>-->
+</tr>
+ 
+
+</table></td></tr>
+
+
+</table>  
+    
+    <!-- [ USER: RODOLFO ] 
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/rodolfo</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sf2d.html" title="Faz uma cópia de um arquivo rsf que seja um mapa 2D">2d</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sffunc.html" title="Versão 1.0">func</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sffunc2.html" title="Versão 2.0 - Sem arquivo de entrada">func2</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table>
+
+    <!--      <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>pens/main</strong></big></font></td></tr>
+    
+  <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfcrpen.html" title="vplot filter for Cairo Graphics. ">crpen</a><br>
+<font color="#778899">sf</font><a href="sfgdpen.html" title="vplot filter for LibGD. ">gdpen</a><br>
+<font color="#778899">sf</font><a href="sfraspen.html" title="vplot filter for ppm format output. ">jpegpen</a><br>
+<font color="#778899">sf</font><a href="sfoglpen.html" title="vplot filter for OpenGL. ">oglpen</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfcrpen.html" title="vplot filter for Cairo Graphics. ">pdfpen</a><br>
+<font color="#778899">sf</font><a href="sfxtpen.html" title="Vplot filter for X windows using the X Toolkit (Xt). ">pen</a><br>
+<font color="#778899">sf</font><a href="sfcrpen.html" title="vplot filter for Cairo Graphics. ">pngpen</a><br>
+<font color="#778899">sf</font><a href="sfraspen.html" title="vplot filter for ppm format output. ">ppmpen</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfpspen.html" title="Vplot filter for Postscript. ">pspen</a><br>
+<font color="#778899">sf</font><a href="sfraspen.html" title="vplot filter for ppm format output. ">raspen</a><br>
+<font color="#778899">sf</font><a href="sfcrpen.html" title="vplot filter for Cairo Graphics. ">svgpen</a><br>
+<font color="#778899">sf</font><a href="sfraspen.html" title="vplot filter for ppm format output. ">tiffpen</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfvppen.html" title="Vplot filter for the virtual vplot device.">vppen</a><br>
+<font color="#778899">sf</font><a href="sfx11pen.html" title="Vplot filter for X-Window ">x11pen</a><br>
+<font color="#778899">sf</font><a href="sfxtpen.html" title="Vplot filter for X windows using the X Toolkit (Xt). ">xtpen</a><br>
+</td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>plot/lib</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfstdplot.html" title="Setting up frames for a generic plot. ">stdplot</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>plot/main</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfgrey.html" title="Generate raster plot.">bar</a><br>
+<font color="#778899">sf</font><a href="sfbargraph.html" title="Bar plot.">bargraph</a><br>
+<font color="#778899">sf</font><a href="sfbox.html" title="Draw a balloon-style label.">box</a><br>
+<font color="#778899">sf</font><a href="sfgrey.html" title="Generate raster plot.">byte</a><br>
+<font color="#778899">sf</font><a href="sfcontour.html" title="Contour plot.">contour</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfcontour3.html" title="Generate 3-D contour plot.">contour3</a><br>
+<font color="#778899">sf</font><a href="sfgrey3.html" title="Generate 3-D cube plot.">cubeplot</a><br>
+<font color="#778899">sf</font><a href="sfdots.html" title="Plot signal with lollipops.">dots</a><br>
+<font color="#778899">sf</font><a href="sfgraph.html" title="Graph plot.">graph</a><br>
+<font color="#778899">sf</font><a href="sfgraph3.html" title="Generate 3-D cube plot for surfaces.">graph3</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfgrey.html" title="Generate raster plot.">grey</a><br>
+<font color="#778899">sf</font><a href="sfgrey3.html" title="Generate 3-D cube plot.">grey3</a><br>
+<font color="#778899">sf</font><a href="sfgrey4.html" title="Generate movie of 3-D cube plots.">grey4</a><br>
+<font color="#778899">sf</font><a href="sfplas.html" title="Plot Assembler - convert ascii to vplot. ">plas</a><br>
+<font color="#778899">sf</font><a href="sfpldb.html" title="Plot Debugger - convert vplot to ascii. ">pldb</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfplotrays.html" title="Plot rays.">plotrays</a><br>
+<font color="#778899">sf</font><a href="sfthplot.html" title="Hidden-line surface plot.">thplot</a><br>
+<font color="#778899">sf</font><a href="sfvplotdiff.html" title="Vplot diff - see if 2 vplot files represent "identical" plots. ">vplotdiff</a><br>
+<font color="#778899">sf</font><a href="sfwiggle.html" title="Plot data with wiggly traces. ">wiggle</a><br>
+</td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>plot/plplot</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfplsurf.html" title="Generate a surface plot. ">plsurf</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>plot/test</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="vp7ab.html" title="">vp7ab</a><br>
+<a href="vpcmp.html" title="">vpcmp</a><br>
+<a href="vpcroshyp.html" title="">vpcroshyp</a><br>
+<a href="vpcsp.html" title="">vpcsp</a><br>
+<a href="vpdc.html" title="">vpdc</a><br>
+</td><td width="25%" valign=top><a href="vpdcretard.html" title="">vpdcretard</a><br>
+<a href="vpellipse.html" title="">vpellipse</a><br>
+<a href="vpfrancis.html" title="">vpfrancis</a><br>
+<a href="vpheadray.html" title="">vpheadray</a><br>
+<a href="vphyplay.html" title="">vphyplay</a><br>
+</td><td width="25%" valign=top><a href="vpnmotraj.html" title="">vpnmotraj</a><br>
+<a href="vpreflector.html" title="">vpreflector</a><br>
+<a href="vpreflector.html" title="">vpreflexpt</a><br>
+<a href="vpreflector.html" title="">vpreflkine</a><br>
+<a href="vpsg.html" title="">vpsg</a><br>
+</td><td width="25%" valign=top><a href="vpvrms.html" title="">vpvrms</a><br>
+<a href="vpwhitepruf.html" title="">vpwhitepruf</a><br>
+</td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>su/main</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfkdmig2d.html" title="2-D Prestack Kirchhoff depth migration (SU version). ">kdmig2d</a><br>
+<font color="#778899">sf</font><a href="sfmakevel.html" title="Make a velocity function v(x,y,z) ">makevel</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfpef.html" title="Wiener predictive error filtering ">pef</a><br>
+<font color="#778899">sf</font><a href="sfsinc.html" title="1-D sinc interpolation.">sinc</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sftraces.html" title="Make traces with reverberations for testing deconvolution. ">traces</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>su/plot</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfimage.html" title="X IMAGE plot of a uniformly-sampled function f(x1,x2).">image</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfwigb.html" title="X WIGgle-trace plot of f(x1,x2) via Bitmap.">wigb</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>system/generic</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfagc.html" title="Automatic gain control. ">agc</a><br>
+<font color="#778899">sf</font><a href="sfaliasp.html" title="Aliasing test. ">aliasp</a><br>
+<font color="#778899">sf</font><a href="sfbandpass.html" title="Bandpass filtering. ">bandpass</a><br>
+<font color="#778899">sf</font><a href="sfbin.html" title="Data binning in 2-D slices. ">bin</a><br>
+<font color="#778899">sf</font><a href="sfbin1.html" title="Data binning in 1-D slices. ">bin1</a><br>
+<font color="#778899">sf</font><a href="sfboxsmooth.html" title="Multi-dimensional smoothing with boxes. ">boxsmooth</a><br>
+<font color="#778899">sf</font><a href="sfcanny.html" title="Canny-like edge detector. ">canny</a><br>
+<font color="#778899">sf</font><a href="sfcausint.html" title="Causal integration on the first axis. ">causint</a><br>
+<font color="#778899">sf</font><a href="sfclip.html" title="Clip the data.">clip</a><br>
+<font color="#778899">sf</font><a href="sfclip2.html" title="One- or two-sided data clipping.">clip2</a><br>
+<font color="#778899">sf</font><a href="sfcmatmult.html" title="Simple matrix multiplication for complex matrices ">cmatmult</a><br>
+<font color="#778899">sf</font><a href="sfcmatmult2.html" title="Multiplication of two complex matrices ">cmatmult2</a><br>
+<font color="#778899">sf</font><a href="sfcosft.html" title="Multi-dimensional cosine transform.">cosft</a><br>
+<font color="#778899">sf</font><a href="sfcostaper.html" title="Cosine taper around the borders (N-D). ">costaper</a><br>
+<font color="#778899">sf</font><a href="sfderiv.html" title="First derivative with a maximally linear FIR differentiator. ">deriv</a><br>
+<font color="#778899">sf</font><a href="sfdipfilter.html" title="Filter data based on dip in 2-D or 3-D.">dipfilter</a><br>
+<font color="#778899">sf</font><a href="sfdwt.html" title="1-D digital wavelet transform ">dwt</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfenoint2.html" title="ENO interpolation in 2-D slices. ">enoint2</a><br>
+<font color="#778899">sf</font><a href="sfequal.html" title="Image enhancement by histogram equalization. ">equal</a><br>
+<font color="#778899">sf</font><a href="sfextract.html" title="Forward interpolation in 2-D slices. ">extract</a><br>
+<font color="#778899">sf</font><a href="sffern.html" title="Generate fractal fern. ">fern</a><br>
+<font color="#778899">sf</font><a href="sffft1.html" title="Fast Fourier Transform along the first axis. ">fft1</a><br>
+<font color="#778899">sf</font><a href="sffft3.html" title="FFT transform on extra axis.">fft3</a><br>
+<font color="#778899">sf</font><a href="sfgrad2.html" title="2-D smooth gradient. ">grad2</a><br>
+<font color="#778899">sf</font><a href="sfheat.html" title="Finite-difference solution of 2-D heat-flow equation ">heat</a><br>
+<font color="#778899">sf</font><a href="sfhistogram.html" title="Compute a histogram of integer- or float-valued input data.">histogram</a><br>
+<font color="#778899">sf</font><a href="sfigrad.html" title="Gradient on the first axis. ">igrad</a><br>
+<font color="#778899">sf</font><a href="sfimpl2.html" title="2-D anisotropic diffusion. ">impl2</a><br>
+<font color="#778899">sf</font><a href="sfintshow.html" title="Output interpolation filter. ">intshow</a><br>
+<font color="#778899">sf</font><a href="sfinttest1.html" title="Interpolation from a regular grid in 1-D. ">inttest1</a><br>
+<font color="#778899">sf</font><a href="sfinttest2.html" title="Interpolation from a regular grid in 2-D. ">inttest2</a><br>
+<font color="#778899">sf</font><a href="sfiwarp.html" title="Inverse 1-D warping. ">iwarp</a><br>
+<font color="#778899">sf</font><a href="sfjacobi.html" title="Find eigenvalues of a symmetric matrix by Jacobi's iteration. ">jacobi</a><br>
+<font color="#778899">sf</font><a href="sflapfill.html" title="Missing data interpolation in 2-D by Laplacian regularization. ">lapfill</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sflaplac.html" title="2-D finite-difference Laplacian operation. ">laplac</a><br>
+<font color="#778899">sf</font><a href="sflinear.html" title="1-D linear interpolation.">linear</a><br>
+<font color="#778899">sf</font><a href="sflinefit.html" title="Fit a line to a set of points in 2-D.">linefit</a><br>
+<font color="#778899">sf</font><a href="sflorenz.html" title="Generate Lorenz attractor. ">lorenz</a><br>
+<font color="#778899">sf</font><a href="sflpad.html" title="Pad and interleave traces.">lpad</a><br>
+<font color="#778899">sf</font><a href="sfmandelbrot.html" title="Generate Mandelbrot set. ">mandelbrot</a><br>
+<font color="#778899">sf</font><a href="sfmatmult.html" title="Simple matrix multiplication ">matmult</a><br>
+<font color="#778899">sf</font><a href="sfmax1.html" title="Picking local maxima on the first axis. ">max1</a><br>
+<font color="#778899">sf</font><a href="sfmonof.html" title="Mono-frequency wavelet estimation.">monof</a><br>
+<font color="#778899">sf</font><a href="sfmutter.html" title="Muting.">mutter</a><br>
+<font color="#778899">sf</font><a href="sfnoise.html" title="Add random noise to the data.">noise</a><br>
+<font color="#778899">sf</font><a href="sfpostfilter2.html" title="Convert B-spline coefficients to data in 2-D. ">postfilter2</a><br>
+<font color="#778899">sf</font><a href="sfpow.html" title="Apply power gain. ">pow</a><br>
+<font color="#778899">sf</font><a href="sfreg2tri.html" title="Decimate a regular grid to triplets for triangulation. ">reg2tri</a><br>
+<font color="#778899">sf</font><a href="sfremap1.html" title="1-D ENO interpolation. ">remap1</a><br>
+<font color="#778899">sf</font><a href="sfroots.html" title="Find roots of a complex polynomial. ">roots</a><br>
+<font color="#778899">sf</font><a href="sfshapebin1.html" title="1-D inverse interpolation with shaping regularization. ">shapebin1</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfsharpen.html" title="Sharpening operator ">sharpen</a><br>
+<font color="#778899">sf</font><a href="sfslice.html" title="Extract a slice using picked surface (usually from a stack or a semblance).">slice</a><br>
+<font color="#778899">sf</font><a href="sfsmooth.html" title="Multi-dimensional triangle smoothing. ">smooth</a><br>
+<font color="#778899">sf</font><a href="sfsmoothder.html" title="Smooth first derivative on the first axis.">smoothder</a><br>
+<font color="#778899">sf</font><a href="sfsmoothreg2.html" title="Smoothing in 2-D by simple regularization.">smoothreg2</a><br>
+<font color="#778899">sf</font><a href="sfspectra.html" title="Frequency spectra. ">spectra</a><br>
+<font color="#778899">sf</font><a href="sfspectra2.html" title="Frequency spectra in 2-D. ">spectra2</a><br>
+<font color="#778899">sf</font><a href="sfspline.html" title="1-D cubic spline interpolation.">spline</a><br>
+<font color="#778899">sf</font><a href="sfsplinefilter.html" title="Convert data to B-spline coefficients. ">splinefilter</a><br>
+<font color="#778899">sf</font><a href="sft2warp.html" title="Time-squared warping. ">t2warp</a><br>
+<font color="#778899">sf</font><a href="sfthreshold.html" title="Soft thresholding. ">threshold</a><br>
+<font color="#778899">sf</font><a href="sfpow.html" title="Apply power gain. ">tpow</a><br>
+<font color="#778899">sf</font><a href="sftrapez.html" title="Convolution with a trapezoidal filter. ">trapez</a><br>
+<font color="#778899">sf</font><a href="sftri2reg.html" title="Interpolate triangulated triplets to a regular grid. ">tri2reg</a><br>
+<font color="#778899">sf</font><a href="sftrirand.html" title="Edit points for triangulation by removing similar and randomizing. ">trirand</a><br>
+<font color="#778899">sf</font><a href="sfunif2.html" title="Generate 2-D layered velocity model from specified interfaces. ">unif2</a><br>
+<font color="#778899">sf</font><a href="sfunif3.html" title="Generate 3-D layered velocity model from specified interfaces. ">unif3</a><br>
+</td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>system/main</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfadd.html" title="Add, multiply, or divide  RSF datasets.">add</a><br>
+<font color="#778899">sf</font><a href="sfattr.html" title="Display dataset attributes.">attr</a><br>
+<font color="#778899">sf</font><a href="sfcat.html" title="Concatenate datasets. ">cat</a><br>
+<font color="#778899">sf</font><a href="sfcconjgrad.html" title="Generic conjugate-gradient solver for linear inversion with complex data ">cconjgrad</a><br>
+<font color="#778899">sf</font><a href="sfcconjgradmpi.html" title="Generic conjugate-gradient solver for linear inversion.">cconjgradmpi</a><br>
+<font color="#778899">sf</font><a href="sfcdottest.html" title="Generic dot-product test for complex linear operators with adjoints ">cdottest</a><br>
+<font color="#778899">sf</font><a href="sfcdottestmpi.html" title="Generic dot-product test for complex linear operators with adjoints ">cdottestmpi</a><br>
+<font color="#778899">sf</font><a href="sfcmplx.html" title="Create a complex dataset from its real and imaginary parts.">cmplx</a><br>
+<font color="#778899">sf</font><a href="sfconjgrad.html" title="Generic conjugate-gradient solver for linear inversion ">conjgrad</a><br>
+<font color="#778899">sf</font><a href="sfconjgradmpi.html" title="Generic conjugate-gradient solver for linear inversion.">conjgradmpi</a><br>
+<font color="#778899">sf</font><a href="sfcp.html" title="Copy or move a dataset.">cp</a><br>
+<font color="#778899">sf</font><a href="sfcut.html" title="Zero a portion of the dataset.">cut</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfdd.html" title="Convert between different formats. ">dd</a><br>
+<font color="#778899">sf</font><a href="sfdisfil.html" title="Print out data values.">disfil</a><br>
+<font color="#778899">sf</font><a href="sfadd.html" title="Add, multiply, or divide  RSF datasets.">div</a><br>
+<font color="#778899">sf</font><a href="sfdottest.html" title="Generic dot-product test for linear operators with adjoints ">dottest</a><br>
+<font color="#778899">sf</font><a href="sfdottestmpi.html" title="Generic dot-product test for linear operators with adjoints ">dottestmpi</a><br>
+<font color="#778899">sf</font><a href="sfget.html" title="Output parameters from the header.">get</a><br>
+<font color="#778899">sf</font><a href="sfheadercut.html" title="Zero a portion of a dataset based on a header mask.">headercut</a><br>
+<font color="#778899">sf</font><a href="sfheadersort.html" title="Sort a dataset according to a header key. ">headersort</a><br>
+<font color="#778899">sf</font><a href="sfheaderwindow.html" title="Window a dataset based on a header mask.">headerwindow</a><br>
+<font color="#778899">sf</font><a href="sfreal.html" title="Extract real (sfreal) or imaginary (sfimag) part of a complex dataset. ">imag</a><br>
+<font color="#778899">sf</font><a href="sfin.html" title="Display basic information about RSF files.">in</a><br>
+<font color="#778899">sf</font><a href="sfinterleave.html" title="Combine several datasets by interleaving.">interleave</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfmask.html" title="Create a mask.">mask</a><br>
+<font color="#778899">sf</font><a href="sfmath.html" title="Mathematical operations on data files.">math</a><br>
+<font color="#778899">sf</font><a href="sfstack.html" title="Stack a dataset over one of the dimensions.">max</a><br>
+<font color="#778899">sf</font><a href="sfcat.html" title="Concatenate datasets. ">merge</a><br>
+<font color="#778899">sf</font><a href="sfstack.html" title="Stack a dataset over one of the dimensions.">min</a><br>
+<font color="#778899">sf</font><a href="sfmpi.html" title="MPI wrapper for embarassingly parallel jobs. ">mpi</a><br>
+<font color="#778899">sf</font><a href="sfadd.html" title="Add, multiply, or divide  RSF datasets.">mul</a><br>
+<font color="#778899">sf</font><a href="sfcp.html" title="Copy or move a dataset.">mv</a><br>
+<font color="#778899">sf</font><a href="sfomp.html" title="OpenMP wrapper for embarassingly parallel jobs. ">omp</a><br>
+<font color="#778899">sf</font><a href="sfpad.html" title="Pad a dataset with zeros.">pad</a><br>
+<font color="#778899">sf</font><a href="sfstack.html" title="Stack a dataset over one of the dimensions.">prod</a><br>
+<font color="#778899">sf</font><a href="sfput.html" title="Input parameters into a header. ">put</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfcat.html" title="Concatenate datasets. ">rcat</a><br>
+<font color="#778899">sf</font><a href="sfreal.html" title="Extract real (sfreal) or imaginary (sfimag) part of a complex dataset. ">real</a><br>
+<font color="#778899">sf</font><a href="sfreverse.html" title="Reverse one or more axes in the data hypercube. ">reverse</a><br>
+<font color="#778899">sf</font><a href="sfrm.html" title="Remove RSF files together with their data.">rm</a><br>
+<font color="#778899">sf</font><a href="sfrotate.html" title="Rotate a portion of one or more axes in the data hypercube. ">rotate</a><br>
+<font color="#778899">sf</font><a href="sfrtoc.html" title="Convert real data to complex (by adding zero imaginary part).">rtoc</a><br>
+<font color="#778899">sf</font><a href="sfscale.html" title="Scale data.">scale</a><br>
+<font color="#778899">sf</font><a href="sfspike.html" title="Generate simple data: spikes, boxes, planes, constants. ">spike</a><br>
+<font color="#778899">sf</font><a href="sfspray.html" title="Extend a dataset by duplicating in the specified axis dimension.">spray</a><br>
+<font color="#778899">sf</font><a href="sfstack.html" title="Stack a dataset over one of the dimensions.">stack</a><br>
+<font color="#778899">sf</font><a href="sftransp.html" title="Transpose two axes in a dataset. ">transp</a><br>
+<font color="#778899">sf</font><a href="sfwindow.html" title="Window a portion of a dataset. ">window</a><br>
+</td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>system/seismic</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfaastack.html" title="Stack with antialiasing ">aastack</a><br>
+<font color="#778899">sf</font><a href="sfagmig.html" title="Angle-gather constant-velocity time migration. ">agmig</a><br>
+<font color="#778899">sf</font><a href="sfai2refl.html" title="Convert acoustic impedance to reflectivity. ">ai2refl</a><br>
+<font color="#778899">sf</font><a href="sfc2r.html" title="Cartesian-Coordinates to Riemannian-Coordinates interpolation ">c2r</a><br>
+<font color="#778899">sf</font><a href="sfcascade.html" title="Velocity partitioning for cascaded migrations. ">cascade</a><br>
+<font color="#778899">sf</font><a href="sfcgscan.html" title="Hyperbolic Radon transform with conjugate-directions inversion ">cgscan</a><br>
+<font color="#778899">sf</font><a href="sfcmp2shot.html" title="Convert CMPs to shots for regular 2-D geometry. ">cmp2shot</a><br>
+<font color="#778899">sf</font><a href="sfconstfdmig2.html" title="2-D implicit finite-difference migration in constant velocity. ">constfdmig2</a><br>
+<font color="#778899">sf</font><a href="sfstretch.html" title="Stretch of the time axis. ">datstretch</a><br>
+<font color="#778899">sf</font><a href="sfdepth2time.html" title="Conversion from depth to time in a V(z) medium.">depth2time</a><br>
+<font color="#778899">sf</font><a href="sfdiffoc.html" title="Diffraction focusing test. ">diffoc</a><br>
+<font color="#778899">sf</font><a href="sfdiffraction.html" title="Generate diffractions in zero-offset data. ">diffraction</a><br>
+<font color="#778899">sf</font><a href="sfdmo.html" title="Kirchhoff DMO with antialiasing by reparameterization. ">dmo</a><br>
+<font color="#778899">sf</font><a href="sfdsr.html" title="Prestack 2-D VTI v(z) modeling/migration by DSR with angle gathers. ">dsr</a><br>
+<font color="#778899">sf</font><a href="sfenvelope.html" title="None">envelope</a><br>
+<font color="#778899">sf</font><a href="sffincon.html" title="Offset continuation by finite differences ">fincon</a><br>
+<font color="#778899">sf</font><a href="sffindmo.html" title="DMO without stacking by finite-difference offset continuation. ">findmo</a><br>
+<font color="#778899">sf</font><a href="sffinstack.html" title="DMO and stack by finite-difference offset continuation. ">finstack</a><br>
+<font color="#778899">sf</font><a href="sffkamo.html" title="Computes Azimuth Move-Out (AMO) operator in the f-k log-stretch domain ">fkamo</a><br>
+<font color="#778899">sf</font><a href="sffkdmo.html" title="Offset continuation by log-stretch F-K operator. ">fkdmo</a><br>
+<font color="#778899">sf</font><a href="sffold.html" title="Make a seismic foldplot/stacking chart. ">fold</a><br>
+<font color="#778899">sf</font><a href="sffourvc.html" title="Prestack velocity continuation. ">fourvc</a><br>
+<font color="#778899">sf</font><a href="sffourvc2.html" title="Velocity continuation with semblance computation. ">fourvc2</a><br>
+<font color="#778899">sf</font><a href="sffreqlet.html" title="1-D seislet frame ">freqlet</a><br>
+<font color="#778899">sf</font><a href="sfgazdag.html" title="Post-stack 2-D/3-D v(z) time modeling/migration with Gazdag phase-shift. ">gazdag</a><br>
+<font color="#778899">sf</font><a href="sfhalfint.html" title="Half-order integration or differentiation. ">halfint</a><br>
+<font color="#778899">sf</font><a href="sfheaderattr.html" title="Display header attributes. ">headerattr</a><br>
+<font color="#778899">sf</font><a href="sfheadermath.html" title="Mathematical operations, possibly on header keys. ">headermath</a><br>
+<font color="#778899">sf</font><a href="sfhwt2d.html" title="2-D Huygens wavefront tracing traveltimes ">hwt2d</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfhwtex.html" title="Huygens wavefront tracing traveltimes ">hwtex</a><br>
+<font color="#778899">sf</font><a href="sfinfill.html" title="Shot interpolation. ">infill</a><br>
+<font color="#778899">sf</font><a href="sfinmo.html" title="Inverse normal moveout. ">inmo</a><br>
+<font color="#778899">sf</font><a href="sfinmo3.html" title="3-D Inverse normal moveout.">inmo3</a><br>
+<font color="#778899">sf</font><a href="sfintbin.html" title="Data binning by trace sorting. ">intbin</a><br>
+<font color="#778899">sf</font><a href="sfintbin3.html" title="4-D data binning. ">intbin3</a><br>
+<font color="#778899">sf</font><a href="sfitaupmo.html" title="Inverse normal moveout in tau-p domain. ">itaupmo</a><br>
+<font color="#778899">sf</font><a href="sfiwarp2.html" title="Inverse 2-D warping ">iwarp2</a><br>
+<font color="#778899">sf</font><a href="sfiwarp3.html" title="Inverse 3-D warping ">iwarp3</a><br>
+<font color="#778899">sf</font><a href="sfkirchinv.html" title="Kirchhoff 2-D post-stack least-squares time migration with antialiasing. ">kirchinv</a><br>
+<font color="#778899">sf</font><a href="sfkirchnew.html" title="Kirchhoff 2-D post-stack time migration and modeling with antialiasing. ">kirchnew</a><br>
+<font color="#778899">sf</font><a href="sfkirmod.html" title="Kirchhoff 2-D/2.5-D modeling with analytical Green's functions. ">kirmod</a><br>
+<font color="#778899">sf</font><a href="sfkirmod3.html" title="Kirchhoff 3-D modeling with analytical Green's functions. ">kirmod3</a><br>
+<font color="#778899">sf</font><a href="sflineiko.html" title="Iterative solution of the linearized eikonal equation. ">lineiko</a><br>
+<font color="#778899">sf</font><a href="sfstretch.html" title="Stretch of the time axis. ">lmostretch</a><br>
+<font color="#778899">sf</font><a href="sfstretch.html" title="Stretch of the time axis. ">logstretch</a><br>
+<font color="#778899">sf</font><a href="sfmap2coh.html" title="From parameter's attribute map (veltran) to coherency-like plots. ">map2coh</a><br>
+<font color="#778899">sf</font><a href="sfmigsteep3.html" title="3-D Kirchhoff time migration for antialiased steep dips. ">migsteep3</a><br>
+<font color="#778899">sf</font><a href="sfmodrefl.html" title="Normal reflectivity modeling. ">modrefl</a><br>
+<font color="#778899">sf</font><a href="sfmodrefl2.html" title="Normal reflectivity modeling. ">modrefl2</a><br>
+<font color="#778899">sf</font><a href="sfmoveout.html" title="Put spikes at an arbitrary moveout ">moveout</a><br>
+<font color="#778899">sf</font><a href="sfnmo.html" title="Normal moveout.">nmo</a><br>
+<font color="#778899">sf</font><a href="sfnmo3_ort.html" title="3-D Normal moveout using orthogonal parametrization">nmo3_ort</a><br>
+<font color="#778899">sf</font><a href="sfstretch.html" title="Stretch of the time axis. ">nmostretch</a><br>
+<font color="#778899">sf</font><a href="sfnmow_adj.html" title="None">nmow_adj</a><br>
+<font color="#778899">sf</font><a href="sfovczo.html" title="Post-stack 2-D oriented velocity continuation. ">ovczo</a><br>
+<font color="#778899">sf</font><a href="sfpmig.html" title="Slope-based prestack time migration. ">pmig</a><br>
+<font color="#778899">sf</font><a href="sfpnmo.html" title="Slope-based normal moveout. ">pnmo</a><br>
+<font color="#778899">sf</font><a href="sfpnmo3d.html" title="Slope-based normal moveout for 3-D CMP geometry. ">pnmo3d</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfpreconstkirch.html" title="Prestack Kirchhoff modeling/migration in constant velocity. ">preconstkirch</a><br>
+<font color="#778899">sf</font><a href="sfptaupmo.html" title="Slope-based tau-p moveout. ">ptaupmo</a><br>
+<font color="#778899">sf</font><a href="sfptaupmoVTI.html" title="Slope-based tau-p moveout in VTI. ">ptaupmoVTI</a><br>
+<font color="#778899">sf</font><a href="sfpveltran.html" title="Slope-based velocity transform. ">pveltran</a><br>
+<font color="#778899">sf</font><a href="sfpveltranVTI.html" title="Slope-based tau-p velocity transform for VTI media. ">pveltranVTI</a><br>
+<font color="#778899">sf</font><a href="sfpyramid.html" title="Pyramid transform ">pyramid</a><br>
+<font color="#778899">sf</font><a href="sfradial.html" title="Radial transform. ">radial</a><br>
+<font color="#778899">sf</font><a href="sfradial2.html" title="Another version of radial transform. ">radial2</a><br>
+<font color="#778899">sf</font><a href="sfradon.html" title="High-resolution Radon transform. ">radon</a><br>
+<font color="#778899">sf</font><a href="sfstretch.html" title="Stretch of the time axis. ">radstretch</a><br>
+<font color="#778899">sf</font><a href="sfrays2.html" title="Ray tracing by a Runge-Kutta integrator.">rays2</a><br>
+<font color="#778899">sf</font><a href="sfrays2a.html" title="Ray tracing in VTI media by a Runge-Kutta integrator.">rays2a</a><br>
+<font color="#778899">sf</font><a href="sfrefer.html" title="Subtract a reference from a grid. ">refer</a><br>
+<font color="#778899">sf</font><a href="sfricker.html" title="Ricker wavelet estimation. ">ricker</a><br>
+<font color="#778899">sf</font><a href="sfricker1.html" title="Convolution with a Ricker wavelet. ">ricker1</a><br>
+<font color="#778899">sf</font><a href="sfricker2.html" title="Nonstationary convolution with a Ricker wavelet. Phase and Frequency can be time-varying. ">ricker2</a><br>
+<font color="#778899">sf</font><a href="sfrweab.html" title="Riemannian Wavefield Extrapolation: a,b coefficients ">rweab</a><br>
+<font color="#778899">sf</font><a href="sfrwezomig.html" title="Riemannian Wavefield Extrapolation: zero-offset modeling/migration ">rwezomig</a><br>
+<font color="#778899">sf</font><a href="sfstretch.html" title="Stretch of the time axis. ">scalestretch</a><br>
+<font color="#778899">sf</font><a href="sfsegyheader.html" title="Make a trace header file for segywrite.">segyheader</a><br>
+<font color="#778899">sf</font><a href="sfsegyread.html" title="Convert a SEG-Y or SU dataset to RSF.">segyread</a><br>
+<font color="#778899">sf</font><a href="sfsegywrite.html" title="Convert an RSF dataset to SEGY or SU.">segywrite</a><br>
+<font color="#778899">sf</font><a href="sfshot2cmp.html" title="Convert shots to CMPs for regular 2-D geometry. ">shot2cmp</a><br>
+<font color="#778899">sf</font><a href="sfshotholes.html" title="Remove random shot gathers from a 2-D dataset. ">shotholes</a><br>
+<font color="#778899">sf</font><a href="sfshotprop.html" title="Shot propagation. ">shotprop</a><br>
+<font color="#778899">sf</font><a href="sfsimivscan.html" title="Velocity analysis using similarity-weighted semblance.">simivscan</a><br>
+<font color="#778899">sf</font><a href="sfslant.html" title="Time-space-domain Radon transform (slant stack) ">slant</a><br>
+<font color="#778899">sf</font><a href="sfsrmva.html" title="3-D S/R WEMVA with extended split-step ">srmva</a><br>
+<font color="#778899">sf</font><a href="sfsrseidel.html" title="Amplitude balancing of a 2-D amplitude map. ">srseidel</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfsrsyn.html" title="Synthesize shot/receiver wavefields for 3-D SR migration ">srsyn</a><br>
+<font color="#778899">sf</font><a href="sfstacks.html" title="Constant-velocity stacks. ">stacks</a><br>
+<font color="#778899">sf</font><a href="sfstolt.html" title="Post-stack Stolt modeling/migration. ">stolt</a><br>
+<font color="#778899">sf</font><a href="sfstolt2.html" title="Post-stack Stolt modeling/migration. ">stolt2</a><br>
+<font color="#778899">sf</font><a href="sfstoltstretch.html" title="Stolt stretch. ">stoltstretch</a><br>
+<font color="#778899">sf</font><a href="sfstretch.html" title="Stretch of the time axis. ">stretch</a><br>
+<font color="#778899">sf</font><a href="sfstripes.html" title="Model the positions and dips of the constant offset, source, midpoint, and receiver strikes in a source vs. offset space. ">stripes</a><br>
+<font color="#778899">sf</font><a href="sfsegyread.html" title="Convert a SEG-Y or SU dataset to RSF.">suread</a><br>
+<font color="#778899">sf</font><a href="sfsegywrite.html" title="Convert an RSF dataset to SEGY or SU.">suwrite</a><br>
+<font color="#778899">sf</font><a href="sfstretch.html" title="Stretch of the time axis. ">t2chebstretch</a><br>
+<font color="#778899">sf</font><a href="sfstretch.html" title="Stretch of the time axis. ">t2stretch</a><br>
+<font color="#778899">sf</font><a href="sftan2ang.html" title="tangent to angle transformation ">tan2ang</a><br>
+<font color="#778899">sf</font><a href="sftaupmo.html" title="Normal moveout in tau-p domain. ">taupmo</a><br>
+<font color="#778899">sf</font><a href="sftime2depth.html" title="Time-to-depth conversion in V(z). ">time2depth</a><br>
+<font color="#778899">sf</font><a href="sftshift.html" title="Compute angle gathers for time-shift imaging condition ">tshift</a><br>
+<font color="#778899">sf</font><a href="sfvczo.html" title="Post-stack 2-D velocity continuation. ">vczo</a><br>
+<font color="#778899">sf</font><a href="sfvczo2.html" title="Post-stack 2-D velocity continuation in the time-stretch frequency domain. ">vczo2</a><br>
+<font color="#778899">sf</font><a href="sfvczo3.html" title="Post-stack 3-D velocity continuation. ">vczo3</a><br>
+<font color="#778899">sf</font><a href="sfvelmod.html" title="Velocity transform.">velmod</a><br>
+<font color="#778899">sf</font><a href="sfveltran.html" title="Hyperbolic Radon transform ">veltran</a><br>
+<font color="#778899">sf</font><a href="sfvoft.html" title="V(t) function for a linear V(Z) profile.">voft</a><br>
+<font color="#778899">sf</font><a href="sfvscan.html" title="Velocity analysis.">vscan</a><br>
+<font color="#778899">sf</font><a href="sfxlagtoang2d.html" title="SS(x-lag) to angle transformation (PP or PS waves) ">xlagtoang2d</a><br>
+<font color="#778899">sf</font><a href="sfzoeppritz.html" title="Testing Zoeppritz equation ">zoeppritz</a><br>
+<font color="#778899">sf</font><a href="sfzomig.html" title="3-D zero-offset modeling/migration with extended split-step">zomig</a><br>
+<font color="#778899">sf</font><a href="sfzomva.html" title="3-D zero-offset WEMVA ">zomva</a><br>
+</td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>trip/iwave/acd/main</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfacd.html" title="None">acd</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfacdcgne.html" title="None">acdcgne</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>trip/iwave/asg/main</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfasg.html" title="None">asg</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>trip/iwave/grid/main</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfstandardmodel.html" title="None">standardmodel</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>trip/iwave/trace/main</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sftowed_array.html" title="None">towed_array</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/aklokov</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfcrssemb.html" title="CRS-based semblance">crssemb</a><br>
+<font color="#778899">sf</font><a href="sfcrssemb3d.html" title="CRS-based semblance for 3D">crssemb3d</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfdagap.html" title="Reflection event apex protector/removal for dip-angle gathers.">dagap</a><br>
+<font color="#778899">sf</font><a href="sfdiptaper.html" title="Aperture optimization for migrated gathers in the dip-angle domain.">diptaper</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfdmigda.html" title="2D depth scattering-angle Kirchhoff migration  ">dmigda</a><br>
+<font color="#778899">sf</font><a href="sftmigda.html" title="3D time scattering-angle Kirchhoff migration  ">tmigda</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/bash</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfmpihello.html" title="MPI example, summation of vectors c = a + b ">mpihello</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/browaeys</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfkarman.html" title="Estimation of von Karman autocorrelation 1D spectrum. ">karman</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/chen</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfaddevent.html" title="Add a dispersive event to a seismic profile ">addevent</a><br>
+<font color="#778899">sf</font><a href="sfcoherence.html" title="3D Coherence Cube, C1, C2, C3 in one ">coherence</a><br>
+<font color="#778899">sf</font><a href="sfcomp.html" title="Compare 2 data set ">comp</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfldip.html" title="dip estimation by line interpolating pwd ">ldip</a><br>
+<font color="#778899">sf</font><a href="sflphfreq.html" title="frequency response of linear phase approximators ">lphfreq</a><br>
+<font color="#778899">sf</font><a href="sfmflt.html" title="3D Recursive median filter ">mflt</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfodip.html" title="omnidirectional dip estimation  ">odip</a><br>
+<font color="#778899">sf</font><a href="sfpca.html" title="KL transform. ">pca</a><br>
+<font color="#778899">sf</font><a href="sfpwdfreq.html" title="frequency response of PWD operator ">pwdfreq</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfshuffle.html" title="shuffle the data">shuffle</a><br>
+<font color="#778899">sf</font><a href="sfsignal.html" title="Generate signal series ">signal</a><br>
+<font color="#778899">sf</font><a href="sfwavmod.html" title="1-2-3D finite difference modeling ">wavmod</a><br>
+</td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/chengjb</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfdatasucjb2rsf2d.html" title="Convert 2D cjb-SU data to RSF format.">datasucjb2rsf2d</a><br>
+<font color="#778899">sf</font><a href="sfkine2dvti.html" title="2-D two-components wavefield modeling using pseudo-pure mode P-wave equation in VTI media.">kine2dvti</a><br>
+<font color="#778899">sf</font><a href="sfort3de.html" title="3-D three-components wavefield modeling using elastic wave equation in tilted ORT media.">ort3de</a><br>
+<font color="#778899">sf</font><a href="sfort3devectorlrkspace_double.html" title="None">ort3devectorlrkspace_double</a><br>
+<font color="#778899">sf</font><a href="sfort3dhomodevK.html" title="3D three-components projection deviation correction operators calculation in">ort3dhomodevK</a><br>
+<font color="#778899">sf</font><a href="sfort3dhomodevcK.html" title="Correct projection deviation in K-domian for 3-D pseudo-pure P-wave field in homogeneous ORT media.">ort3dhomodevcK</a><br>
+<font color="#778899">sf</font><a href="sfort3dpseudophomo.html" title="3-D three-components wavefield modeling using pseudo-pure mode P-wave equation in tilted ORT media.">ort3dpseudophomo</a><br>
+<font color="#778899">sf</font><a href="sfresamp.html" title="2D data resampling. ">resamp</a><br>
+<font color="#778899">sf</font><a href="sftti2de.html" title="2-D two-components wavefield modeling using original elastic displacement wave equation in TTI media.">tti2de</a><br>
+<font color="#778899">sf</font><a href="sftti2dekspacelr.html" title="None">tti2dekspacelr</a><br>
+<font color="#778899">sf</font><a href="sftti2dekspacelrsource.html" title="None">tti2dekspacelrsource</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sftti2delr.html" title="None">tti2delr</a><br>
+<font color="#778899">sf</font><a href="sftti2delrdec.html" title="None">tti2delrdec</a><br>
+<font color="#778899">sf</font><a href="sftti2delrdecomp.html" title="None">tti2delrdecomp</a><br>
+<font color="#778899">sf</font><a href="sftti2delrdecomp2p.html" title="None">tti2delrdecomp2p</a><br>
+<font color="#778899">sf</font><a href="sftti2delrsep.html" title="None">tti2delrsep</a><br>
+<font color="#778899">sf</font><a href="sftti2delrsep2p.html" title="None">tti2delrsep2p</a><br>
+<font color="#778899">sf</font><a href="sftti2desep.html" title="2-D two-components wavefield modeling using original elastic displacement wave equation in TTI media.">tti2desep</a><br>
+<font color="#778899">sf</font><a href="sftti2devectorlrsvd.html" title="None">tti2devectorlrsvd</a><br>
+<font color="#778899">sf</font><a href="sftti2devectorlrsvd_double.html" title="None">tti2devectorlrsvd_double</a><br>
+<font color="#778899">sf</font><a href="sftti2devectorlrsvdkspace_double.html" title="None">tti2devectorlrsvdkspace_double</a><br>
+<font color="#778899">sf</font><a href="sftti2devectorlrsvdkspace_double_stiffness.html" title="None">tti2devectorlrsvdkspace_double_stiffness</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sftti2dpseudop.html" title="2-D two-components wavefield modeling using pseudo-pure mode P-wave equation in TTI media.">tti2dpseudop</a><br>
+<font color="#778899">sf</font><a href="sftti2dpseudoplrsep.html" title="None">tti2dpseudoplrsep</a><br>
+<font color="#778899">sf</font><a href="sftti2dpseudosvlrsep.html" title="None">tti2dpseudosvlrsep</a><br>
+<font color="#778899">sf</font><a href="sftti3de.html" title="3-D three-components wavefield modeling using elasic wave equation in tilted TI media.">tti3de</a><br>
+<font color="#778899">sf</font><a href="sftti3delrsepP.html" title="None">tti3delrsepP</a><br>
+<font color="#778899">sf</font><a href="sftti3delrsepSH.html" title="None">tti3delrsepSH</a><br>
+<font color="#778899">sf</font><a href="sftti3delrsepSV.html" title="None">tti3delrsepSV</a><br>
+<font color="#778899">sf</font><a href="sftwolayer2dti.html" title="2-D two-components wavefield modeling using pseudo-pure mode P-wave equation in VTI media.">twolayer2dti</a><br>
+<font color="#778899">sf</font><a href="sftwolayer3dort.html" title="3-D three-components wavefield modeling using general anisotropy">twolayer3dort</a><br>
+<font color="#778899">sf</font><a href="sftwolayer3dti.html" title="2-D two-components wavefield modeling using pseudo-pure mode P-wave equation in VTI media.">twolayer3dti</a><br>
+<font color="#778899">sf</font><a href="sfvti2desep.html" title="2-D two-components wavefield modeling using original elastic displacement wave equation in VTI media.">vti2desep</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfvti2dpseudop.html" title="2-D two-components wavefield modeling using pseudo-pure mode P-wave equation in VTI media.">vti2dpseudop</a><br>
+<font color="#778899">sf</font><a href="sfvti2dpseudop1.html" title="2-D two-components wavefield modeling using pseudo-pure mode P-wave equation in VTI media.">vti2dpseudop1</a><br>
+<font color="#778899">sf</font><a href="sfvti2dpseudopfvs0.html" title="2-D two-components wavefield modeling using pseudo-pure mode P-wave equation in VTI media.">vti2dpseudopfvs0</a><br>
+<font color="#778899">sf</font><a href="sfvti2dpseudosv.html" title="2-D two-components wavefield modeling using pseudo-pure mode qSV-wave equation in VTI media.">vti2dpseudosv</a><br>
+<font color="#778899">sf</font><a href="sfvti3de.html" title="3-D three-components wavefield modeling using elasic wave equation in VTI media.">vti3de</a><br>
+<font color="#778899">sf</font><a href="sfvti3delrsepP.html" title="None">vti3delrsepP</a><br>
+<font color="#778899">sf</font><a href="sfvti3delrsepSH.html" title="None">vti3delrsepSH</a><br>
+<font color="#778899">sf</font><a href="sfvti3delrsepSV.html" title="None">vti3delrsepSV</a><br>
+<font color="#778899">sf</font><a href="sfvti3dpseudosh.html" title="3-D three-components wavefield modeling using pure mode SH-wave equation in 3D VTI media.">vti3dpseudosh</a><br>
+<font color="#778899">sf</font><a href="sfvti3dpseudosv.html" title="3-D three-components wavefield modeling using pseudo-pure mode SV-wave equation in 3D VTI media.">vti3dpseudosv</a><br>
+</td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/chenyk</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfbin2rsf.html" title="Binary file to RSF file ">bin2rsf</a><br>
+<font color="#778899">sf</font><a href="sfblend.html" title="Seismic blending operator.">blend</a><br>
+<font color="#778899">sf</font><a href="sfcabs.html" title="Absolute value complex data. ">cabs</a><br>
+<font color="#778899">sf</font><a href="sfdiff.html" title="Compare the difference of two rsf data sets with the same size. ">diff</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfemd.html" title="Empirical Mode Decomposition ">emd</a><br>
+<font color="#778899">sf</font><a href="sffxdecon.html" title="Random noise attenuation using f-x deconvolution ">fxdecon</a><br>
+<font color="#778899">sf</font><a href="sflow.html" title="Calculating local (signal-and-noise) orthogonalization weight (LOW)  ">low</a><br>
+<font color="#778899">sf</font><a href="sfmutter3.html" title="3D mutter (only linear). ">mutter3</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfprekirch.html" title="2-D Prestack Kirchhoff time migration with antialiasing. ">prekirch</a><br>
+<font color="#778899">sf</font><a href="sfsimidenoise.html" title="Random noise attenuation using local similarity ">simidenoise</a><br>
+<font color="#778899">sf</font><a href="sfsimidenoise1.html" title="Random noise attenuation using local similarity (different weighting approach) ">simidenoise1</a><br>
+<font color="#778899">sf</font><a href="sfsnr2.html" title="Compute signal-noise-ratio.">snr2</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfsvmf.html" title="Space varying median filtering. ">svmf</a><br>
+<font color="#778899">sf</font><a href="sfthreshold1.html" title="Soft or hard thresholding using exact-value or percentile thresholding.">threshold1</a><br>
+<font color="#778899">sf</font><a href="sftsmf.html" title="Two-step space varying median filtering. ">tsmf</a><br>
+</td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/cram</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfbspvel2.html" title="B-spline coefficients for a 2-D (an)isotropic velocity model. ">bspvel2</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfcram2.html" title="2-D angle-domain Kirchhoff migration based on escape tables. ">cram2</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfescrt2.html" title="Escape tables by ray tracing with escape equations in 2-D. ">escrt2</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfpcrdata2.html" title="Prepare data for 2-D angle-domain migration. ">pcrdata2</a><br>
+</td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/cwp</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfawefd2d.html" title="2D acoustic time-domain FD modeling ">awefd2d</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfawefd3d.html" title="3D acoustic time-domain FD modeling ">awefd3d</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/dellinger</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="vpvr.html" title="Plot impulse responses in 2 dimensions ">vpvr</a><br>
+</td><td width="25%" valign=top><a href="vpvr3d.html" title="Plot impulse responses in 3 dimensions ">vpvr3d</a><br>
+</td><td width="25%" valign=top><a href="vpvrtest.html" title="Plot impulse responses in 2 dimensions ">vpvrtest</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/dmerzlikin</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfcerf.html" title="Complex error function.">cerf</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfgpi3dzo.html" title="Gaussian weighting for ZO 3D case">gpi3dzo</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfpsovc.html" title="Pre-stack 2-D oriented velocity continuation. ">psovc</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfpsovcp.html" title="Pre-stack 2-D oriented velocity continuation. ">psovcp</a><br>
+</td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/ediazp</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfnderiv.html" title="">nderiv</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/fangg</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfexpand.html" title="Expand 2D data  ">expand</a><br>
+<font color="#778899">sf</font><a href="sfisolrsg1.html" title="Lowrank decomposition for 1-D isotropic wave propagation. ">isolrsg1</a><br>
+<font color="#778899">sf</font><a href="sfisolrsg2.html" title="Lowrank decomposition for 2-D isotropic wave propagation. ">isolrsg2</a><br>
+<font color="#778899">sf</font><a href="sfmatrix.html" title="multiply, for Matrix ">matrix</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfmms1dexp.html" title="1D method of manufactured solution using Gaussian pulsa">mms1dexp</a><br>
+<font color="#778899">sf</font><a href="sfsgfd1.html" title="1-D staggered Grid Finite-difference wave extrapolation ">sgfd1</a><br>
+<font color="#778899">sf</font><a href="sfsglfd1pml.html" title="1-D Lowrank Finite-difference wave extrapolation ">sglfd1pml</a><br>
+<font color="#778899">sf</font><a href="sfsglfd2pml.html" title="2-D Lowrank Finite-difference wave extrapolation on staggered grid">sglfd2pml</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfsglfdc1.html" title="1D Lowrank FD coefficient of d/dx on staggered grid (optimized)">sglfdc1</a><br>
+<font color="#778899">sf</font><a href="sfsglfdcp1.html" title="Relative error of phase velocity of 16-th order 1D SG Lowrank FD and 1D FD coefficient ">sglfdcp1</a><br>
+<font color="#778899">sf</font><a href="sfsglfdcx1.html" title="1D Lowrank FD coefficient of d/dx on staggered grid">sglfdcx1</a><br>
+<font color="#778899">sf</font><a href="sfsglfdcx2_7.html" title="2D Lowrank FD coefficient of d/dx on staggered grid (optimized)">sglfdcx2_7</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfsglfdcz2_7.html" title="2D Lowrank FD coefficient of d/dx on staggered grid">sglfdcz2_7</a><br>
+<font color="#778899">sf</font><a href="sfsglr1.html" title="1-D lowrank wave propagation on staggered grid">sglr1</a><br>
+<font color="#778899">sf</font><a href="sfsglr2.html" title="Simple 2-D wave propagation on staggered grid">sglr2</a><br>
+</td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/fbroggin</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfawefd2d_fo.html" title="Finite-difference time-domain (FDTD) wave propagation modeling in lossless acoustic 2D media.">awefd2d_fo</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfmarchenko.html" title="Marchenko-Wapenaar-Broggini iterative scheme">marchenko</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/fomels</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfabalance.html" title="Amplitude balancing. ">abalance</a><br>
+<font color="#778899">sf</font><a href="sfangle.html" title="Illustration of angle gathers.">angle</a><br>
+<font color="#778899">sf</font><a href="sfangle2.html" title="Another illustration of angle gathers.">angle2</a><br>
+<font color="#778899">sf</font><a href="sfanisolr2.html" title="Lowrank decomposition for 2-D anisotropic wave propagation (Real number).">anisolr2</a><br>
+<font color="#778899">sf</font><a href="sfbilat2.html" title="2-D bilateral filtering ">bilat2</a><br>
+<font color="#778899">sf</font><a href="sfbyte2jpg.html" title="Convert byte RSF to a JPEG image. ">byte2jpg</a><br>
+<font color="#778899">sf</font><a href="sfbyte2tif.html" title="Convert byte RSF to a TIFF image. ">byte2tif</a><br>
+<font color="#778899">sf</font><a href="sfcdivn.html" title="Smooth division for complex data. ">cdivn</a><br>
+<font color="#778899">sf</font><a href="sfcgi.html" title="A generic CGI script">cgi</a><br>
+<font color="#778899">sf</font><a href="sfchebvc.html" title="Post-stack 2-D velocity continuation by Chebyshev-tau method. ">chebvc</a><br>
+<font color="#778899">sf</font><a href="sfclpf.html" title="Local prediction filter for complex numbers (n-dimensional). ">clpf</a><br>
+<font color="#778899">sf</font><a href="sfcltft.html" title="Complex local time-frequency transform. ">cltft</a><br>
+<font color="#778899">sf</font><a href="sfcpef.html" title="1-D prediction-error filter estimation from complex data ">cpef</a><br>
+<font color="#778899">sf</font><a href="sfdeblur.html" title="Non-stationary debluring by inversion ">deblur</a><br>
+<font color="#778899">sf</font><a href="sfdivn.html" title="Smooth division. ">divn</a><br>
+<font color="#778899">sf</font><a href="sfdix.html" title="Convert RMS to interval velocity using LS and shaping regularization. ">dix</a><br>
+<font color="#778899">sf</font><a href="sfeikonal.html" title="Fast marching eikonal solver (3-D). ">eikonal</a><br>
+<font color="#778899">sf</font><a href="sfeikonalvti.html" title="Fast marching eikonal solver in VTI media. ">eikonalvti</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sferf.html" title="Bandpass filtering using erf function. ">erf</a><br>
+<font color="#778899">sf</font><a href="sfexgr.html" title="Exact group velocity in VTI media ">exgr</a><br>
+<font color="#778899">sf</font><a href="sffft.html" title="Fourier transform as a linear operator">fft</a><br>
+<font color="#778899">sf</font><a href="sffftexp0.html" title="2-D FFT-based zero-offset exploding reflector modeling/migration  ">fftexp0</a><br>
+<font color="#778899">sf</font><a href="sffftexp3.html" title="3-D FFT-based zero-offset exploding reflector modeling/migration  ">fftexp3</a><br>
+<font color="#778899">sf</font><a href="sffftwave1.html" title="1-D FFT wave extrapolation ">fftwave1</a><br>
+<font color="#778899">sf</font><a href="sffftwave2.html" title="Simple 2-D wave propagation ">fftwave2</a><br>
+<font color="#778899">sf</font><a href="sffftwave3.html" title="Simple 3-D wave propagation ">fftwave3</a><br>
+<font color="#778899">sf</font><a href="sffocus.html" title="Focusing indicator. ">focus</a><br>
+<font color="#778899">sf</font><a href="sfgaussmooth.html" title="Recursive Gaussian smoothing on the fast axis. ">gaussmooth</a><br>
+<font color="#778899">sf</font><a href="sfiphase.html" title="Smooth estimate of instantaneous frequency. ">iphase</a><br>
+<font color="#778899">sf</font><a href="sfipick.html" title="Simple interactive picking">ipick</a><br>
+<font color="#778899">sf</font><a href="sfisolr2.html" title="Lowrank decomposition for 2-D isotropic wave propagation.">isolr2</a><br>
+<font color="#778899">sf</font><a href="sfisolr3.html" title="Lowrank decomposition for 3-D isotropic wave propagation. ">isolr3</a><br>
+<font color="#778899">sf</font><a href="sfjpg2byte.html" title="Convert JPEG image to byte RSF. ">jpg2byte</a><br>
+<font color="#778899">sf</font><a href="sflas2rsf.html" title="Convert LAS-2 well logs to RSF">las2rsf</a><br>
+<font color="#778899">sf</font><a href="sflocalskew.html" title="Rotate phase and compute local skewness. ">localskew</a><br>
+<font color="#778899">sf</font><a href="sflpf.html" title="Local prediction filter (n-dimensional). ">lpf</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sflsfit.html" title="Simple least-squares regression. ">lsfit</a><br>
+<font color="#778899">sf</font><a href="sfmedian.html" title="Compute median on the first axis. ">median</a><br>
+<font color="#778899">sf</font><a href="sfmffit.html" title="Fitting multi-focusing approximations ">mffit</a><br>
+<font color="#778899">sf</font><a href="sfmig3.html" title="3-D Kirchhoff time migration with antialiasing. ">mig3</a><br>
+<font color="#778899">sf</font><a href="sfnsmooth1.html" title="1-D non-stationary smoothing. ">nsmooth1</a><br>
+<font color="#778899">sf</font><a href="sfocparcel.html" title="Patching test for out-of-core patching. ">ocparcel</a><br>
+<font color="#778899">sf</font><a href="sfoctentwt.html" title="Tent-like weight for out-of-core patching. ">octentwt</a><br>
+<font color="#778899">sf</font><a href="sfofilp.html" title="2-D missing data interpolation by differential offset continuation. ">ofilp</a><br>
+<font color="#778899">sf</font><a href="sfortho.html" title="Orthogonolize signal and noise. ">ortho</a><br>
+<font color="#778899">sf</font><a href="sfpatch.html" title="Patching (N-dimensional). ">patch</a><br>
+<font color="#778899">sf</font><a href="sfphaserot.html" title="Non-stationary phase rotation. ">phaserot</a><br>
+<font color="#778899">sf</font><a href="sfpick.html" title="Automatic picking from semblance-like panels.">pick</a><br>
+<font color="#778899">sf</font><a href="sfpick3.html" title="Automatic picking  from 3-D semblance-like panels. ">pick3</a><br>
+<font color="#778899">sf</font><a href="sfplane.html" title="Generating plane waves with steering filters. ">plane</a><br>
+<font color="#778899">sf</font><a href="sfresults.html" title="Explore project results">results</a><br>
+<font color="#778899">sf</font><a href="sfriesz.html" title="Compute 2-D Riesz transform. ">riesz</a><br>
+<font color="#778899">sf</font><a href="sfshapeagc.html" title="Automatic gain control by shaping regularization. ">shapeagc</a><br>
+<font color="#778899">sf</font><a href="sfshapefill.html" title="Missing data interpolation in 2-D by Laplacian regularization. ">shapefill</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfshearer.html" title="Preconditioning for traveltime picking. ">shearer</a><br>
+<font color="#778899">sf</font><a href="sfshift1.html" title="Generate shifts for 1-D regularized autoregression. ">shift1</a><br>
+<font color="#778899">sf</font><a href="sfsimenv.html" title="Rotate phase and compute similarity with enevelope. ">simenv</a><br>
+<font color="#778899">sf</font><a href="sfsimilarity.html" title="Local similarity measure between two datasets. ">similarity</a><br>
+<font color="#778899">sf</font><a href="sfsmoothreg.html" title="Smoothing in 1-D by simple regularization.">smoothreg</a><br>
+<font color="#778899">sf</font><a href="sftif2byte.html" title="Convert TIFF image to byte RSF. ">tif2byte</a><br>
+<font color="#778899">sf</font><a href="sftimefreq.html" title="Time-frequency analysis using local attributes. ">timefreq</a><br>
+<font color="#778899">sf</font><a href="sftwofreq2.html" title="2-D two spectral component estimation.">twofreq2</a><br>
+<font color="#778899">sf</font><a href="sfvelcon.html" title="Post-stack velocity continuation by implicit finite differences ">velcon</a><br>
+<font color="#778899">sf</font><a href="sfwarp1.html" title="Multicomponent data registration by 1-D warping. ">warp1</a><br>
+<font color="#778899">sf</font><a href="sfwarpadd.html" title="Add a perturbation to the warping function. ">warpadd</a><br>
+<font color="#778899">sf</font><a href="sfwarpscan.html" title="Multicomponent data registration analysis. ">warpscan</a><br>
+<font color="#778899">sf</font><a href="sfwxipick.html" title="Simple interactive picking">wxipick</a><br>
+<font color="#778899">sf</font><a href="sfwxresults.html" title="Explore project results">wxresults</a><br>
+<font color="#778899">sf</font><a href="sfwxzoom.html" title="Show data with zoom">wxzoom</a><br>
+<font color="#778899">sf</font><a href="sfzoom.html" title="Show data with zoom">zoom</a><br>
+</td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/gchliu</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfcshifts2.html" title="Generate shifts for 2-D regularized autoregression in complex domain. From (x,y,f) to (x,y,s,f) ">cshifts2</a><br>
+<font color="#778899">sf</font><a href="sfshiftd1.html" title="Generate shifts for 1-D regularized autoregression double sides (not include the trace self). ">shiftd1</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfshiftd2.html" title="Generate shifts for 1-D regularized autoregression double sides (include the trace self for 3D shifts). ">shiftd2</a><br>
+<font color="#778899">sf</font><a href="sfsmstack.html" title="Stack a dataset over the second dimensions by smart stacking. ">smstack</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfsnrstack.html" title="Stack a dataset over the second dimensions by SNR weighted method. ">snrstack</a><br>
+<font color="#778899">sf</font><a href="sfwcorr.html" title="Stack a dataset over the second dimensions by SNR weighted method. ">wcorr</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/gee</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfautocorr.html" title="Autocorrelation for helix filters. ">autocorr</a><br>
+<font color="#778899">sf</font><a href="sfburstnoise.html" title="Synthetics with bursts of noise. ">burstnoise</a><br>
+<font color="#778899">sf</font><a href="sfcconv.html" title="1-D convolution with complex numbers. ">cconv</a><br>
+<font color="#778899">sf</font><a href="sfconflict.html" title="2-D synthetic data of conflicting dips. ">conflict</a><br>
+<font color="#778899">sf</font><a href="sfconv.html" title="1-D convolution. ">conv</a><br>
+<font color="#778899">sf</font><a href="sfconvf.html" title="1-D convolution, adjoint is the filter. ">convf</a><br>
+<font color="#778899">sf</font><a href="sfcpef1.html" title="Estimate complex PEF on the first axis. ">cpef1</a><br>
+<font color="#778899">sf</font><a href="sfcube.html" title="Simple cube fault synthetic ">cube</a><br>
+<font color="#778899">sf</font><a href="sfdeburst.html" title="Remove bursty noise by IRLS. ">deburst</a><br>
+<font color="#778899">sf</font><a href="sfdecon.html" title="Deconvolution (N-dimensional).">decon</a><br>
+<font color="#778899">sf</font><a href="sfdespike.html" title="Remove spikes in by sliding 1-D medians. ">despike</a><br>
+<font color="#778899">sf</font><a href="sfdespike2.html" title="Remove spikes in by sliding 2-D medians. ">despike2</a><br>
+<font color="#778899">sf</font><a href="sffactorm.html" title="Plane-wave destruction with 3-D plane-wave filter. ">factorm</a><br>
+<font color="#778899">sf</font><a href="sffactorn.html" title="Missing data interpolation with 3-D plane-wave filter. ">factorn</a><br>
+<font color="#778899">sf</font><a href="sfframe.html" title="Create a frame for binning.">frame</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfhconv.html" title="Convolution of two helix filters. ">hconv</a><br>
+<font color="#778899">sf</font><a href="sfheat3.html" title="Finite-difference 3-D heat-flow equation using helix ">heat3</a><br>
+<font color="#778899">sf</font><a href="sfhelicon.html" title="Multidimensional convolution and deconvolution by helix transform. ">helicon</a><br>
+<font color="#778899">sf</font><a href="sfhole.html" title="Cut an elliptic hole in data (for interpolation tests).">hole</a><br>
+<font color="#778899">sf</font><a href="sfhpef.html" title="Multi-dimensional PEF (prediction error filter) estimation on a helix. ">hpef</a><br>
+<font color="#778899">sf</font><a href="sfidempatch.html" title="Patching test. ">idempatch</a><br>
+<font color="#778899">sf</font><a href="sfimospray.html" title="Inversion of constant-velocity nearest-neighbor inverse NMO. ">imospray</a><br>
+<font color="#778899">sf</font><a href="sfinvbin.html" title="Data interpolation in 2-D slices using helix preconditioning. ">invbin</a><br>
+<font color="#778899">sf</font><a href="sfinvbin1.html" title="1-D inverse interpolation. ">invbin1</a><br>
+<font color="#778899">sf</font><a href="sfinvrec1.html" title="1-D inverse interpolation with recursive filtering. ">invrec1</a><br>
+<font color="#778899">sf</font><a href="sfkolmog.html" title="Kolmogoroff spectral factorization. ">kolmog</a><br>
+<font color="#778899">sf</font><a href="sflevint.html" title="Leveler inverse interpolation in 1-D. ">levint</a><br>
+<font color="#778899">sf</font><a href="sflight.html" title="Apply 2-D directional high-pass to highlight data.">light</a><br>
+<font color="#778899">sf</font><a href="sflopef.html" title="Local Prediction-Error Filter (1-D, 2-D, and 3-D). ">lopef</a><br>
+<font color="#778899">sf</font><a href="sflosignoi.html" title="Local signal and noise separation (N-dimensional).">losignoi</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sflpef.html" title="Find PEF on aliased traces. ">lpef</a><br>
+<font color="#778899">sf</font><a href="sfmake.html" title="Simple 2-D synthetics with crossing plane waves.">make</a><br>
+<font color="#778899">sf</font><a href="sfmaskinv.html" title="Missing data interpolation using one or two prediction-error filters. ">maskinv</a><br>
+<font color="#778899">sf</font><a href="sfmisif.html" title="Find MISSing Input values and Filter in 1-D. ">misif</a><br>
+<font color="#778899">sf</font><a href="sfmiss.html" title="Multi-dimensional missing data interpolation. ">miss</a><br>
+<font color="#778899">sf</font><a href="sfmiss1.html" title="Missing data interpolation in 1-D. ">miss1</a><br>
+<font color="#778899">sf</font><a href="sfmsmiss.html" title="Multiscale missing data interpolation (N-dimensional). ">msmiss</a><br>
+<font color="#778899">sf</font><a href="sfmspef.html" title="Multi-scale PEF estimation.">mspef</a><br>
+<font color="#778899">sf</font><a href="sfnhelicon.html" title="Non-stationary helix convolution and deconvolution. ">nhelicon</a><br>
+<font color="#778899">sf</font><a href="sfnpef.html" title="Estimate Non-stationary PEF in N dimensions.">npef</a><br>
+<font color="#778899">sf</font><a href="sfparcel.html" title="Patching test.">parcel</a><br>
+<font color="#778899">sf</font><a href="sfpefdeburst.html" title="Burst noise removal using PEF. ">pefdeburst</a><br>
+<font color="#778899">sf</font><a href="sfpfactor2.html" title="Plane prediction filter on a helix. ">pfactor2</a><br>
+<font color="#778899">sf</font><a href="sfqdome.html" title="3-D synthetic image from Jon Claerbout. ">qdome</a><br>
+<font color="#778899">sf</font><a href="sfrandline.html" title="Construct data from random lines ">randline</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfsigmoid.html" title="2-D synthetic model from J.F.Claerbout. ">sigmoid</a><br>
+<font color="#778899">sf</font><a href="sfsignoi.html" title="Signal and noise separation (N-dimensional). ">signoi</a><br>
+<font color="#778899">sf</font><a href="sfsplinebank.html" title="Prepare a filter bank for B-spline plane wave filters ">splinebank</a><br>
+<font color="#778899">sf</font><a href="sfsplineplane.html" title="B-spline plane-wave filter ">splineplane</a><br>
+<font color="#778899">sf</font><a href="sfsynmarine.html" title="Simple synthetic marine data example. ">synmarine</a><br>
+<font color="#778899">sf</font><a href="sfsyntop.html" title="Make synthetic topography map. ">syntop</a><br>
+<font color="#778899">sf</font><a href="sftentwt.html" title="Tent-like weight for patching.">tentwt</a><br>
+<font color="#778899">sf</font><a href="sftspline.html" title="Helix filters for spline in tension ">tspline</a><br>
+<font color="#778899">sf</font><a href="sfungrad.html" title="Phase unwrapping by least squares. ">ungrad</a><br>
+<font color="#778899">sf</font><a href="sfvelcon3.html" title="3-D finite-difference velocity continuation on a helix ">velcon3</a><br>
+<font color="#778899">sf</font><a href="sfwavemovie.html" title="Helmholtz factorization ">wavemovie</a><br>
+<font color="#778899">sf</font><a href="sfwilson.html" title="Wilson-Burg spectral factorization. ">wilson</a><br>
+</td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/godwinj</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfbrowser.html" title="">browser</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfgui.html" title="">gui</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfpysvd.html" title="Perform SVD on a matrix using SCIPY.  ">pysvd</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfthreedcube.html" title="Interactively displays a 3D cube of RSF data using Python + MayaVi2 + VTK.  ">threedcube</a><br>
+</td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/hpcss</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfacd2d.html" title="time-domain acoustic FD modeling ">acd2d</a><br>
+<font color="#778899">sf</font><a href="sfeacd2d.html" title="Extended time-domain acoustic FD modeling ">eacd2d</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfwavedoc.html" title="Rice HPCSS seismic modeling and migration. ">rtm</a><br>
+<font color="#778899">sf</font><a href="sfvam.html" title="Create a layered model. ">vam</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfwavedoc.html" title="Rice HPCSS seismic modeling and migration. ">wave</a><br>
+<font color="#778899">sf</font><a href="sfwavedoc.html" title="Rice HPCSS seismic modeling and migration. ">wave24</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfwavedoc.html" title="Rice HPCSS seismic modeling and migration. ">wavedoc</a><br>
+</td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/ivlad</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfcreate.html" title="Creates just the ascii header from parameters">create</a><br>
+<font color="#778899">sf</font><a href="sfcsqrtf.html" title="Complex square root. Good example of I/O loop for applying a function.">csqrtf</a><br>
+<font color="#778899">sf</font><a href="sfcsv2rsf.html" title="Convert a delimited-text ASCII file to RSF binary floating point or int.">csv2rsf</a><br>
+<font color="#778899">sf</font><a href="sffiledims.html" title="Computes number of dimensions and their values">filedims</a><br>
+<font color="#778899">sf</font><a href="sffileflush.html" title="Creates just the ascii header from parameters">fileflush</a><br>
+<font color="#778899">sf</font><a href="sfgettype.html" title="Displays numerical type of a dataset">gettype</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfhist2.html" title="Compute a 2-D histogram of integer- or float-valued input data">hist2</a><br>
+<font color="#778899">sf</font><a href="sfinvalid.html" title="Finds RSF files with missing or incomplete binaries or headers.">invalid</a><br>
+<font color="#778899">sf</font><a href="sfleftsize.html" title="Computes Ni+1 x Ni+2 x ...">leftsize</a><br>
+<font color="#778899">sf</font><a href="sflmo.html" title="Linear move-out in the frequency domain">lmo</a><br>
+<font color="#778899">sf</font><a href="sfmulticheck.html" title="Check whether all values in a dataset are a multiple of a factor or not ">multicheck</a><br>
+<font color="#778899">sf</font><a href="sfpad2nextfastsize.html" title="How much to pad to get to next fast c2c FFT size (factors: 2,3 and 5)">pad2nextfastsize</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfpclip.html" title="Percentile clip. Shell for sfclip(sfquantile(input)).">pclip</a><br>
+<font color="#778899">sf</font><a href="sfprep4plot.html" title="Resamples a 2-D dataset to the desired picture resolution, with antialias">prep4plot</a><br>
+<font color="#778899">sf</font><a href="sfquantile.html" title="Computes what clip value corresponds to a given pclip.">quantile</a><br>
+<font color="#778899">sf</font><a href="sfrmrf.html" title="Recursively removes all RSF headers in a directory (associated binaries too)">rmrf</a><br>
+<font color="#778899">sf</font><a href="sfseekwin.html" title="Test for the seek wrapper function in the F90 API">seekwin</a><br>
+<font color="#778899">sf</font><a href="sfsparsify.html" title="Transforms regular 2-D array to sparse array">sparsify</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfsplit.html" title="Splits file into slices along the last dimension">split</a><br>
+<font color="#778899">sf</font><a href="sftouch.html" title="Applies the Unix command touch to binaries of RSF datasets in a directory.">touch</a><br>
+<font color="#778899">sf</font><a href="sfwiki2static.html" title="Downloads the Madagascar wiki as static html">wiki2static</a><br>
+<font color="#778899">sf</font><a href="sfwuab.html" title="Wrapper for Utilities Acting on Binaries">wuab</a><br>
+<font color="#778899">sf</font><a href="sfximage.html" title="Displays a 2-D RSF file with Seismic Unix's ximage">ximage</a><br>
+<font color="#778899">sf</font><a href="sfzcp.html" title="Copies header of float file, fills output binary with zeros">zcp</a><br>
+</td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/jeff</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfewefd2d_omp.html" title="2D elastic time-domain FD modeling ">ewefd2d_omp</a><br>
+<font color="#778899">sf</font><a href="sfewefd3d_omp.html" title="3D elastic time-domain FD modeling ">ewefd3d_omp</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfmodelcreate.html" title="Create a dipping layer model for HTI testing purposes.  Has fixed velocity structure, but can change dip of layer and degree of anisotropy.">modelcreate</a><br>
+<font color="#778899">sf</font><a href="sfwexmig.html" title="3-D modeling/migration with extended SSF ">wexmig</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfwexmva.html" title="3-D S/R WEMVA with extended split-step ">wexmva</a><br>
+<font color="#778899">sf</font><a href="sfwexwfl.html" title="3-D wavefield extrapolation with extended SSF ">wexwfl</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/jennings</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfbooklist.html" title="List properties of Madagascar example book directories.">booklist</a><br>
+<font color="#778899">sf</font><a href="sffiglist.html" title="Compare Vplot files in Fig and Lock directories">figlist</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sflistminmax.html" title="Construct incremental minimum or maximum lists from an RSF file.">listminmax</a><br>
+<font color="#778899">sf</font><a href="sfminmax.html" title="Element by element minimum or maximum of two RSF files.">minmax</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfsizes.html" title="Display the size of RSF files.">sizes</a><br>
+<font color="#778899">sf</font><a href="sftestlist.html" title="Inventory test results of Madagascar example book directories.">testlist</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/jingwei</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfadiradon2.html" title="direct adjoint 2to2 hyper Radon transform (single integral, nearest point interpolation)">adiradon2</a><br>
+<font color="#778899">sf</font><a href="sfdiiradon2.html" title="direct 2to2 hyper Radon transform (double integral, exact)">diiradon2</a><br>
+<font color="#778899">sf</font><a href="sfdiradon2.html" title="direct 2to2 hyper Radon transform (single integral, nearest point interpolation)">diradon2</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfdiradon32.html" title="direct azimuthally isotropic 3to2 hyper Radon transform">diradon32</a><br>
+<font color="#778899">sf</font><a href="sfinmo3_ort.html" title="3-D Inverse normal moveout using orthogonal parametrization">inmo3_ort</a><br>
+<font color="#778899">sf</font><a href="sfradon2.html" title="2to2 Radon transform (using 2to2 butterfly)">radon2</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfradon32.html" title="azimuthally isotropic 3to2 Radon transform (using 2to2 butterfly)">radon32</a><br>
+<font color="#778899">sf</font><a href="sfradon34.html" title="azimuthally anisotropic 3to4 Radon transform (using 3to3 butterfly)">radon34</a><br>
+<font color="#778899">sf</font><a href="sfsum.html" title="adjoint test ">sum</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/jmonsegny</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfgpurayt.html" title="Parallel shortest path ray tracing">gpurayt</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/jsun</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfacqgeo.html" title="generating acquisition geometry file for sfmpicfftrtm  ">acqgeo</a><br>
+<font color="#778899">sf</font><a href="sfcfftwave1d.html" title="1-D complex lowrank FFT wave extrapolation using complex to complex fft using initial condition">cfftwave1d</a><br>
+<font color="#778899">sf</font><a href="sfcfftwave2.html" title="Complex 2-D wave propagation (with multi-threaded FFTW3)">cfftwave2</a><br>
+<font color="#778899">sf</font><a href="sfcfftwave2omp.html" title="Complex 2-D wave propagation (with multi-threaded FFTW3)">cfftwave2omp</a><br>
+<font color="#778899">sf</font><a href="sfcfftwave2taper.html" title="Complex 2-D wave propagation (with multi-threaded FFTW3)">cfftwave2taper</a><br>
+<font color="#778899">sf</font><a href="sfcfftwave3.html" title="Simple 3-D lowrank onestep wave propagation ">cfftwave3</a><br>
+<font color="#778899">sf</font><a href="sfcisolr2.html" title="Complex lowrank decomposition for 2-D isotropic wave propagation. ">cisolr2</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfcisolr2abc.html" title="Complex lowrank decomposition for 2-D isotropic wave propagation with absorbing boundaries. ">cisolr2abc</a><br>
+<font color="#778899">sf</font><a href="sfcisolr2abc1.html" title="Complex lowrank decomposition for 2-D isotropic wave propagation with absorbing boundaries. ">cisolr2abc1</a><br>
+<font color="#778899">sf</font><a href="sfcisolr2grad.html" title="Complex lowrank decomposition for 2-D isotropic wave propagation (including velocity gradient term). ">cisolr2grad</a><br>
+<font color="#778899">sf</font><a href="sfcmatrix.html" title="multiply, for complex Matrix ">cmatrix</a><br>
+<font color="#778899">sf</font><a href="sfewdlr3.html" title="None">ewdlr3</a><br>
+<font color="#778899">sf</font><a href="sfewdlr3d.html" title="3D elastic recursive integral time extrapolation using KISS-FFT">ewdlr3d</a><br>
+<font color="#778899">sf</font><a href="sfewelr3.html" title="None">ewelr3</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfewelr3d.html" title="3D elastic recursive integral time extrapolation using shared-memory parallel FFT">ewelr3d</a><br>
+<font color="#778899">sf</font><a href="sffftwave3p.html" title="Simple 3-D wave propagation with multi-threaded fftw3">fftwave3p</a><br>
+<font color="#778899">sf</font><a href="sffraclr2.html" title="Complex lowrank decomposition for 2-D viscoacoustic isotropic wave propagation. ">fraclr2</a><br>
+<font color="#778899">sf</font><a href="sfimagsrc.html" title="Convolution with a Ricker wavelet. ">imagsrc</a><br>
+<font color="#778899">sf</font><a href="sfmpicfftrtm.html" title="Lowrank decomposition for 3-D isotropic wave propagation. ">mpicfftrtm</a><br>
+<font color="#778899">sf</font><a href="sfortholr3.html" title="Lowrank decomposition for 3-D orthorhombic wave propagation (Real). ">ortholr3</a><br>
+<font color="#778899">sf</font><a href="sfwcfftexp2.html" title="2-D FFT-based zero-offset exploding reflector modeling/migration  ">wcfftexp2</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfzanisolr2.html" title="Lowrank decomposition for 2-D anisotropic wave propagation (Complex). ">zanisolr2</a><br>
+<font color="#778899">sf</font><a href="sfzfraclr2.html" title="Complex lowrank decomposition for 2-D viscoacoustic isotropic wave propagation. ">zfraclr2</a><br>
+<font color="#778899">sf</font><a href="sfzolsrtm2.html" title="2-D FFT-based zero-offset exploding reflector modeling/migration linear operator ">zolsrtm2</a><br>
+<font color="#778899">sf</font><a href="sfzortholr3.html" title="Lowrank decomposition for 3-D orthorhombic wave propagation. ">zortholr3</a><br>
+<font color="#778899">sf</font><a href="sfzortmgmres.html" title="2-D FFT-based zero-offset exploding reflector modeling/migration linear operator ">zortmgmres</a><br>
+</td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/jun</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfvelinvww.html" title="None">velinvww</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfvelxf.html" title="None">velxf</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/jyan</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfconvolve2.html" title="2D convolution with arbitrary filter ">convolve2</a><br>
+<font color="#778899">sf</font><a href="sfederiv2d.html" title="">ederiv2d</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfederiv3d.html" title="">ederiv3d</a><br>
+<font color="#778899">sf</font><a href="sfederiv3dfilters.html" title="">ederiv3dfilters</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfewefd2dtti.html" title="elastic time-domain FD modeling ">ewefd2dtti</a><br>
+<font color="#778899">sf</font><a href="sfewefd3dtti.html" title="3D elastic time-domain FD modeling ">ewefd3dtti</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfstiff3d.html" title="stiffness tensor for 3D TTI models">stiff3d</a><br>
+</td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/karl</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfkarlpocs.html" title="n-D POCS interpolation using a general Lp-norm optimization">karlpocs</a><br>
+<font color="#778899">sf</font><a href="sftahagc.html" title="Read Trace And Header (tah) from standard input, MUTE ">tahagc</a><br>
+<font color="#778899">sf</font><a href="sftahgain.html" title="Read Trace And Header (tah) from standard input and apply GAIN">tahgain</a><br>
+<font color="#778899">sf</font><a href="sftahgethw.html" title="Trace And Header GET Header Word prints trace headers.">tahgethw</a><br>
+<font color="#778899">sf</font><a href="sftahheadermath.html" title="Trace And Header MEADER MATH">tahheadermath</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sftahmakeskey.html" title="Trace And Header MAKE Secondary KEY.">tahmakeskey</a><br>
+<font color="#778899">sf</font><a href="sftahmute.html" title="Read Trace And Header (tah) from standard input, MUTE.">tahmute</a><br>
+<font color="#778899">sf</font><a href="sftahnmo.html" title="Trace And Header Normal MoveOut">tahnmo</a><br>
+<font color="#778899">sf</font><a href="sftahpef.html" title="Trace And Header Prediction Error Filtering ">tahpef</a><br>
+<font color="#778899">sf</font><a href="sftahread.html" title="Read Trace And Header from separate files, combine, write to pipe">tahread</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sftahscdecon.html" title="Trace And Header Surface Consistant Decon.">tahscdecon</a><br>
+<font color="#778899">sf</font><a href="sftahscscale.html" title="Surface Consistant SCALE - Compute & apply surface consistant scale">tahscscale</a><br>
+<font color="#778899">sf</font><a href="sftahsort.html" title="Read Trace And Header from separate files in sorted order, write to pipe">tahsort</a><br>
+<font color="#778899">sf</font><a href="sftahstack.html" title="Read Trace And Header (tah) from STDIN, stack matching header keys">tahstack</a><br>
+<font color="#778899">sf</font><a href="sftahstatic.html" title="Trace And Header STATIC">tahstatic</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sftahwindow.html" title="Trace And Header WINDOW">tahwindow</a><br>
+<font color="#778899">sf</font><a href="sftahwrite.html" title="Read Trace And Header (tah) from standard input, write to separate files">tahwrite</a><br>
+</td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/kourkina</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfcameron2d.html" title="Convert Dix velocity to interval velocity. ">cameron2d</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfspiral.html" title="Spiral function ">spiral</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfve2d.html" title="Convert interval velocity to Dix velocity ">ve2d</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/lcasasan</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfintervalVTI.html" title="Interval/Effective VTI parameters from Effective/Interval profiles ">intervalVTI</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfsmoothderLS.html" title="Convert input to its derivative using LS and shaping regularization">smoothderLS</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/lexing</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfclrmatrix.html" title="Lowrank matrix decomposition for a complex matrix">clrmatrix</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sflrmatrix.html" title="Lowrank matrix decomposition">lrmatrix</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/llisiw</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfdsreiko.html" title="Double square-root eikonal solver (2D) ">dsreiko</a><br>
+<font color="#778899">sf</font><a href="sfdsreiko0.html" title="Double square-root eikonal solver (2D + explicit) ">dsreiko0</a><br>
+<font color="#778899">sf</font><a href="sfdsrtomo.html" title="Prestack first-arrival traveltime tomography (DSR) ">dsrtomo</a><br>
+<font color="#778899">sf</font><a href="sfeikods.html" title="Fast marching with source perturbation. ">eikods</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sffatomoomp.html" title="First-arrival Traveltime Tomography (OMP) ">fatomoomp</a><br>
+<font color="#778899">sf</font><a href="sfftoper.html" title="First-arrival Traveltime Tomography (linear operator) ">ftoper</a><br>
+<font color="#778899">sf</font><a href="sfirays.html" title="Fast marching for image rays ">irays</a><br>
+<font color="#778899">sf</font><a href="sfkirdatsr.html" title="2-D Pre-stack Kirchhoff redatuming. ">kirdatsr</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfkirmig0.html" title="2-D Post-stack Kirchhoff depth migration. ">kirmig0</a><br>
+<font color="#778899">sf</font><a href="sfkirmigsr.html" title="2-D Prestack Kirchhoff depth migration. ">kirmigsr</a><br>
+<font color="#778899">sf</font><a href="sfmkrcv.html" title="Make topography mask / receiver list / record list for first-arrival traveltime tomography ">mkrcv</a><br>
+<font color="#778899">sf</font><a href="sft2diter.html" title="Time-to-depth conversion (linear operator) ">t2diter</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sftdconvert.html" title="Iterative time-to-depth velocity conversion ">tdconvert</a><br>
+<font color="#778899">sf</font><a href="sftinterp.html" title="Traveltime interpolation by cubic Hermite spline ">tinterp</a><br>
+</td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/mccowan</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfdmeig.html" title="Find eigenvalues and eigenvectors of an spd matrix. ">dmeig</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sffastft.html" title="Fast Fourier Transform. ">fastft</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfkernel.html" title="Test migration kernel. ">kernel</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/parvaneh</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfbackdire.html" title="Background directivity(Dip). ">backdire</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/poulsonj</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfmpipsp.html" title="Parallel Sweeping Preconditioner (PSP) for solving 3D Helmholtz equations.
+">mpipsp</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/psava</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfcamig3.html" title="3-D common-azimuth modeling/migration with extended SSF ">camig3</a><br>
+<font color="#778899">sf</font><a href="sfewefd2d.html" title="2D elastic time-domain FD modeling ">ewefd2d</a><br>
+<font color="#778899">sf</font><a href="sfhic2ang.html" title="angle decomposition of CIPs ">hic2ang</a><br>
+<font color="#778899">sf</font><a href="sfic.html" title="Imaging condition ">ic</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sflaps2d.html" title="OpenMP lagged-products in the time-domain ">laps2d</a><br>
+<font color="#778899">sf</font><a href="sflwefd2d.html" title="linearized acoustic time-domain FD modeling ">lwefd2d</a><br>
+<font color="#778899">sf</font><a href="sfsic3d.html" title="Local slant stacks I.C. ">sic3d</a><br>
+<font color="#778899">sf</font><a href="sfsrmig3.html" title="3-D S/R migration with extended SSF ">srmig3</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfsrmod3.html" title="3-D S/R modeling with extended split-step ">srmod3</a><br>
+<font color="#778899">sf</font><a href="sfwdf.html" title="Assymptotic Wigner distribution ">wdf</a><br>
+<font color="#778899">sf</font><a href="sfwei.html" title="3-D modeling/migration with extended SSF ">wei</a><br>
+<font color="#778899">sf</font><a href="sfwigner.html" title="Assymptotic Wigner distribution in space-time ">wigner</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfxcor2d.html" title="OpenMP time- or freq-domain cross-correlation on axes 1,2,3 ">xcor2d</a><br>
+<font color="#778899">sf</font><a href="sfzomig3.html" title="3-D zero-offset modeling/migration with extended SSF ">zomig3</a><br>
+</td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/pwd</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfdealias.html" title="3-D trace interpolation to a denser grid using PWD.">dealias</a><br>
+<font color="#778899">sf</font><a href="sfdijkstra.html" title="Dijkstra shortest-path algorithm in 2-D ">dijkstra</a><br>
+<font color="#778899">sf</font><a href="sfdip.html" title="3-D dip estimation by plane wave destruction. ">dip</a><br>
+<font color="#778899">sf</font><a href="sfdip2.html" title="2-D dip estimation by plane wave destruction. ">dip2</a><br>
+<font color="#778899">sf</font><a href="sfdiplet.html" title="2-D Seislet frame ">diplet</a><br>
+<font color="#778899">sf</font><a href="sfdixshape.html" title="Convert RMS to interval velocity using LS and shaping regularization.">dixshape</a><br>
+<font color="#778899">sf</font><a href="sfexplanesignoi.html" title="Signal and noise separation using both frequency components and dips. ">explanesignoi</a><br>
+<font color="#778899">sf</font><a href="sfexpsignoi.html" title="Signal and noise separation using frequency components. ">expsignoi</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sffdip.html" title="3D fast dip estimation by plane wave destruction ">fdip</a><br>
+<font color="#778899">sf</font><a href="sfplanemis2.html" title="Missing data interpolation in 2-D using plane-wave destruction. ">planemis2</a><br>
+<font color="#778899">sf</font><a href="sfplanemis3.html" title="Missing data interpolation in 3-D using plane-wave destruction. ">planemis3</a><br>
+<font color="#778899">sf</font><a href="sfplanesignoi.html" title="Signal and noise separation using plane-wave destruction filters.  ">planesignoi</a><br>
+<font color="#778899">sf</font><a href="sfpmshape2.html" title="Missing data interpolation in 2-D using plane-wave destruction and shaping regularization. ">pmshape2</a><br>
+<font color="#778899">sf</font><a href="sfpredict.html" title="2-D plane-wave prediction. ">predict</a><br>
+<font color="#778899">sf</font><a href="sfpwcoh.html" title="Coherency by plane-wave construction. ">pwcoh</a><br>
+<font color="#778899">sf</font><a href="sfpwd.html" title="3-D plane wave destruction. ">pwd</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfpwdsigk.html" title="Signal component separation using plane-wave destruction. ">pwdsigk</a><br>
+<font color="#778899">sf</font><a href="sfpwdsmooth2.html" title="2-D smoothing by triangle plane-wave construction shaping. ">pwdsmooth2</a><br>
+<font color="#778899">sf</font><a href="sfpwpaint.html" title="Painting by plane-wave construction. ">pwpaint</a><br>
+<font color="#778899">sf</font><a href="sfpwpaint2.html" title="3-D painting by plane-wave construction. ">pwpaint2</a><br>
+<font color="#778899">sf</font><a href="sfpwpaint3.html" title="3-D painting by plane-wave construction. ">pwpaint3</a><br>
+<font color="#778899">sf</font><a href="sfpwsmooth.html" title="2-D structure-enhancing filtering. ">pwsmooth</a><br>
+<font color="#778899">sf</font><a href="sfpwspray.html" title="Plane-wave spray. ">pwspray</a><br>
+<font color="#778899">sf</font><a href="sfpwspray2.html" title="Plane-wave spray in 3-D. ">pwspray2</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfpwspray3.html" title="Plane-wave spray in 3-D. ">pwspray3</a><br>
+<font color="#778899">sf</font><a href="sfseisigk.html" title="Signal component separation using seislet transforms. ">seisigk</a><br>
+<font color="#778899">sf</font><a href="sfseislet.html" title="Seislet transform ">seislet</a><br>
+<font color="#778899">sf</font><a href="sftrismooth2.html" title="2-D smoothing by triangle directional shaping. ">trismooth2</a><br>
+<font color="#778899">sf</font><a href="sftwodip2.html" title="2-D two dip estimation by plane wave destruction.">twodip2</a><br>
+</td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/pyang</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfTestaniso.html" title="A 2D demo of elliptically-anisotropic wave propagation (4th order)">Testaniso</a><br>
+<font color="#778899">sf</font><a href="sfTesteb.html" title="Demo for effective boundary saving in regular grid">Testeb</a><br>
+<font color="#778899">sf</font><a href="sfTestelastic2d.html" title="2D 8-th order elastic wave propagation using sponge ABC">Testelastic2d</a><br>
+<font color="#778899">sf</font><a href="sfTestfd2d.html" title="A demo of 2D FD test">Testfd2d</a><br>
+<font color="#778899">sf</font><a href="sfTestfd3d.html" title="3D acoustic time-domain FD modeling">Testfd3d</a><br>
+<font color="#778899">sf</font><a href="sfTestspml.html" title="2D acoustic FD using Split PML (SPML) absorbing boundary condition">Testspml</a><br>
+<font color="#778899">sf</font><a href="sfcheckptdemo.html" title="RTM with checkpointing in 2D acoustic media">checkptdemo</a><br>
+<font color="#778899">sf</font><a href="sfdlct.html" title="discrete linear chirp transfrom (DLCT)">dlct</a><br>
+<font color="#778899">sf</font><a href="sfexcitationic.html" title="Demo for excitation imaging condition">excitationic</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sffbrec.html" title="Forward-backword exact reconstruction using boundary saving">fbrec</a><br>
+<font color="#778899">sf</font><a href="sffbrec2d.html" title="2-D forward modeling to generate shot records ">fbrec2d</a><br>
+<font color="#778899">sf</font><a href="sffpocs2d.html" title="2-D Two-step POCS interpolation using a general Lp-norm optimization">fpocs2d</a><br>
+<font color="#778899">sf</font><a href="sffpocs3d.html" title="3-D Two-step POCS interpolation using a general Lp-norm optimization">fpocs3d</a><br>
+<font color="#778899">sf</font><a href="sffwi2d.html" title="Time domain full waveform inversion ">fwi2d</a><br>
+<font color="#778899">sf</font><a href="sfgenshots.html" title="Generate shots for FWI using Enquist absorbing boundary condition">genshots</a><br>
+<font color="#778899">sf</font><a href="sfgpufd3d.html" title="GPU-based finite difference on 3-D grid">gpufd3d</a><br>
+<font color="#778899">sf</font><a href="sfgpufwi.html" title="CUDA based FWI using Enquist absorbing boundary condition (A2)">gpufwi</a><br>
+<font color="#778899">sf</font><a href="sfgpurtm.html" title="2D prestack GPU-based RTM using effective boundary saving.">gpurtm</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfistseislet.html" title="Analysis-based IST interpolation using seislet (2d validation)">istseislet</a><br>
+<font color="#778899">sf</font><a href="sflsinterp2d.html" title="Least-squares interpolation for 2D validition">lsinterp2d</a><br>
+<font color="#778899">sf</font><a href="sflsprtm2d.html" title="2-D prestack least-squares RTM using wavefield reconstruction">lsprtm2d</a><br>
+<font color="#778899">sf</font><a href="sflsrtm2d.html" title="2-D zero-offset least-squares reverse time migration (LSRTM)">lsrtm2d</a><br>
+<font color="#778899">sf</font><a href="sfmcaseislet.html" title="Morphological component analysis using 2-D Seislet transform ">mcaseislet</a><br>
+<font color="#778899">sf</font><a href="sfmodeling2d.html" title="2-D forward modeling to generate shot records ">modeling2d</a><br>
+<font color="#778899">sf</font><a href="sfmshots.html" title="2-D prestack forward modeling using sponge ABC using 4-th order FD">mshots</a><br>
+<font color="#778899">sf</font><a href="sfmwni2d.html" title="2-D bandlimited minimum weighted-norm interpolation (MWNI) ">mwni2d</a><br>
+<font color="#778899">sf</font><a href="sfmyradon2.html" title="Linear/parabolic radon transform frequency domain implementation ">myradon2</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfmysnr.html" title="print out signal-to-noise ratio in decibel (dB)">mysnr</a><br>
+<font color="#778899">sf</font><a href="sfpocs.html" title="n-D POCS interpolation using a hard thresholding">pocs</a><br>
+<font color="#778899">sf</font><a href="sfps2d.html" title="2-D attenuating wavefield simulation using Fourier Pseudo Spectral method ">ps2d</a><br>
+<font color="#778899">sf</font><a href="sfrtm2d.html" title="2-D zero-offset reverse-time migration">rtm2d</a><br>
+<font color="#778899">sf</font><a href="sfrtmadcig.html" title="RTM and angle gather (ADCIG) extraction using poynting vector">rtmadcig</a><br>
+<font color="#778899">sf</font><a href="sfrtmva2d.html" title="RTM with checkpointing in 2D acoustic media">rtmva2d</a><br>
+<font color="#778899">sf</font><a href="sfviscoa2d.html" title="2D visco-acoustic modeling with 8th order staggered-grid FD">viscoa2d</a><br>
+<font color="#778899">sf</font><a href="sfviscoe2d.html" title="2D 4-th order visco-elastic wave propagation using sponge ABC">viscoe2d</a><br>
+</td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/rickettj</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfcorral.html" title="Cross-correlate every trace with every other in frequency domain. ">corral</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfpmod.html" title="Random plane wave modeling. ">pmod</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfsensitivity.html" title="Traveltime sensitivity kernels. ">sensitivity</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/ridder</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfspecfac.html" title="(MD) Spectral Factorization or (MD) Autocorrelation using Helix Transform. ">specfac</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    
+-->    
+
+
+
+
+<!--    
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/rweiss</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfewefd2d_gpu.html" title="2D elastic time-domain FD modeling with GPU">ewefd2d_gpu</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfewefd3d_gpu_p2p.html" title="3D elastic time-domain FD modeling with GPU (For use in single node with one or more GPUs)">ewefd3d_gpu_p2p</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfewefd3d_multiNode.html" title="3D elastic time-domain FD modeling with multiple GPUs coordinated via MPI and p2p">ewefd3d_multiNode</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/saragiotis</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfconvft.html" title="Trace-by-trace or data-by-trace convolution using Fourier transform. ">convft</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfstackn.html" title="Stack prespecified values. ">stackn</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfzerocross.html" title="Zero crossings. ">zerocross</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/seisinv</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfkirchinvs.html" title="Kirchhoff 2-D post-stack least-squares time migration with sparse constrains. ">kirchinvs</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/seplib_compat</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfsepcmplx2rsf.html" title="Convert legacy SEPlib complex datasets to RSF">sepcmplx2rsf</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/slim</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfboolcmp.html" title="Element-wise boolean comparison of values. For int/float/complex data-sets.">boolcmp</a><br>
+<font color="#778899">sf</font><a href="sffdct.html" title="">fdct</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sffileheader.html" title="dumps header information to the standard output.">fileheader</a><br>
+<font color="#778899">sf</font><a href="sfjitter.html" title="">jitter</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfkilltraces.html" title="">killtraces</a><br>
+<font color="#778899">sf</font><a href="sfset2zero.html" title="replaces content of RSF file with zeros">set2zero</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfsort.html" title="Sort a float/complex vector by absolute values.">sort</a><br>
+<font color="#778899">sf</font><a href="sfthr.html" title="Threshold float/complex inputs given a constant/varying threshold level.">thr</a><br>
+</td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/songxl</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sffd2_10.html" title="2-D Fourth-order Optimized Finite-difference wave extrapolation ">fd2_10</a><br>
+<font color="#778899">sf</font><a href="sffd2bs.html" title="2-D Fourth-order Finite-difference wave extrapolation ">fd2bs</a><br>
+<font color="#778899">sf</font><a href="sfffd0.html" title="2-D FFD zero-offset migration: MPI + OMP">ffd0</a><br>
+<font color="#778899">sf</font><a href="sfffd2_ps.html" title="2-D Fourier finite-difference wave extrapolation, point source ">ffd2_ps</a><br>
+<font color="#778899">sf</font><a href="sfffd2dehf.html" title="2-D Fourier finite-difference wave extrapolation, smooth point source, depress high frequency ">ffd2dehf</a><br>
+<font color="#778899">sf</font><a href="sfffdantti4b_smsr.html" title="2-D Fourier finite-difference wave extrapolation ">ffdantti4b_smsr</a><br>
+<font color="#778899">sf</font><a href="sflfd2_25b.html" title="2-D Fourth-order Optimized Finite-difference wave extrapolation ">lfd2_25b</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sflfdanc2_25.html" title="2D high-order TTI Lowrank FD coefficient">lfdanc2_25</a><br>
+<font color="#778899">sf</font><a href="sflfdc1.html" title="1D 10th-order Lowrank FD coefficient">lfdc1</a><br>
+<font color="#778899">sf</font><a href="sflfdc2_25.html" title="2D 10th-order Lowrank FD coefficient">lfdc2_25</a><br>
+<font color="#778899">sf</font><a href="sflfdc2_7.html" title="2D 10th-order Lowrank FD coefficient">lfdc2_7</a><br>
+<font color="#778899">sf</font><a href="sflfdp1.html" title="1D 10th-order Lowrank FD coefficient">lfdp1</a><br>
+<font color="#778899">sf</font><a href="sflffd2an25.html" title="2-D Fourier finite-difference wave extrapolation ">lffd2an25</a><br>
+<font color="#778899">sf</font><a href="sflffdan.html" title="2D high-order TTI Lowrank FFD coefficient">lffdan</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfofd2_10.html" title="2-D Fourth-order Optimized Finite-difference wave extrapolation ">ofd2_10</a><br>
+<font color="#778899">sf</font><a href="sfofd2_25.html" title="2-D Fourth-order Optimized Finite-difference wave extrapolation ">ofd2_25</a><br>
+<font color="#778899">sf</font><a href="sfofd2_7.html" title="2-D Fourth-order Optimized Finite-difference wave extrapolation ">ofd2_7</a><br>
+<font color="#778899">sf</font><a href="sformatrix.html" title="Lowrank decomposition for 3-D orthorhombic wave propagation. ">ormatrix</a><br>
+<font color="#778899">sf</font><a href="sforp.html" title="2-D 10th-order Finite-difference dispersion">orp</a><br>
+<font color="#778899">sf</font><a href="sforthollr.html" title="Lowrank decomposition for 3-D orthorhombic wave propagation with linearization. ">orthollr</a><br>
+<font color="#778899">sf</font><a href="sfortholr.html" title="Lowrank decomposition for 3-D orthorhombic wave propagation. ">ortholr</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sforthowave.html" title="Simple 3-D wave propagation ">orthowave</a><br>
+<font color="#778899">sf</font><a href="sfortllr.html" title="Lowrank decomposition for 3-D orthorhombic wave propagation with linearization. ">ortllr</a><br>
+<font color="#778899">sf</font><a href="sfortlr.html" title="Lowrank decomposition for 3-D orthorhombic wave propagation. ">ortlr</a><br>
+<font color="#778899">sf</font><a href="sfpspifcos2bs.html" title="1-D finite-difference wave extrapolation ">pspifcos2bs</a><br>
+<font color="#778899">sf</font><a href="sfsp.html" title="2-D Pseudo-spectral wave extrapolation ">sp</a><br>
+</td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/tariq</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfScanCoef.html" title="Coeffecients of the eta expansion eikonal solver (3-D). ">ScanCoef</a><br>
+<font color="#778899">sf</font><a href="sfawefd2dds.html" title="2D acoustic time-domain FD modeling  for source perturbation -first order">awefd2dds</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfawefd2dds2nd.html" title="2D acoustic time-domain FD modeling  for source perturbation- 2nd order approximation">awefd2dds2nd</a><br>
+<font color="#778899">sf</font><a href="sfeikEta.html" title="Eta differential eikonal solver (3-D). ">eikEta</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfeikds.html" title="Source differntial eikonal solver (3-D). ">eikds</a><br>
+<font color="#778899">sf</font><a href="sfwkbjTI.html" title="VTI eikonal solver (3-D). ">wkbjTI</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/tsai</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfrickerfit.html" title="Model wavelet spectrum by fitting spectral components of ricker wavelet.">rickerfit</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/urdaneta</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfnorsar.html" title="Traveltime and amplitude estimation using wavefront construction. ">norsar</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/xuxin</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfintegral1.html" title="integration ">integral1</a><br>
+<font color="#778899">sf</font><a href="sfmpirtmiso.html" title="isotropic reverse-time migration ">mpirtmiso</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfpseudodepth.html" title="depth to vertical-time interpolation">pseudodepth</a><br>
+<font color="#778899">sf</font><a href="sfswapbyte.html" title="endianness conversion ">swapbyte</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfzomiso.html" title="zero-offset isotropic reverse-time migration">zomiso</a><br>
+<font color="#778899">sf</font><a href="sfzomvti.html" title="acoustic VTI wavefield">zomvti</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/yliu</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfapef.html" title="Estimate adaptive nonstationary PEF on aliased traces. ">apef</a><br>
+<font color="#778899">sf</font><a href="sfdifference.html" title="Difference profile of two data ">difference</a><br>
+<font color="#778899">sf</font><a href="sfdomf.html" title="2D dip-oriented median/mean filter (DOMF). ">domf</a><br>
+<font color="#778899">sf</font><a href="sffkoclet.html" title="1-D seislet transform using omega-wavenumber offset continuation ">fkoclet</a><br>
+<font color="#778899">sf</font><a href="sffourmis2.html" title="Missing data interpolation in 2-D using Fourier transform and compressive sensing. ">fourmis2</a><br>
+<font color="#778899">sf</font><a href="sffreshape.html" title="Nonstationary spectral balancing in frequency domain. ">freshape</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sflpfdenoise2.html" title="2D denoising using edge-preserving local polynomial fitting (ELPF). ">lpfdenoise2</a><br>
+<font color="#778899">sf</font><a href="sfltft.html" title="Local time-frequency transform (LTFT). ">ltft</a><br>
+<font color="#778899">sf</font><a href="sflum.html" title="1D LUM filter">lum</a><br>
+<font color="#778899">sf</font><a href="sfmf.html" title="1D median filtering. ">mf</a><br>
+<font color="#778899">sf</font><a href="sfmig2.html" title="2-D prestack Kirchhoff time migration with antialiasing. ">mig2</a><br>
+<font color="#778899">sf</font><a href="sfmiss4.html" title="Missing data interpolation with adaptive PEFs. ">miss4</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfmiss43.html" title="3-D missing data interpolation with adaptive PEFs. ">miss43</a><br>
+<font color="#778899">sf</font><a href="sfsaltpepper.html" title="Add salt and pepper noise to the data.">saltpepper</a><br>
+<font color="#778899">sf</font><a href="sfst.html" title="S transform ">st</a><br>
+<font color="#778899">sf</font><a href="sfstft.html" title="Short-time Fourier transform (STFT). ">stft</a><br>
+<font color="#778899">sf</font><a href="sfsvd.html" title="Singular value decomposition (SVD)">svd</a><br>
+<font color="#778899">sf</font><a href="sfthreshold2.html" title="2-D Soft thresholding. ">threshold2</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sftvmf.html" title="1D Time-varying median filtering. ">tvmf</a><br>
+<font color="#778899">sf</font><a href="sftxrna2.html" title="2D space-noncausal t-x nonstationary regularized autoregression. ">txrna2</a><br>
+<font color="#778899">sf</font><a href="sftxrna3.html" title="3D space-noncausal t-x-y nonstationary regularized autoregression. ">txrna3</a><br>
+<font color="#778899">sf</font><a href="sfv2d.html" title="Velocity convert to dip. ">v2d</a><br>
+</td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/zhiguang</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfpad2.html" title="Pad boundary ">pad2</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>user/zone</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><font color="#778899">sf</font><a href="sfkirmod_newton.html" title="Kirchhoff 2-D/2.5-D modeling in layered media with bending ray tracing.  ">kirmod_newton</a><br>
+</td><td width="25%" valign=top><font color="#778899">sf</font><a href="sfvtihti2ort.html" title="Combining VTI and HTI parameters to orthorhombic according to Schoenberg & Sayer (1995)">vtihti2ort</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table>-->
+    </body></html>

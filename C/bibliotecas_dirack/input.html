@@ -1,0 +1,172 @@
+    <!doctype html>
+<!--
+
+-->
+    <html><head><meta charset="utf-8"><title>C: input.h</title>
+    <link rel="icon" 
+      type="image/png" 
+      href="../favicon.ico" />
+    <style type="text/css"><!--
+    TT { font-family: lucidatypewriter, lucida console, courier }
+    --></style></head><body bgcolor="#f0f0f8">
+    
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#7799ee">
+    <td valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>input.h</strong></big></big></font></td
+    ><td align=right valign=bottom>
+        <font color="#ffffff" face="helvetica, arial">
+        <a href=https://github.com/Geofisicando/input.h/blob/master/input.h title="Baixar código fonte de input.h?">Download</a></font>
+        
+    </td></tr></table>
+    Biblioteca de funções para tratar com entradas de parâmetros a partir da linha de comandos. 
+Os parâmetros e seus valores
+    são armazenados em uma tabela simbólica de parâmetros, 
+inicializada pela função init(argc,argv) que recebe como argumentos
+    as variáveis int argc e char* argv, 
+que são os parâmetros passados à função main() na inicialização do programa
+    
+<!-- Descrição das structs da biblioteca (ESTRUTURAS) -->
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#aa55cc">
+    	<td colspan=3 valign=bottom>&nbsp;<br>
+    	<font color="#fffff" face="helvetica, arial"><big><strong>Estruturas</strong></big></font></td>
+    </tr>
+    
+    <tr>
+
+	<td bgcolor="#aa55cc" width="5%"></td>
+	<td align="left"><strong>struct</strong> tb_pars</td>
+	<td align="right">Tabela de parâmetros</td>
+    </tr>
+
+	<tr>
+		<td bgcolor="#aa55cc"></td>
+		<td><strong>int</strong> tb_pars.tam</td>
+		<td align="right" valign="bottom">Número total de parâmetros. Tamanho da tabela de parâmetros</td>
+	</tr>
+	<tr>
+		<td bgcolor="#aa55cc"></td>
+		<td><strong>char**</strong> tb_pars.pars</td>
+		<td align="right">Parâmetro armazenado na tabela de parâmetros</td>
+	</tr>
+	<tr>
+		<td bgcolor="#aa55cc"></td>
+		<td>tabela</td>
+		<td align="right">Apelido (alias) da tabela de parâmetros</td>
+	</tr>
+
+
+</table>
+
+
+
+<!-- Descrição das funções da biblioteca -->
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Funções</strong></big></font></td></tr>
+    
+    <tr>
+	<td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+	<td width="100%">
+    
+	<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+    		<tr bgcolor="#ffc8d8">
+    			<td valign=bottom><font color="#000000" face="helvetica, arial">&nbsp;<strong>void</strong> init(<strong>int</strong> tam, <strong>char</strong> **p) </font></td>
+			<td align=right valign=bottom><font color="#000000" face="helvetica, arial">Inicializa a tabela simbólica de parâmetros </font></td>
+
+		</tr>
+    		<tr bgcolor="#ffc8d8">
+    			<td valign=bottom><font color="#000000" face="helvetica, arial">&nbsp;<strong>bool</strong> getint(<strong>char</strong> *string, <strong>int</strong> *pi) </font></td>
+			<td align=right valign=bottom><font color="#000000" face="helvetica, arial">Extrair um parâmetro do tipo int da tabela simbólica de parâmetros </font></td>
+
+		</tr>
+
+    		<tr bgcolor="#ffc8d8">
+    			<td valign=bottom><font color="#000000" face="helvetica, arial">&nbsp;<strong>bool</strong> getfloat(<strong>char</strong> *string, <strong>float</strong> *pi) </font></td>
+			<td align=right valign=bottom><font color="#000000" face="helvetica, arial">Extrair um parâmetro do tipo float da tabela simbólica de parâmetros </font></td>
+
+		</tr>
+
+    		<tr bgcolor="#ffc8d8">
+    			<td valign=bottom><font color="#000000" face="helvetica, arial">&nbsp;<strong>bool</strong> getdouble(<strong>char</strong> *string, <strong>double</strong> *pi) </font></td>
+			<td align=right valign=bottom><font color="#000000" face="helvetica, arial">Extrair um parâmetro do tipo double da tabela simbólica de parâmetros </font></td>
+
+		</tr>
+
+	</table>
+    
+</td></tr></table>
+
+<!-- EXEMPLOS E DICAS -->
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#11aadd">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#fffff" face="helvetica, arial"><big><strong>Exemplos e dicas</strong></big></font></td></tr>
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>* Salve input.h na pasta /usr/include para poder utilizar a seguinte diretiva nos seus programas:</strong></td></tr>
+        <tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">#include &lt;input.h&gt;</td></tr>
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"></td></tr>
+     <tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>* Inicie a tabela de parâmetros no seu programa, antes de utilizar as funções. Basta incluir a linha abaixo:</strong></td></tr>
+        <tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">init(argc,argv);</td></tr>
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"></td></tr>
+
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>* As funções get são melhor utilizadas com condicionais ifnot. No exemplo abaixo, a função getfloat retornará 'true' se o parâmetro 'f' foi passado pela linha de comandos e atribuirá o valor passado à variável correspondente. Se 'f' não foi passado, getfloat retorna 'false' e atribui o valor 0 à 'f' definido como default:  </strong></td></tr>
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">if (!getfloat("f",&#38;f)) f=0.;</td></tr>
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"></td></tr>
+
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>* Da mesma forma getint:</strong></td></tr>
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">if (!getint("i",&#38;i)) i=0.;</td></tr>
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"></td></tr>
+
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>* Idem para getdouble </strong></td></tr>
+<tr><td bgcolor="#11aadd"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">if (!getdouble("d",&#38;d)) d=0.;</td></tr>
+
+</table>
+
+
+
+<!-- Exemplos de uso e tutoriais-->
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    	<tr bgcolor="#eeaa77">
+    		<td colspan=3 valign=bottom>&nbsp;<br><font color="#ffffff" face="helvetica, arial"><big><strong>Tutoriais</strong></big></font></td>
+	    </tr>
+    
+        <tr>
+		<td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+		<td>&nbsp;</td>
+		<td width="100%">
+			<p>
+			<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    				<tr bgcolor="#ffd8c8">
+    					<td colspan=3 valign=bottom>&nbsp;<br><font color="#000000" face="helvetica, arial"><big><strong>Exemplos de uso: </strong></big></font></td>
+	            	</tr>
+	            	 <tr bgcolor="#ffd8c8">
+    					<td colspan=3 valign=bottom>&nbsp;<br><font color="#000000" face="helvetica, arial"><big><a href=https://github.com/Geofisicando/input.h.git title="Exemplo de uso 1">Exemplo 1</a></big></font>
+    					</td>
+	            	</tr>
+    
+       
+	</table>
+</table>
+
+</body></html>
