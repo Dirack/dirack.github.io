@@ -33,14 +33,14 @@ $(document).ready(function(){
 
 		$.ajax({
 			type:'POST',
-			url:'query.php',
+			url:'https://existentialist-addi.000webhostapp.com/artigos/query.php',
 			data:txt,
 			success:function(resultado){
 				$('#postagens').html(resultado);
 			},
 
 			error:function(){
-				alert("erro na solicitação AJAX");
+				alert("erro na solicitação AJAX em blogAjax.js");
 			}
 
 		});
