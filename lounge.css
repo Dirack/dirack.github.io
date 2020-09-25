@@ -403,7 +403,7 @@ blockquote {
 
 @media screen and (max-device-width: 740px) and (orientation: portrait){
 	#menu ul li{
-		font-size: 9pt;
+		font-size: 10pt;
 		padding: 5px 10px 5px 10px;
 		display: block;
 	}
@@ -411,7 +411,6 @@ blockquote {
 	#menu ul{
 		margin: auto;
 		width:100%;
-		display: block;	
 	}
 	
 	#menu{
