@@ -25,7 +25,7 @@ $('document').ready(function(){
 
 		$.ajax({
 			type:'GET',
-			url:'artigos.php',
+			url:'https://existentialist-addi.000webhostapp.com/artigos/artigos.php',
 			data:txt,
 			success:function(resultado){
 				$('#comentariosAnteriores').html(resultado);
