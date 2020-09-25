@@ -405,13 +405,13 @@ blockquote {
 	#menu ul li{
 		font-size: 9pt;
 		padding: 5px 10px 5px 10px;
-	
+		display: block;
 	}
 
 	#menu ul{
 		margin: auto;
-		width:50%;
-		line-height: 200%;
+		width:100%;
+		display: block;	
 	}
 	
 	#menu{
