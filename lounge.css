@@ -153,7 +153,7 @@ nav {
     opacity:0;
     background-image: linear-gradient(to bottom, #545454, #000000);
     margin: 0px 0px 0px 0px;
-    width: 1355px;
+    width: 100%;
     position: fixed;
     z-index: 1;
     -webkit-transition: all .6s ease-in;
