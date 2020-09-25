@@ -401,6 +401,12 @@ blockquote {
 	display: none;
 }
 
+@media screen and (max-device-width: 740px) and (orientation: portrait){
+	#menu{
+		font-size: 9pt;
+	}
+}
+
 @media screen and (max-device-width: 740px) and (orientation: portrait), screen and (max-device-height: 740px) and (orientation:landscape){
 
 	#posts, #redes{
@@ -449,9 +455,11 @@ blockquote {
 
 	#menu{
 		opacity: 1;
+		display: block;
 	}
 
 	#menuMobile nav{
 		display: none;
 	}
 }
+
