@@ -400,3 +400,14 @@ blockquote {
 #logoMobile, #menuMobileImg{
 	display: none;
 }
+
+@media screen and (max-width:640px){
+
+	#menu, #posts, #redes{
+		display: none;
+	}
+
+	#redes ul li{
+		display: inline;
+	}
+}
