@@ -401,11 +401,12 @@ blockquote {
 	display: none;
 }
 
-/*@media screen and (max-device-width: 740px) and (orientation: portrait){
-	#menu{
+@media screen and (max-device-width: 740px) and (orientation: portrait){
+	#menu ul li{
 		font-size: 9pt;
+		padding: 5px 10px 5px 10px;
 	}
-}*/
+}
 
 @media screen and (max-device-width: 740px) and (orientation: portrait), screen and (max-device-height: 740px) and (orientation:landscape){
 
