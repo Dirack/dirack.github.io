@@ -412,7 +412,12 @@ blockquote {
 	}
 
 	#canvas{
-		margin: 0px 0px 0px 30px;
+		margin: 0px 0px 0px 0px;
+		text-indent: 0px;
+	}
+
+	#descricao{
+		text-indent: 30px;
 	}
 
 	#titulo h1{
