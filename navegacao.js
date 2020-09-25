@@ -12,22 +12,22 @@
 */
 
 // Menu aparece quando o usuário baixa a barra de rolagem 
-window.addEventListener('scroll', function(event){ 
+/*window.addEventListener('scroll', function(event){ 
   if (window.scrollY > 200) {
      document.getElementById("menu").style.opacity = "1";
   }else {
      document.getElementById("menu").style.opacity = "0";
  }
-});
+});*/
 
 // Quando o mouse está sobre a área de menu, a barra de menu aparece
 // Quando o mouse é retirado da área de menu, a barra de menu some
-function onMenu(){
+/*function onMenu(){
 	document.getElementById("menu").style.opacity = "1";
 }
 function offMenu(){
 	document.getElementById("menu").style.opacity = "0";
-}
+}*/
 
 // Na barra lateral à esquerda tem um ícone de mais. Quando clicado
 // este exibe uma tela com as redes sociais extras da página. Estas

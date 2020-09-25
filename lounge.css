@@ -150,7 +150,7 @@ li.atual{
 }
 
 nav {
-    opacity:0;
+    opacity:1;
     background-image: linear-gradient(to bottom, #545454, #000000);
     margin: 0px 0px 0px 0px;
     width: 100%;
@@ -403,8 +403,12 @@ blockquote {
 
 @media screen and (max-device-width: 740px) and (orientation: portrait), screen and (max-device-height: 740px) and (orientation:landscape){
 
-	#menu, #posts, #redes{
+	#posts, #redes{
 		display: none;
+	}
+
+	#menuMobile{
+		display: block;
 	}
 
 	#redes ul li{
@@ -441,5 +445,13 @@ blockquote {
 		background-position: 38% 38%;
 		height: 200px;
 		padding: 150px 0px 10px 0px;
+	}
+
+	#menu{
+		opacity: 1;
+	}
+
+	#menuMobile nav{
+		display: none;
 	}
 }
