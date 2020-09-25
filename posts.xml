@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><entradas>
 <entrada>
-		<fonte>http://localhost/Site-diracks-lounge/artigos/artigos.html?var=fortran2shell</fonte>
+		<fonte>https://dirack.github.io/Site-diracks-lounge/artigos/artigos.html?var=fortran2shell</fonte>
 		<thumb>thumbs/fortran.png</thumb>
 		<titulo>Passar parâmetros através da linha de comandos em Fortran</titulo>
 		<autor> Rodolfo Dirack </autor><data>2019-01-22</data>
@@ -13,7 +13,7 @@ Por exemplo o '-l' do comando 'ls -l' que modifica a atuação do comando 'ls' p
 	</entrada>
 
 	<entrada>
-		<fonte>http://localhost/Site-diracks-lounge/artigos/artigos.html?var=iostat</fonte>
+		<fonte>https://dirack.github.io/Site-diracks-lounge/artigos/artigos.html?var=iostat</fonte>
 		<thumb>thumbs/fortran.png</thumb>
 		<titulo>Leitura e abetura correta de arquivos com iostat</titulo>
 		<autor> Rodolfo Dirack </autor><data>2018-04-26</data>
@@ -27,7 +27,7 @@ negativo ou nulo a uma variável do tipo INTEGER, especificada pelo comando IOST
 	</entrada>
 
 	<entrada>
-		<fonte>http://localhost/Site-diracks-lounge/artigos/artigos.html?var=makefile</fonte>
+		<fonte>https://dirack.github.io/Site-diracks-lounge/artigos/artigos.html?var=makefile</fonte>
 		<thumb>thumbs/fortran.png</thumb>
 		<titulo>Compilação facilitada com arquivos Makefile</titulo>
 		<autor> Rodolfo Dirack </autor><data>2018-04-24</data>
