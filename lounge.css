@@ -401,7 +401,7 @@ blockquote {
 	display: none;
 }
 
-@media screen and (max-width:640px){
+@media screen and (max-width:751px){
 
 	#menu, #posts, #redes{
 		display: none;
