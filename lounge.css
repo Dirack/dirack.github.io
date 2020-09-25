@@ -416,13 +416,13 @@ blockquote {
 	}
 
 	#titulo h1{
-		font-size: 40pt;
+		font-size: 30pt;
 		margin: auto;
 		position: unset;
 	}
 
 	#titulo h3{
-		font-size: 20pt;
+		font-size: 15pt;
 		margin: auto;
 		position: unset;
 	}
@@ -432,12 +432,8 @@ blockquote {
 		text-align: center;
 	}
 
-/*	#titulo{
-		line-height: 700px;
-	}*/
-
 	#preheader{
-		background-position: 40% 40%;
+		background-position: 38% 38%;
 		height: 200px;
 		padding: 150px 0px 10px 0px;
 	}
