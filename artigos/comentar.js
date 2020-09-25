@@ -31,14 +31,14 @@ $('document').ready(function(){
 
 		$.ajax({
 			type:'POST',
-			url:'comentar.php',
+			url:'https://existentialist-addi.000webhostapp.com/artigos/comentar.php',
 			data:txt,
 			success:function(resultado){
 				$('#comentariosAnteriores').prepend(resultado);
 			},
 
 			error:function(){
-				alert("erro na solicitação AJAX");
+				alert("erro na solicitação AJAX em comentar.js");
 			}
 
 		});
