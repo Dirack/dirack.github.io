@@ -401,7 +401,7 @@ blockquote {
 	display: none;
 }
 
-@media screen and (max-width:751px){
+@media screen and (max-device-width: 740px) and (orientation: portrait), screen and (max-device-height: 740px) and (orientation:landscape){
 
 	#menu, #posts, #redes{
 		display: none;
