@@ -410,4 +410,35 @@ blockquote {
 	#redes ul li{
 		display: inline;
 	}
+
+	#canvas{
+		margin: 0px 0px 0px 30px;
+	}
+
+	#titulo h1{
+		font-size: 40pt;
+		margin: auto;
+		position: unset;
+	}
+
+	#titulo h3{
+		font-size: 20pt;
+		margin: auto;
+		position: unset;
+	}
+
+	body{
+		text-indent: 0px;
+		text-align: center;
+	}
+
+/*	#titulo{
+		line-height: 700px;
+	}*/
+
+	#preheader{
+		background-position: 40% 40%;
+		height: 200px;
+		padding: 150px 0px 10px 0px;
+	}
 }
