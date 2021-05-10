@@ -25,10 +25,10 @@
 
 /* Barra com imagem do planeta Terra */
 #preheader {
-    opacity:0.88;
+    /*opacity:0.88;*/
     background-image: url(images/banner.png);
-    background-position: 50% 55%;
-    height: 500px;
+    background-position: 50% 60%;
+    height: 700px;
     padding: 0px 20px 10px 50px;
     margin: 0px;
 }
@@ -149,12 +149,27 @@ li.atual{
 }
 
 nav {
-    opacity:1;
     background-color: #3B4545;
     margin: auto;
     width: 100%;
     position: fixed;
     z-index: 1;
+    height: 75px;
+}
+
+#menu-esq{
+	width:50%;
+	background-color: red;
+	float: left;
+	line-height: 75px;
+}
+
+#menu-dir{
+	width:50%;
+	background-color: blue;
+	float: right;
+	height: 75px;
+	line-height: 75px;
 }
 
 /*nav:hover {
@@ -163,7 +178,6 @@ nav {
 
 nav ul {
     list-style-type: none;
-    height: 40px;
 }
 
 nav ul li {
@@ -212,13 +226,14 @@ nav ul li a:link, nav ul li a:visited {
 /*< Coluna principal à esquerda com as postagens e artigos >*/
 
 #canvas {
-    text-indent: 30px;
+    text-indent: 0px;
     background: white top left;
-    padding: 30px 50px 50px 50px;
-    margin: 0px 425px 0px 30px;
+    padding: 10px;
+    margin: 10px 0px 10px 100px;
     color: #191919;
     text-align: justify;
-    border-right: 1px solid gray;
+    width: 60%;
+    /*border: 2px solid gray;*/
 }
 
 /*< Barra lateral à direita com formulário de email e atualizações >*/
@@ -226,10 +241,10 @@ nav ul li a:link, nav ul li a:visited {
 #posts {
     background: white top left;
     padding: 10px;
-    margin: 0px 25px 0px 10px;
-    width: 380px;
+    margin: 10px 55px 0px 0px;
+    width: 25%;
     float: right;
-    border-left: 1px solid gray;
+    /*border-left: 1px solid gray;*/
 }
 
 /*< Formulário Email na página HOME - index.html >*/
