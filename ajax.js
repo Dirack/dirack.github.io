@@ -78,7 +78,7 @@ function ajax(){
 				// Data formatada para DD/MM/AAAA
 				txt +=  +dataform[2]+"/"+dataform[1]+"/"+dataform[0]+ "</small></p>";
 				
-				txt += '<p id="descricao">'+resumo[i].childNodes[0].nodeValue + "</p>";
+				txt += '<p id="descricao">'+resumo[i].childNodes[0].nodeValue + "</p><br>";
 			}
 			
 

@@ -27,7 +27,7 @@
 #preheader {
     /*opacity:0.88;*/
     background-image: url(images/banner.png);
-    background-position: 50% 60%;
+    background-position: 50% 50%;
     height: 700px;
     padding: 0px 20px 10px 50px;
     margin: 0px;
@@ -131,15 +131,16 @@
 }
 
 
-/* Botões de navegação #0F92C6*/
+/* Botões de navegação #0F92C6
 nav ul li.selected {
     background-image: linear-gradient(to bottom, #545454, #000000);
     border-radius: 5px;
-}
+}*/
 
 /* BOTÃO: Flutuação */
 li.selected:hover{
-    background-image: linear-gradient(to bottom, #cf2b4f, #bdb1c2);
+    /*background-image: linear-gradient(to bottom, #cf2b4f, #bdb1c2);*/
+    background-color: #4A5C57;
     border-radius: 5px;
 }
 
@@ -157,17 +158,37 @@ nav {
     height: 75px;
 }
 
+#geof-logo{
+	width: 50px;
+	height: 50px;
+	margin-top: 15px;
+}
+
 #menu-esq{
-	width:50%;
-	background-color: red;
+	width: 30%;
+	padding-left: 50px;
+	background-color: black;
 	float: left;
+	height: 75px;
 	line-height: 75px;
+}
+
+#menu-esq a{
+	border-bottom: none;
 }
 
 #menu-dir{
 	width:50%;
-	background-color: blue;
+	/*background-color: blue;*/
 	float: right;
+	height: 75px;
+	line-height: 75px;
+}
+
+#menu-center{
+	width: 100%;
+	margin-left: 22%;
+	/*background-color: blue;*/
 	height: 75px;
 	line-height: 75px;
 }
