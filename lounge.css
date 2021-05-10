@@ -26,10 +26,9 @@
 /* Barra com imagem do planeta Terra */
 #preheader {
     opacity:0.88;
-    background-image: url(images/vulcano.jpg);
-    background-position: 80% 80%;
-    width:1320px;
-    height: 700px;
+    background-image: url(images/banner.png);
+    background-position: 50% 55%;
+    height: 500px;
     padding: 0px 20px 10px 50px;
     margin: 0px;
 }
@@ -47,7 +46,7 @@
 /* titulo do site */
 #titulo h1{
 	text-indent: none;
-	opacity:1;
+	opacity:0;
 	font-size:80pt;
 	position: absolute;
         color: #000000;
@@ -57,7 +56,7 @@
 }
 
 #titulo h3{
-	opacity:1;
+	opacity:0;
 	font-size:25pt;
 	position: absolute;
         color: #000000;
@@ -150,18 +149,17 @@ li.atual{
 }
 
 nav {
-    opacity:0;
+    opacity:1;
     background-image: linear-gradient(to bottom, #545454, #000000);
     margin: 0px 0px 0px 0px;
     width: 1355px;
     position: fixed;
     z-index: 1;
-    -webkit-transition: all .6s ease-in;
 }
 
-nav:hover {
+/*nav:hover {
 	opacity: 1;
-}
+}*/
 
 nav ul {
     margin: 0px;
