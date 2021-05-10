@@ -298,6 +298,7 @@ fieldset
 
 #img-rodape{
 	height: 50px;
+	line-height: 70px;
 }
 
 #links-rodape{
@@ -306,25 +307,49 @@ fieldset
 }
 
 #links-rodape-ajuda{
-	background-color: #776385;
 	width: 30%;
 	height: 180px;
 	float: left;
 	margin-left: 5%;
 }
 
+#links-rodape-ajuda ul, #links-rodape-sobre ul, #links-rodape-redes-sociais ul{
+	text-align: left;
+}
+
+#links-rodape-ajuda ul li, #links-rodape-sobre ul li, #links-rodape-redes-sociais ul li{
+	text-align: left;
+	list-style-type: none;
+	padding-bottom: 5px;
+}
+
+#img-redes-sociais li{
+	display: inline;
+}
+
+#links-rodape-ajuda a, #links-rodape-sobre a, #links-rodape-redes-sociais a{
+	border-bottom: none;
+	color: white;
+}
+
+#links-rodape-ajuda h2, #links-rodape-sobre h2, #links-rodape-redes-sociais h2{
+	color: white;
+}
+
 #links-rodape-sobre{
-	background-color: #857063;
 	width:30%;
 	height: 180px;
 	float: left;
 }
 
 #links-rodape-redes-sociais{
-	background-color: #81856A;
 	width: 30%;
 	height: 180px;
 	margin-left: 65%;
+}
+
+#titulo-rodape{
+	color: white;
 }
 
 /*< Formatação >*/
@@ -382,11 +407,11 @@ a:link {
     border-bottom: thin solid #053447;
 }
 
-a:visited {
+/*a:visited {
     color: #053447;
     text-decoration: none;
     border-bottom: thin dotted #053447;
-}
+}*/
 
 #galeria {
     border-bottom:0px;
