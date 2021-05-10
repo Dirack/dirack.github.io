@@ -25,10 +25,9 @@
 
 /* Barra com imagem do planeta Terra */
 #preheader {
-    opacity:0.88;
-    background-image: url(images/vulcano.jpg);
-    background-position: 80% 80%;
-    width:1320px;
+    /*opacity:0.88;*/
+    background-image: url(images/banner.png);
+    background-position: 50% 50%;
     height: 700px;
     padding: 0px 20px 10px 50px;
     margin: 0px;
@@ -47,7 +46,7 @@
 /* titulo do site */
 #titulo h1{
 	text-indent: none;
-	opacity:1;
+	opacity:0;
 	font-size:80pt;
 	position: absolute;
         color: #000000;
@@ -57,7 +56,7 @@
 }
 
 #titulo h3{
-	opacity:1;
+	opacity:0;
 	font-size:25pt;
 	position: absolute;
         color: #000000;
@@ -132,15 +131,16 @@
 }
 
 
-/* Botões de navegação #0F92C6*/
+/* Botões de navegação #0F92C6
 nav ul li.selected {
     background-image: linear-gradient(to bottom, #545454, #000000);
     border-radius: 5px;
-}
+}*/
 
 /* BOTÃO: Flutuação */
 li.selected:hover{
-    background-image: linear-gradient(to bottom, #cf2b4f, #bdb1c2);
+    /*background-image: linear-gradient(to bottom, #cf2b4f, #bdb1c2);*/
+    background-color: #4A5C57;
     border-radius: 5px;
 }
 
@@ -150,23 +150,55 @@ li.atual{
 }
 
 nav {
-    opacity:0;
-    background-image: linear-gradient(to bottom, #545454, #000000);
-    margin: 0px 0px 0px 0px;
-    width: 1355px;
+    background-color: #3B4545;
+    margin: auto;
+    width: 100%;
     position: fixed;
     z-index: 1;
-    -webkit-transition: all .6s ease-in;
+    height: 75px;
 }
 
-nav:hover {
-	opacity: 1;
+#geof-logo{
+	width: 50px;
+	height: 50px;
+	margin-top: 15px;
 }
+
+#menu-esq{
+	width: 30%;
+	padding-left: 50px;
+	background-color: black;
+	float: left;
+	height: 75px;
+	line-height: 75px;
+}
+
+#menu-esq a{
+	border-bottom: none;
+}
+
+#menu-dir{
+	width:50%;
+	/*background-color: blue;*/
+	float: right;
+	height: 75px;
+	line-height: 75px;
+}
+
+#menu-center{
+	width: 100%;
+	margin-left: 22%;
+	/*background-color: blue;*/
+	height: 75px;
+	line-height: 75px;
+}
+
+/*nav:hover {
+	opacity: 1;
+}*/
 
 nav ul {
-    margin: 0px;
     list-style-type: none;
-    padding: 5px 20px 5px 20px;
 }
 
 nav ul li {
@@ -215,13 +247,14 @@ nav ul li a:link, nav ul li a:visited {
 /*< Coluna principal à esquerda com as postagens e artigos >*/
 
 #canvas {
-    text-indent: 30px;
+    text-indent: 0px;
     background: white top left;
-    padding: 30px 50px 50px 50px;
-    margin: 0px 425px 0px 30px;
+    padding: 10px;
+    margin: 10px 0px 10px 100px;
     color: #191919;
     text-align: justify;
-    border-right: 1px solid gray;
+    width: 60%;
+    /*border: 2px solid gray;*/
 }
 
 /*< Barra lateral à direita com formulário de email e atualizações >*/
@@ -229,10 +262,10 @@ nav ul li a:link, nav ul li a:visited {
 #posts {
     background: white top left;
     padding: 10px;
-    margin: 0px 25px 0px 10px;
-    width: 380px;
+    margin: 10px 55px 0px 0px;
+    width: 25%;
     float: right;
-    border-left: 1px solid gray;
+    /*border-left: 1px solid gray;*/
 }
 
 /*< Formulário Email na página HOME - index.html >*/
@@ -292,11 +325,67 @@ fieldset
 
 #rodape {
     text-align: center;
-    background-image: linear-gradient(to bottom, #545454, #000000);
+    background-color: #3B4545;
     color: white;
-    margin: 0px;
-    padding: 20px;
-    clear: right;
+    margin: auto;
+    width: 100%;
+    height: 300px;
+}
+
+#img-rodape{
+	height: 50px;
+	line-height: 70px;
+}
+
+#links-rodape{
+	height: 200px;
+	padding: 10px 10px;
+}
+
+#links-rodape-ajuda{
+	width: 30%;
+	height: 180px;
+	float: left;
+	margin-left: 5%;
+}
+
+#links-rodape-ajuda ul, #links-rodape-sobre ul, #links-rodape-redes-sociais ul{
+	text-align: left;
+}
+
+#links-rodape-ajuda ul li, #links-rodape-sobre ul li, #links-rodape-redes-sociais ul li{
+	text-align: left;
+	list-style-type: none;
+	padding-bottom: 5px;
+}
+
+#img-redes-sociais li{
+	display: inline;
+}
+
+#links-rodape-ajuda a, #links-rodape-sobre a, #links-rodape-redes-sociais a{
+	border-bottom: none;
+	color: white;
+}
+
+#links-rodape-ajuda h2, #links-rodape-sobre h2, #links-rodape-redes-sociais h2{
+	color: white;
+}
+
+#links-rodape-sobre{
+	width:30%;
+	height: 180px;
+	float: left;
+}
+
+#links-rodape-redes-sociais{
+	width: 30%;
+	height: 180px;
+	margin-left: 65%;
+}
+
+#titulo-rodape{
+	color: white;
 }
 
 /*< Formatação >*/
@@ -354,11 +443,11 @@ a:link {
     border-bottom: thin solid #053447;
 }
 
-a:visited {
+/*a:visited {
     color: #053447;
     text-decoration: none;
     border-bottom: thin dotted #053447;
-}
+}*/
 
 #galeria {
     border-bottom:0px;
