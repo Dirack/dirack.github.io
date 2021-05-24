@@ -245,7 +245,7 @@ nav ul li a:link, nav ul li a:visited {
 }
 
 #body-text{
-	height: 1000px;
+	height: 1200px;
 }
 
 /*< Coluna principal à esquerda com as postagens e artigos >*/
@@ -257,7 +257,7 @@ nav ul li a:link, nav ul li a:visited {
     color: #191919;
     text-align: justify;
     width: 60%;
-    height: 1000px;
+    height: 100%;
     /*border: 2px solid gray;*/
 }
 

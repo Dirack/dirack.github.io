@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?><entradas>
+
+<entrada>
+		<fonte>http://localhost/Site-diracks-lounge/artigos/artigos.html?var=parceria</fonte>
+		<thumb>thumbs/fortran.png</thumb>
+		<titulo>Nossa nova parceria pode te ajudar a conseguir um emprego!</titulo>
+		<autor> Rodolfo Dirack </autor><data>2021-05-22</data>
+		<resumo>
+Nossa nova parceira é a Workover Academy que se define como "uma plataforma que, através da Jornada do Conhecimento, faz a ponte entre as vagas disponíveis no mercado de Tecnologia e o profissional bem qualificado". Ou seja,
+além de oferecer vários cursos de programação na plataforma, a Workover ainda pode servir de ponte para que você possa conseguir o seu primeiro emprego como programador!
+		</resumo>
+	</entrada>
+
+
 <entrada>
 		<fonte>http://localhost/Site-diracks-lounge/artigos/artigos.html?var=fortran2shell</fonte>
 		<thumb>thumbs/fortran.png</thumb>
