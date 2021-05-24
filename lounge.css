@@ -555,7 +555,7 @@ blockquote {
 
 .cursos{
 	width: 29%;
-	height: 800px;
+	height: 650px;
 	margin-right: 2%;
 	padding: 1%;
 	border-radius: 10px;
@@ -598,8 +598,14 @@ blockquote {
 }
 
 .text-curso{
-	height:50%;
-	border: 1px solid black;
+	height:35%;
+	width: 95%;
+	padding-top: 20px;
+	margin: auto;
+}
+
+#mod3-curso{
+	padding-top: 2px;
 }
 
 .preco-curso{
@@ -608,7 +614,7 @@ blockquote {
 
 .assine-curso{
 	height: 6%;
-	margin-top: 10px;
+	margin-top: 40px;
 }
 
 .assine-curso a{
