@@ -245,7 +245,7 @@ nav ul li a:link, nav ul li a:visited {
 }
 
 #body-text{
-	height: 1200px;
+	height: 2000px;
 }
 
 /*< Coluna principal à esquerda com as postagens e artigos >*/
@@ -256,10 +256,14 @@ nav ul li a:link, nav ul li a:visited {
     margin: 10px 0px 10px 100px;
     color: #191919;
     text-align: justify;
-    width: 60%;
+    width: 55%;
     height: 100%;
     /*border: 2px solid gray;*/
 }
+
+#postagens h1 a{
+	border-bottom: a;
+} 
 
 /*< Barra lateral à direita com formulário de email e atualizações >*/
 
