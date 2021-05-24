@@ -549,7 +549,7 @@ blockquote {
 }
 
 #bar-text{
-	padding-top: 40px;
+	padding-top: 100px;
 	height: 1000px;
 }
 
@@ -569,6 +569,7 @@ blockquote {
 
 #cursos-img{
 	margin-left: 6%;
+	text-indent: 0px;
 }
 
 #img-1{
@@ -586,11 +587,14 @@ blockquote {
 .img-curso{
 	width: 140px;
 	height: 140px;
-	background-color: black;
 	border-radius: 50%;
 	margin: auto;
 }
 
+.img-curso img{
+	width: 140px;
+	height: 140px;
+}
 
 .title-curso p, .title-curso h3{
 	text-align: center;
