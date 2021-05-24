@@ -549,31 +549,104 @@ blockquote {
 }
 
 #bar-text{
-	padding-top: 20px;
+	padding-top: 40px;
 	height: 1000px;
 }
 
 .cursos{
-	width: 28%;
-	height: 500px;
+	width: 29%;
+	height: 800px;
 	margin-right: 2%;
+	padding: 1%;
+	border-radius: 10px;
+	border: 2px solid gray;
+}
+
+.cursos:hover, .cursos:focus, .cursos:active {
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
 }
 
 #cursos-img{
-	margin-left: 10%;
+	margin-left: 6%;
 }
 
 #img-1{
-	background-color: red;
 	float: left;
 }
 
 #img-2{
-	background-color: blue;
 	float: left;
 }
 
 #img-3{
-	background-color: purple;
 	float: left;
+}
+
+.img-curso{
+	width: 140px;
+	height: 140px;
+	background-color: black;
+	border-radius: 50%;
+	margin: auto;
+}
+
+
+.title-curso p, .title-curso h3{
+	text-align: center;
+	text-indent: 0px;
+}
+
+.text-curso{
+	height:50%;
+	border: 1px solid black;
+}
+
+.preco-curso{
+	height: 11%;
+}
+
+.assine-curso{
+	height: 6%;
+	margin-top: 10px;
+}
+
+.assine-curso a{
+	height: 100%;
+	width: 70%;
+	margin: auto;
+	cursor: pointer;
+	border-radius: 2px;
+	display: block;
+	background-color: #bf0000;
+	text-align: center;
+	text-indent: 0px;
+	line-height: 50px;
+	color: white;
+}
+
+.assine-curso a:hover {
+    background: linear-gradient(to top, rgba(255,255,255,0.2) 10%, rgba(255,255,255,0) 90%);
+    background-color: rgba(0, 0, 0, 0);
+    background-color: #FB013D;
+    transform: scale(1.02);
+    transition: 0.2s;
+    color: #ffffff;
+text-decoration: underline;
+}
+
+.preco-curso-de{
+	float: left;
+	height: 100%;
+	width: 49%;
+}
+
+.preco-curso-para{
+	float: left;
+	height: 100%;
+	width: 49%;
+}
+
+.preco-curso-para h2{
+	color: #105e09;
 }
