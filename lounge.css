@@ -553,6 +553,11 @@ blockquote {
 	height: 1000px;
 }
 
+#title-bar-text{
+	text-align: center;
+	margin-bottom: 40px;
+}
+
 .cursos{
 	width: 29%;
 	height: 650px;
