@@ -1,356 +1,228 @@
 <!doctype html>
 <!--
-	index.html (HTML)
+    Salão de jogos do site do Geofisicando
+    
+    Objetivo: Site para a divulgação científica e blog de
+    programação aplicada à geofísica.
+    
+    Autor: Rodolfo A. C. Neves (Dirack) 15/03/2018
 	
-	Objetivo: Jogo Mestre dos Pulos. 
-	
-	Versão 1.0
-	
-	Site: http://www.dirackslounge.online
-	
-	Programador (original): Felipe Alves 
+    Email (Manutenção): rodolfo_profissional@hotmail.com
 
-	Modificado por: Rodolfo A. C. Neves (Dirack) 23/03/2019
-	
-	Email: rodolfo_profissional@hotmail.com
-	
-	Licença: Software de uso livre e código aberto.
 -->
-
-	<head>
-		<meta charset="utf-8" />
-		<title>Jump Master</title>
-		<script src="Sprite.js"></script>
-		<link type="text/css" rel="stylesheet" href="jogos.css">
-	</head>
-	<body>
-	    
-	
-	<div id="canvas">
-	    
-	<script>
-		//variáveis do jogo
-		var canvas, ctx, ALTURA, LARGURA, VELOCIDADE = 6, maxPulos = 3, estadoAtual, record, img,
-        
-		pontosParaNovaFase = [5, 10, 15, 20],
-		faseAtual = 0,
-		
-		labelNovaFase = {
-			texto: "",
-			opacidade: 0.0,
-			
-
-
-
-			fadeIn: function(dt) {
-				var fadeInId = setInterval(function() {
-					if (labelNovaFase.opacidade < 1.0)
-						labelNovaFase.opacidade += 0.01;
-
-					else {
-						clearInterval(fadeInId);
-					}
-				}, 10 * dt);
-			},
-
-			fadeOut: function(dt) {
-				var fadeOutId = setInterval(function() {
-					if (labelNovaFase.opacidade > 0.0)
-						labelNovaFase.opacidade -= 0.01;
-
-					else {
-						clearInterval(fadeOutId);
-					}
-				}, 10 * dt);
-			}
-		},
-
-		estados = {
-			jogar: 0,
-			jogando: 1,
-			perdeu: 2
-		},
-
-		chao = {
-			y: 550,
-			x: 0,
-			altura: 50,
-
-			atualiza: function() {
-				this.x -= VELOCIDADE;
-
-				if (this.x <= -30)
-					this.x += 30;
-			},
-
-			desenha: function() {
-				spriteChao.desenha(this.x, this.y);
-				spriteChao.desenha(this.x + spriteChao.largura, this.y);
-			}
-		},
-
-		bloco = {
-			x: 50,
-			y: 0,
-			altura: spriteBoneco.altura,
-			largura: spriteBoneco.largura,
-			gravidade: 1.6,
-			velocidade: 0,
-			forcaDoPulo: 23.6,
-			qntPulos: 0,
-			score: 0,
-			rotacao: 0,
-
-			vidas: 3,
-			colidindo: false,
-
-			atualiza: function() {
-				this.velocidade += this.gravidade;
-				this.y += this.velocidade;
-				this.rotacao += Math.PI / 180 * VELOCIDADE;
-
-				if (this.y > chao.y - this.altura && estadoAtual != estados.perdeu) {
-					this.y = chao.y - this.altura;
-					this.qntPulos = 0;
-					this.velocidade = 0;
-				}
-			},
-
-			pula: function() {
-				if (this.qntPulos < maxPulos) {
-					this.velocidade = -this.forcaDoPulo;
-					this.qntPulos++;
-				}
-			},
-
-			reset: function() {
-				this.velocidade = 0;
-				this.y = 0;
-				if (this.score > record) {
-					record = this.score;
-					localStorage.setItem("record", this.score);
-				}
-
-				this.vidas = 3;
-				this.score = 0;
-
-				VELOCIDADE = 6;
-				faseAtual = 0;
-				this.gravidade = 1.6;
-
-			},
-
-			desenha: function() {
-				ctx.save();
-				ctx.translate(this.x + this.largura / 2, this.y + this.altura / 2);
-				ctx.rotate(this.rotacao);
-				spriteBoneco.desenha(-this.largura / 2, -this.altura / 2);
-				ctx.restore();
-			}
-		},
-
-		obstaculos = {
-			_obs: [],
-			_scored: false,
-			_sprites: [redObstacle, pinkObstacle, blueObstacle, greenObstacle,yellowObstacle],
-
-			timerInsere: 0,
-
-			insere: function() {
-				this._obs.push({
-					x: LARGURA,
-					y: chao.y - Math.floor(20 + Math.random() * 100),
-					//largura: 50 + Math.floor(10 * Math.random()),
-					largura: 50,
-					sprite: this._sprites[Math.floor(this._sprites.length * Math.random())]
-				});
-
-				this.timerInsere = 30 + Math.floor(20 * Math.random());
-			},
-
-			atualiza: function() {
-				if (this.timerInsere == 0)
-					this.insere();
-
-				else
-					this.timerInsere--;
-
-				for (var i = 0, tam = this._obs.length; i < tam; i++) {
-					var obj = this._obs[i];
-					obj.x -= VELOCIDADE;
-
-					if (!bloco.colidindo && obj.x <= bloco.x + bloco.largura && bloco.x <= obj.x + obj.largura && obj.y <= bloco.y + bloco.altura) {
-
-						bloco.colidindo = true
-
-						setTimeout(function() {
-							bloco.colidindo = false;
-						}, 500);
-
-						if (bloco.vidas >= 1){
-							bloco.vidas--;
-                        }
-						else {
-							estadoAtual = estados.perdeu
-						}
-					}
-
-					else if (obj.x <= 0 && !obj._scored) {
-						bloco.score++;
-						obj._scored = true;
-
-						if (faseAtual < pontosParaNovaFase.length &&
-							 bloco.score == pontosParaNovaFase[faseAtual]) {
-							passarDeFase();
-							//this.vidas=this.vidas+3;//mudei aqui******
-							bloco.vidas++;
-							bloco.vidas++;
-							bloco.vidas++;
-						 }
-					}
-
-					else if (obj.x <= -obj.largura) {
-						this._obs.splice(i, 1);
-						tam--;
-						i--;
-					}
-				}
-			},
-
-			limpa: function() {
-				this._obs = [];
-			},
-
-			desenha: function() {
-				for (var i = 0, tam = this._obs.length; i < tam; i++) {
-					var obj = this._obs[i];
-
-					obj.sprite.desenha(obj.x, obj.y);
-				}
-			}
-		};
-
-		function clique(event) {
-			if (estadoAtual == estados.jogar) {
-				estadoAtual = estados.jogando;
-				frames = 0;
-			}
-
-			else if (estadoAtual == estados.perdeu && bloco.y >= 2 * ALTURA) {
-				estadoAtual = estados.jogar;
-				obstaculos.limpa();
-				bloco.reset();
-			}
-
-			else if (estadoAtual == estados.jogando)
-				bloco.pula();
-		}
-
-		function passarDeFase() {
-			VELOCIDADE++;
-			faseAtual++;
-			bloco.vidas++;
-
-			if (faseAtual == 4)
-				bloco.gravidade *= 0.6;
-
-			labelNovaFase.texto = "Level " + faseAtual;
-			labelNovaFase.fadeIn(0.4);
-
-			setTimeout(function() {
-				labelNovaFase.fadeOut(0.4);
-			}, 800);
-		}
-
-		function main() {
-			ALTURA = window.innerHeight;
-			LARGURA = window.innerWidth;
-
-			if (LARGURA >= 500) {
-				LARGURA = 600;
-				ALTURA = 600;
-			}
-
-			canvas = document.createElement("canvas");
-			canvas.width = LARGURA;
-			canvas.height = ALTURA;
-			canvas.style.border = "1px solid #000";
-
-			ctx = canvas.getContext("2d");
-			document.body.appendChild(canvas);
-
-			document.addEventListener("keyup", clique);
-
-			estadoAtual = estados.jogar;
-
-			record = localStorage.getItem("record");
-
-			if (record == null)
-				record = 0;
-
-			img = new Image();
-			img.src = "imagens/sheet.png";
-
-			roda();
-		}
-
-		function roda() {
-			atualiza();
-			desenha();
-
-			window.requestAnimationFrame(roda);
-		}
-
-		function atualiza() {
-			if (estadoAtual == estados.jogando)
-				obstaculos.atualiza();
-
-			chao.atualiza();
-			bloco.atualiza();
-		}
-
-		function desenha() {
-			bg.desenha(0, 0);
-
-			ctx.fillStyle = "#fff";
-			ctx.font = "50px Arial";
-			ctx.fillText(bloco.score, 30, 68);
-			ctx.fillText(bloco.vidas, 540, 68);
-
-			ctx.fillStyle = "rgba(0, 0, 0, " + labelNovaFase.opacidade + ")";
-			ctx.fillText(labelNovaFase.texto, canvas.width / 2 - ctx.measureText(labelNovaFase.texto).width / 2, canvas.height / 3);
-
-			if (estadoAtual == estados.jogando)
-				obstaculos.desenha();
-
-			chao.desenha();
-			bloco.desenha();
-
-			if (estadoAtual == estados.jogar)
-				jogar.desenha(LARGURA / 2 - jogar.largura / 2, ALTURA / 2 - jogar.altura / 2);
-
-			if (estadoAtual == estados.perdeu) {
-				perdeu.desenha(LARGURA / 2 - perdeu.largura / 2, ALTURA / 2 - perdeu.altura / 2 - spriteRecord.altura / 2);
-
-				spriteRecord.desenha(LARGURA / 2 - spriteRecord.largura / 2, ALTURA / 2 + perdeu.altura / 2 - spriteRecord.altura / 2 - 25);
-
-				ctx.fillStyle = "#fff";
-				ctx.fillText(bloco.score, 375, 390);
-
-				if (bloco.score > record) {
-					novo.desenha(LARGURA / 2 - 180, ALTURA / 2 + 30);
-					ctx.fillText(bloco.score, 420, 470);
-				}
-
-				else
-					ctx.fillText(record, 420, 470);
-			}
-		}
-
-		//inicializa o jogo
-		main();
-	</script>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Geofisicando - Salão de Jogos </title>
+
+<!--{ Ícone do site }-->
+<link rel="icon" 
+      type="image/png" 
+      href="../icon.ico" />
+
+<!-- CSS's mobile é adaptado para tela de celular, lounge.css é para o computador -->
+<!--<link type="text/css" rel="stylesheet" href="mobile.css" media="screen and (max-device-width: 481px) and (orientation: portrait)">
+<link type="text/css" rel="stylesheet" href="mobile.css" media="screen and (max-device-width: 640px) and (orientation: landscape)">-->
+<link type="text/css" rel="stylesheet" href="../lounge.css">
+
+<!-- Funções AJAX alimentar a página -->
+<script type="text/javascript" src="ajax.js"></script>
+
+<!-- JQUERY -->
+<script type="text/javascript" src="login/jquery-3.3.1.min.js"></script>
+
+</head>
+
+<body> 
+	<!-- Menu de Navegação principal do site-->
+	<!-- Classe selected são os botões do menu de navegação -->
+	<nav id="menu">
+		<div id="menu-center">
+			<ul id="homebotao">
+				<li class="selected">
+					<a href="../index.html">HOME</a>
+				</li>
+				<li class="selected">
+					<a href="manutencao.html">BLOG</a>
+				</li>
+				<li class="selected">
+					<a href="manutencao.html">TUTORIAIS</a>
+				</li>
+				<li class="selected">
+					<a href="index.html#body-text">JOGOS</a>
+				</li>
+				<li class="selected">
+					<!--<a href="login/login.html">LOGIN</a>-->
+					<a href="manutencao.html">LOGIN</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+<!-- Banner entre o menu de navegação e o corpo da página (Foto do planeta Terra) --> 
+<div id="preheader"></div>
+
+<div id="body-text">
+
+	<div id="bar-text" style="background-color: white;">
+		<h1 id="title-bar-text">Salão de jogos</h1>
+		<div id="cursos-img">
+
+			<!-- Jogo Mestre dos pulos -->
+			<div id="img-1" class="cursos">
+				<div class="img-curso">
+					<img src="../images/jumpmaster.png" >
+				</div>
+				<div class="title-curso">
+					<h3>Mestre dos pulos</h3>
+					<p>JavaScript</p>
+				</div>
+
+				<div class="assine-curso">
+					<a target="_blank" href="mestredospulos.html">JOGAR</a>
+				</div>
+
+				<div class="text-curso">
+					<p>Jump Master precisará vencer vários obstáculos para se tornar O Mestre dos Pulos</p>
+					<h3>Controles:</h3>
+					<ul>
+						<li>Seta para cima para pular</li>
+						<li>Seta para cima 2X para super pulo</li>
+					</ul>
+					<br><br>
+					<p>Creditos: Filipe Alves</p>
+					<a target="_blank" href="https://www.youtube.com/watch?v=z3r8up9cz3w&list=PL1EkVGo1AQ0Hsqhvjm4khfp6innDjpj9J">Tutorial (canal Velasoft)</a>
+				</div>
+			</div>
+
+			<!-- Jogo Brick Breaker -->
+			<div id="img-2" class="cursos">
+				<div class="img-curso">
+					<img src="../images/brickbreaker.png" >
+				</div>
+				<div class="title-curso">
+					<h3>Brick Breaker 0.1 - Beta</h3>
+					<p>Java</p>
+				</div>
+
+				<div class="assine-curso">
+					<a target="_blank" href="https://github.com/WolfGameDevelopmentGroup/BrickBreaker-backup/releases/tag/v0.1-beta.1">JOGAR</a>
+				</div>
+				<div class="text-curso">
+					<p>Quebre todos os tijolos de cada nível para vencer</p>
+					<h3>Controles:</h3>
+					<ul>
+
+						<li>Seta para baixo para pausar/iniciar o jogo</li>
+						<li>Seta para esquerda para mover para a esquerda</li>
+						<li>Seta para a direita para mover para a direita</li>
+					</ul>
+					<p>Creditos: Rodolfo Dirack</p>
+					<a target="_blank" href="https://cursos.dankicode.com/curso-dev-games?ref=X10445005I">Tutorial (Danki code)</a>
+				</div>
+			</div>
+
+			<!-- Jogo Pong Player -->
+			<div id="img-3" class="cursos">
+				<div class="img-curso">
+					<img src="../images/pong.png" >
+				</div>
+				<div class="title-curso">
+					<h3>Pong Player 0.1 - Beta</h3>
+						<p>Java</p>
+				</div>
+
+				<div class="assine-curso">
+					<a target="_blank" href="https://github.com/WolfGameDevelopmentGroup/Pong-backup/releases/tag/v0.1">JOGAR</a>
+				</div>
+				<div class="text-curso">
+					<p>Desafie uma inteligência artificial e faça maiss pontos para vencer</p>
+					<h3>Controles:</h3>
+					<ul>
+
+						<li> Seta para baixo para pausar o jogo</li>
+						<li>Seta para baixo para iniciar o jogo</li>
+						<li>Seta para esquerda para mover para a esquerda</li>
+						<li>Seta para a direita para mover para a direita</li>
+					</ul>
+					<p>Creditos: Rodolfo Dirack</p>
+					<a target="_blank" href="https://cursos.dankicode.com/curso-dev-games?ref=X10445005I">Tutorial (Danki code)</a>
+				</div>
+			</div>
+		</div>
 	</div>
-	
-	</body>
+
+	<div style="height: 800px;"></div>
+
+<!-- Rodapé da Página -->
+<div id="rodape">
+	<div id="img-rodape"></div>
+
+	<div id="links-rodape">
+		<div id="links-rodape-ajuda">
+			<h2>Suporte</h2>
+			<ul>
+				<li>
+					<a href="https://github.com/Geofisicando">Geofisicando</a>
+				</li>
+				<li>
+					<a href="https://github.com/gpgeof" title="Grupo de programação aplicada à Geofísica (GPGEOF)">GPGEOF</a>
+				</li>
+				<li>Perguntas frequentes</li>
+				<li>
+					<a target="_blank" href="https://www.gnu.org/licenses/quick-guide-gplv3.pt-br.html">Licença de uso (GPL 3)</a>
+				</li>
+			</ul>
+	</div>
+	<div id="links-rodape-sobre">
+		<h2>Sobre</h2>
+			<ul>
+				<li>
+					<a href="about/contato.html">Quem somos</a>
+				</li>
+				<li>
+					<a href="about/biografia.html#canvas">O Autor</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://apoia.se/geofisicando">Seja membro (APOIASE)</a>
+				</li>
+			</ul>
+	</div>
+	<div id="links-rodape-redes-sociais">
+		<h2>Redes Sociais</h2>
+
+			<ul id="img-redes-sociais">
+				<li>
+					<a target="_blank" href="https://www.youtube.com/c/Geofisicando" title="Geofisicando no Youtube">
+						<img src="../images/youtube.png">
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://www.linkedin.com/in/rodolfo-andr%C3%A9-cardoso-neves-49a0778b/" title="Linkedin">
+						<img src="../images/linkedin.png">
+					</a>
+				</li>
+				<li>
+					<a taget="_blank" href="https://twitter.com/RodolfoDirack" title="Twitter">
+						<img src="../images/twitter.png">
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://www.instagram.com/rodolfodirack/?hl=pt-br" title="Instagram">
+						<img src="../images/instagram.png">
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://www.facebook.com/geofisicando" title="Facebook">
+						<img src="../images/face.png">
+					</a>
+				</li>
+			</ul>
+
+	</div>
+</div>
+&copy; 2018, Rodolfo Dirack. Todos os direitos reservados.
+</div>
+
+</body>
 </html>

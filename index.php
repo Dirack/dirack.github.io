@@ -19,10 +19,10 @@ $CSS_PATH="lounge.css";
 $ICON_PATH="icon.ico";
 $MENU_ARRAY=array(
 	"HOME"=>"artigos/index.html",
-	"BLOG"=>"artigos/index.html",
 	"TUTORIAIS"=>"artigos/index.html",
+	"CURSOS"=>"artigos/index.html",
+	"PROGRAMAS"=>"artigos/index.html"
 	"JOGOS"=>"artigos/index.html",
-	"LOGIN"=>"artigos/index.html"
 );
 ?>
 
