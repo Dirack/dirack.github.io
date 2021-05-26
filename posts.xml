@@ -5,6 +5,7 @@
 		<thumb>thumbs/fortran.png</thumb>
 		<titulo>Nossa nova parceria pode te ajudar a conseguir um emprego!</titulo>
 		<autor> Rodolfo Dirack </autor><data>2021-05-22</data>
+		<foto>./images/workover_academy.png</foto>
 		<resumo>
 Nossa nova parceira é a Workover Academy que se define como "uma plataforma que, através da Jornada do Conhecimento, faz a ponte entre as vagas disponíveis no mercado de Tecnologia e o profissional bem qualificado". Ou seja,
 além de oferecer vários cursos de programação na plataforma, a Workover ainda pode servir de ponte para que você possa conseguir o seu primeiro emprego como programador!
@@ -17,6 +18,7 @@ além de oferecer vários cursos de programação na plataforma, a Workover aind
 		<thumb>thumbs/fortran.png</thumb>
 		<titulo>Passar parâmetros através da linha de comandos em Fortran</titulo>
 		<autor> Rodolfo Dirack </autor><data>2019-01-22</data>
+		<foto>images/fortran.jpg</foto>
 		<resumo>
 Os programas do Shell do linux ubuntu recebem argumentos através da linha de comandos que modificam a sua atuação.
 Por exemplo o '-l' do comando 'ls -l' que modifica a atuação do comando 'ls' para que este liste também as permissões
@@ -30,6 +32,7 @@ Por exemplo o '-l' do comando 'ls -l' que modifica a atuação do comando 'ls' p
 		<thumb>thumbs/fortran.png</thumb>
 		<titulo>Leitura e abetura correta de arquivos com iostat</titulo>
 		<autor> Rodolfo Dirack </autor><data>2018-04-26</data>
+		<foto>images/fortran2.jpeg</foto>
 		<resumo>
 O comando IOSTAT é uma maneira elegante de identificar as condições de erro de leitura e abertura de arquivos
 em Fortran, deve ser utilizado junto com os comandos OPEN e READ. É uma boa prática de programação
@@ -44,6 +47,7 @@ negativo ou nulo a uma variável do tipo INTEGER, especificada pelo comando IOST
 		<thumb>thumbs/fortran.png</thumb>
 		<titulo>Compilação facilitada com arquivos Makefile</titulo>
 		<autor> Rodolfo Dirack </autor><data>2018-04-24</data>
+		<foto>images/make.jpg</foto>
 		<resumo>
 		Os arquivos Makefile facilitam muito a compilação de seus códigos em FORTRAN. 
 Você pode substituir o 'gfortran -c' por apenas um único comando 'make' no terminal. Isto será muito útil quando

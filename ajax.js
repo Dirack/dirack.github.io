@@ -61,6 +61,7 @@ function ajax(){
 			thumb = xmlDoc.getElementsByTagName("thumb");
 			titulo = xmlDoc.getElementsByTagName("titulo");
 			resumo = xmlDoc.getElementsByTagName("resumo");
+			foto = xmlDoc.getElementsByTagName("foto");
 
 
 			for(i=0; i<autor.length; i++){
@@ -68,14 +69,13 @@ function ajax(){
 			    // Formatar data de AAAA-MM-DD para DD/MM/AAAA
 			    dataform = data[i].childNodes[0].nodeValue.split('-');
 			
-				txt += '<a href='+fonte[i].childNodes[0].nodeValue+' title="Ler artigo completo?">';
+				//txt += '<a href='+fonte[i].childNodes[0].nodeValue+' title="Ler artigo completo?">';
 				txt += '<h1><a href='+fonte[i].childNodes[0].nodeValue+'#column-center title="Ler artigo completo?" style="border-bottom: none;">';
 				txt += titulo[i].childNodes[0].nodeValue+'</a></h1>';
 				txt += "<p><small>Por <em>"+autor[i].childNodes[0].nodeValue + "</em> em ";
-				
 				// Data formatada para DD/MM/AAAA
 				txt +=  +dataform[2]+"/"+dataform[1]+"/"+dataform[0]+ "</small></p>";
-				
+				txt += '<img src="'+foto[i].childNodes[0].nodeValue+'" width="700px" height="500px">';	
 				txt += '<p id="descricao">'+resumo[i].childNodes[0].nodeValue + "</p><br>";
 				txt += '<a href="'+fonte[i].childNodes[0].nodeValue+'#column-center" style="border-bottom: none;" title="Ler artigo completo?">Leia mais...</a><br><br>';
 			}
