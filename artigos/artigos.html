@@ -17,7 +17,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Artigo</title>
+	<title>Geofisicando - Artigo</title>
 
 	<!--{ Ícone do site }-->
 	<link rel="icon" 
@@ -29,9 +29,6 @@
 	<link type="text/css" rel="stylesheet" href="../coluna_mobile.css" media="screen and (max-device-height: 640px) and (orientation: landscape)">
 	<link type="text/css" rel="stylesheet" href="../lounge.css" media="screen and (min-device-width: 1200px)">
 
-	<!-- Funções JS do Menu de Navegação -->
-	<script type="text/javascript" src="../navegacao.js"></script>
-
 	<!-- Funções AJAX alimentar a página -->
 	<script type="text/javascript" src="ajax.js"></script>
 
@@ -39,69 +36,143 @@
 	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
 
 	<!-- Funções AJAX alimentar comentários antigos na página -->
-	<script type="text/javascript" src="comentariosAjax.js"></script>
+	<!--<script type="text/javascript" src="comentariosAjax.js"></script>-->
 
 	<!-- Funções AJAX adicionar comentário novo na página -->
-	<script type="text/javascript" src="comentar.js"></script>
+	<!--<script type="text/javascript" src="comentar.js"></script>-->
 
 </head>
 
 <body onload="ajax();">
-   
-<!-- Menu de Navegação -->
-<nav id="menu" onmouseover="onMenu()" onmouseout="offMenu()">
-	<ul>
-		<li class="selected"><a href="../index.html#homebotao" title="Voltar para Home?">HOME</a></li>
-	</ul>
-</nav> 
 
-<div id="posts">
+ 	<!-- Menu de Navegação principal do site-->
+	<!-- Classe selected são os botões do menu de navegação -->
+	<nav id="menu">
+		<div id="menu-center">
+			<ul id="homebotao">
+				<li class="selected">
+					<a href="../index.html">HOME</a>
+				</li>
+				<li class="selected">
+					<a href="../manutencao.html">BLOG</a>
+				</li>
+				<li class="selected">
+					<a href="../manutencao.html">TUTORIAIS</a>
+				</li>
+				<li class="selected">
+					<a href="../jogos/index.html#body-text">JOGOS</a>
+				</li>
+				<li class="selected">
+					<!--<a href="login/login.html">LOGIN</a>-->
+					<a href="../manutencao.html">LOGIN</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+  
 
-	<div id="ver" style="margin-left:20px; margin-top:50px;">
-		<h3>Ver também:</h3>
+	<!-- Foto de um vulcão: Banner entre o menu de navegação e o corpo da página --> 
+	<div id="preheader"></div>	
 
-		<p>
-		<small>22/01/2019</small><br> Passar parâmetros através da linha de comandos em Fortran: <a class="links" href="artigos.html?var=fortran2shell" title="Ler mais?"> Fortran2shell</a>.
-		</p>
+<div id="column-container">
+	<div id="column-left"></div>
+	    
+	<div id="column-center">
 
-		
-		<p>
-		<small>26/04/2018</small><br> Leitura e abetura correta de arquivos com o comando <a class="links" href="artigos.html?var=iostat" title="Ler mais?"> Iostat</a>.
-		</p>
-
-		<p>
-		<small>24/04/2018</small><br> Aprenda a compilar facilmente seus códigos em FORTRAN com arquivos <a class="links" href="artigos.html?var=makefile" title="Ler mais?"> Makefile</a>.
-		</p>
-	</div>
-</div>
-    
-<div id="canvas">
-
-	<!-- Texto da página a ser carregado a partir de uma solicitação AJAX -->
-	<div id="texto">
-    
-	</div>
-
-	<div id="comentarios">
-		<div id="caixa-coment">
-			<hr>
-			<h1>Comentários:</h1>
-			<form id="form" method="POST">
-			&nbsp;&nbsp;&nbsp;Nome: <input type="text" name="autor">
-			&nbsp;&nbsp;&nbsp;Email: <input type="text" name="email">
-			<button type="submit" name="botao" value="<?php echo $_GET['var']; ?>">Enviar</button><br><br>
-			Comentário: <textarea name="texto" cols="80" rows="3"></textarea><br>
-			</form><br>
+		<br><br><br><br><br><br>
+		<!-- Texto da página a ser carregado a partir de uma solicitação AJAX -->
+		<div id="texto">
+	    
 		</div>
 
-		<div id="comentariosAnteriores">
+		<div id="comentarios">
+			<div id="caixa-coment">
+				<hr>
+				<h1>Comentários:</h1>
+				<form id="form" method="POST">
+				&nbsp;&nbsp;&nbsp;Nome: <input type="text" name="autor">
+				&nbsp;&nbsp;&nbsp;Email: <input type="text" name="email">
+				<button type="submit" name="botao" value="<?php echo $_GET['var']; ?>">Enviar</button><br><br>
+				Comentário: <textarea name="texto" cols="80" rows="3"></textarea><br>
+				</form><br>
+			</div>
 
+			<div id="comentariosAnteriores"></div>
 		</div>
+
 	</div>
+
+	<div id="column-right"></div>
 
 </div>
 
+<!-- Rodapé da Página -->
 <div id="rodape">
+	<div id="img-rodape"></div>
+
+	<div id="links-rodape">
+		<div id="links-rodape-ajuda">
+			<h2>Suporte</h2>
+			<ul>
+				<li>
+					<a href="http://localhost/Site-diracks-lounge/about/contato.html#sobre-geofisicando">Geofisicando</a>
+				</li>
+				<li>
+					<a href="http://localhost/Site-diracks-lounge/about/contato.html#canvas" title="Grupo de programação aplicada à Geofísica (GPGEOF)">GPGEOF</a>
+				</li>
+				<li>Perguntas frequentes</li>
+				<li>
+					<a target="_blank" href="https://www.gnu.org/licenses/quick-guide-gplv3.pt-br.html">Licença de uso (GPL 3)</a>
+				</li>
+			</ul>
+	</div>
+	<div id="links-rodape-sobre">
+		<h2>Sobre</h2>
+			<ul>
+				<li>
+					<a href="about/contato.html#canvas">Quem somos</a>
+				</li>
+				<li>
+					<a href="about/biografia.html#canvas">O Autor</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://apoia.se/geofisicando">Seja membro (APOIASE)</a>
+				</li>
+			</ul>
+	</div>
+	<div id="links-rodape-redes-sociais">
+		<h2>Redes Sociais</h2>
+
+			<ul id="img-redes-sociais">
+				<li>
+					<a target="_blank" href="https://www.youtube.com/c/Geofisicando" title="Geofisicando no Youtube">
+						<img src="../images/youtube.png">
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://www.linkedin.com/in/rodolfo-andr%C3%A9-cardoso-neves-49a0778b/" title="Linkedin">
+						<img src="../images/linkedin.png">
+					</a>
+				</li>
+				<li>
+					<a taget="_blank" href="https://twitter.com/RodolfoDirack" title="Twitter">
+						<img src="../images/twitter.png">
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://www.instagram.com/rodolfodirack/?hl=pt-br" title="Instagram">
+						<img src="../images/instagram.png">
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://www.facebook.com/geofisicando" title="Facebook">
+						<img src="../images/face.png">
+					</a>
+				</li>
+			</ul>
+
+	</div>
+</div>
 &copy; 2018, Rodolfo Dirack. Todos os direitos reservados.
 </div>
 

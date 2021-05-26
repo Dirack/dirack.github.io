@@ -665,3 +665,26 @@ text-decoration: underline;
 .preco-curso-para h2{
 	color: #105e09;
 }
+
+#column-container{
+	height: 1000px;
+	margin: auto;
+}
+
+#column-left{
+	float: left;
+	width: 10%;
+	height: 100%;
+}
+
+#column-center{
+	float: left;
+	width: 80%;
+	height: 100%;
+}
+
+#column-right{
+	float: left;
+	width: 10%;
+	height: 100%;
+}
