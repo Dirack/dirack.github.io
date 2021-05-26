@@ -687,3 +687,13 @@ text-decoration: underline;
 	width: 10%;
 	height: 100%;
 }
+
+#img-destaques{
+	width: 90%;
+	margin: auto;
+	height: 400px;
+}
+
+#botao-destaques{
+	height: 10%;
+}
