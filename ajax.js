@@ -68,12 +68,12 @@ function ajax(){
 			    // Formatar data de AAAA-MM-DD para DD/MM/AAAA
 			    dataform = data[i].childNodes[0].nodeValue.split('-');
 			
-				//txt += '<a href='+fonte[i].childNodes[0].nodeValue+' title="Ler artigo completo?">';
+				txt += '<a href='+fonte[i].childNodes[0].nodeValue+' title="Ler artigo completo?">';
 				//txt += '<a href="manutencao.html" title="Ler artigo completo?">';
 				//txt += '<img class="thumb" align="left" src="'+thumb[i].childNodes[0].nodeValue;
 				//txt += '" alt="Linux user" border=0></a>';
-				//txt += '<h3><a href='+fonte[i].childNodes[0].nodeValue+' title="Ler artigo completo?">';
-				txt += '<h1><a href="manutencao.html" style="border-bottom: none;" title="Ler artigo completo?">';
+				txt += '<h1><a href='+fonte[i].childNodes[0].nodeValue+'#column-center title="Ler artigo completo?" style="border-bottom: none;">';
+				/*txt += '<h1><a href="manutencao.html" style="border-bottom: none;" title="Ler artigo completo?">';*/
 				txt += titulo[i].childNodes[0].nodeValue+'</a></h1>';
 				txt += "<p><small>Por <em>"+autor[i].childNodes[0].nodeValue + "</em> em ";
 				

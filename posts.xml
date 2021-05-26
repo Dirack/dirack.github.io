@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><entradas>
 
 <entrada>
-		<fonte>http://localhost/Site-diracks-lounge/artigos/artigos.html?var=parceria</fonte>
+		<!--<fonte>http://localhost/Site-diracks-lounge/artigos/artigos.html?var=parceria</fonte>-->
+		<fonte>http://localhost/Site-diracks-lounge/manutencao.html</fonte>
 		<thumb>thumbs/fortran.png</thumb>
 		<titulo>Nossa nova parceria pode te ajudar a conseguir um emprego!</titulo>
 		<autor> Rodolfo Dirack </autor><data>2021-05-22</data>

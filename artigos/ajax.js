@@ -63,8 +63,8 @@ function ajax(){
 			autor = xmlDoc.getElementsByTagName("autor");
 			data = xmlDoc.getElementsByTagName("data");
 
-			txt += '<h2>'+titulo[0].childNodes[0].nodeValue+'</h2>';
-			txt += "<p><small>Por <em>"+autor[0].childNodes[0].nodeValue + "</em> em ";
+			txt += '<h1 style="text-align: center;">'+titulo[0].childNodes[0].nodeValue+'</h1>';
+			txt += '<p style="text-align: center;"><small>Por <em>'+autor[0].childNodes[0].nodeValue + "</em> em ";
 			
 			//Converter a data do formato AAAA-MM-DD para DD/MM/AAAA
 			dataform = data[0].childNodes[0].nodeValue.split('-'); 
@@ -75,15 +75,15 @@ function ajax(){
 			
 			if (video[0].childNodes[0].nodeValue!="none") {
 				txt += '<div id="video">';
-				txt += '<iframe width="560" height="315" src="';
+				txt += '<iframe width="660" height="415" src="';
 				txt += video[0].childNodes[0].nodeValue;
-				txt += '" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>"';
-				txt += '</div>';
+				txt += '" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+				txt += '<br><br></div>';
 			}
 
 			// Primeiro parágrafo
 			p1 = xmlDoc.getElementsByTagName("p1");
-			txt += '<p>'+p1[0].childNodes[0].nodeValue + "</p>";
+			txt += '<p style="font-size: larger;">'+p1[0].childNodes[0].nodeValue + "</p>";
 			
 			//data = xmlDoc.getElementsByTagName("data");
 			//fonte = xmlDoc.getElementsByTagName("fonte");
@@ -96,7 +96,7 @@ function ajax(){
 
 			// Varre as seções
 			for(i=0; i<sub.length; i++){
-				txt += '<br><h3>'+subtitulo[i].childNodes[0].nodeValue+'</h3>';				
+				txt += '<br><h2>'+subtitulo[i].childNodes[0].nodeValue+'</h2>';				
 				p2 = sub[i].getElementsByTagName("p2");
 
 				// Varre todos os parágrafos da seção
@@ -108,10 +108,10 @@ function ajax(){
 					   Esta é identificada pelo 
 					   caractere especial '§' */
 					if (p2p.indexOf("§")!=-1) {
-						txt += '<p>'+p2p.replace(/§/g, "&emsp;&emsp;")+'</p>'; 
+						txt += '<p style="font-size: larger;">'+p2p.replace(/§/g, "&emsp;&emsp;")+'</p>'; 
 
 					} else {
-						txt += '<p>'+p2p+'</p>';
+						txt += '<p style="font-size:larger;">'+p2p+'</p>';
 					}
 				}
 			}
@@ -127,4 +127,14 @@ function ajax(){
 	xmlHttp.send(null);
 
 	
+	var len = $('#texto').height();
 }
+
+$(document).ready(function(){
+	setTimeout(function(){
+	var len = $('#texto').height();
+	$('#column-container').css("height",2000);
+	},600);
+});
+
+
