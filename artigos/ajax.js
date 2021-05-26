@@ -13,6 +13,23 @@
 	Programador: Rodolfo A. C. Neves 21/01/2019
 */
 
+function parsing(p2,len){
+	var str='<p>';
+	var ps = p2.getElementsByTagName("p");
+	var pa = p2.getElementsByTagName("a");
+	for(k=0;k<len;k++){
+		tag = p2.childNodes[k].tagName;
+		if(tag=='a'){
+			link = p2.childNodes[k].getAttribute('link');
+			str += '<a target="_blank" href="'+link+'">'+p2.childNodes[k].childNodes[0].nodeValue+'</a>';
+		}else{
+			str += p2.childNodes[k].childNodes[0].nodeValue;
+		}
+	}
+	str += '</p>';
+	return str;
+}
+
 function ajax(){
 
 	/* Obter a página xml (xmlpage) da URL */
@@ -102,16 +119,20 @@ function ajax(){
 				// Varre todos os parágrafos da seção
 				for(j=0;j<p2.length;j++){
 
-					p2p = p2[j].childNodes[0].nodeValue;
+					p2len = p2[j].childNodes.length;	
+					if(p2len>1){	
+						txt += parsing(p2[j],p2len);
+					}else{
+						p2p = p2[j].childNodes[0].nodeValue;
+						/* Verificar se tem identação.
+						   Esta é identificada pelo 
+						   caractere especial '§' */
+						if (p2p.indexOf("§")!=-1) {
+							txt += '<p style="font-size: larger;">'+p2p.replace(/§/g, "&emsp;&emsp;")+'</p>'; 
 
-					/* Verificar se tem identação.
-					   Esta é identificada pelo 
-					   caractere especial '§' */
-					if (p2p.indexOf("§")!=-1) {
-						txt += '<p style="font-size: larger;">'+p2p.replace(/§/g, "&emsp;&emsp;")+'</p>'; 
-
-					} else {
-						txt += '<p style="font-size:larger;">'+p2p+'</p>';
+						} else {
+							txt += '<p style="font-size:larger;">'+p2p+'</p>';
+						}
 					}
 				}
 			}
