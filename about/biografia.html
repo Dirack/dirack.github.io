@@ -14,25 +14,18 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Biografia</title>
+<title>Geofisicando - O Autor (Rodolfo Dirack)</title>
 
 <!--{ Ícone do site }-->
 <link rel="icon" 
       type="image/png" 
       href="../icon.ico" />
 
-<!-- TODO (alterar) Folha de estilo CSS para celular modo retrato (em pé) -->
-<link type="text/css" rel="stylesheet" href="../mobile.css" media="screen and (max-device-width: 481px) and (orientation: portrait)">
-<!-- TODO (alterar) Folha de estilo CSS para celular modo paisagem (deitado) -->
-<link type="text/css" rel="stylesheet" href="../mobile.css" media="screen and (max-device-height: 640px) and (orientation: landscape)">
 <!-- Folha de estilo CSS para desktop -->
-<link type="text/css" rel="stylesheet" href="../lounge.css" media="screen and (min-device-width: 1200px)">
+<link type="text/css" rel="stylesheet" href="../lounge.css">
 
 <!-- Folha de estilo CSS para o álbum de fotos desta página -->
 <link type="text/css" rel="stylesheet" href="fotos.css" media="screen and (min-device-width: 1200px)">
-
-<!-- Funções JS do Menu de Navegação -->
-<script type="text/javascript" src="../navegacao.js"></script>
 
 </head>
 
@@ -40,57 +33,51 @@
 
 	<!-- Menu de Navegação principal do site-->
 	<!-- Classe selected são os botões do menu de navegação -->
-	<nav id="menu" onmouseover="onMenu()" onmouseout="offMenu()">
-		<ul>
-			<li class="selected"><a href="../index.html#canvas" title="Voltar para Home?">HOME</a></li>
-		</ul>
+	<nav id="menu">
+		<div id="menu-center">
+			<ul id="homebotao">
+				<li class="selected">
+					<a href="index.html">HOME</a>
+				</li>
+				<li class="selected">
+					<a href="manutencao.html">BLOG</a>
+				</li>
+				<li class="selected">
+					<a href="manutencao.html">TUTORIAIS</a>
+				</li>
+				<li class="selected">
+					<a href="jogos/index.html#body-text">JOGOS</a>
+				</li>
+				<li class="selected">
+					<!--<a href="login/login.html">LOGIN</a>-->
+					<a href="manutencao.html">LOGIN</a>
+				</li>
+			</ul>
+		</div>
 	</nav>
 
+
 <!-- Foto de um vulcão: Banner entre o menu de navegação e o corpo da página --> 
-<div id="preheader">	
-	<!-- Título do site sobre a imagem do banner -->
-	<div id="titulo"><h1>Dirack's Lounge</h1><h3>Programação aplicada à Geofísica</h3></div>
+<div id="preheader"></div>	
 
-	<!-- Página oculta que aparece quando clicado no botão de mais à esquerda -->
-	<!-- Exibe um menu adicional de redes socias -->	
-	<div id="plus-on" style="display: none;">
-
-	<h1>Me siga nas minhas redes sociais:</h1>
-
-	<ul>
-		<li><img src="../images/linkedin.png" onclick="goTo('https://www.linkedin.com/in/rodolfo-andr%C3%A9-cardoso-neves-49a0778b/');"></li>
-		<li><img src="../images/twitter.png" onclick="goTo('https://twitter.com/RodolfoDirack');"></li>
-		<li><img src="../images/instagram.png" onclick="goTo('https://www.instagram.com/rodolfodirack/?hl=pt-br');"></li>
-		<li><img src="../images/face.png" onclick="goTo('https://www.facebook.com/rodolfo.neves.925');"></li>
-	</ul>
-</div>
-
-	<div id="redes">
-	<ul>
-		<li><a target="_blank" href="https://www.youtube.com/channel/UCi5XD5PCQtPrIRD0H_GJvag" title="Geofisicando: Youtube"><img id="youtube" src="../images/youtube.png"></a></li>
-		<li><a target="_blank" href="https://github.com/Geofisicando" title="Repositório Github"><img id="git" src="../images/git.png"></a></li>
-		<li><img id="face" src="../images/email.png" onclick="alert('Opção ainda não disponível')"></li>
-
-		<li><img id="plus" src="../images/plus.png" onclick="onPlus();"></li>
-	</ul>
-	</div>
-	 
-</div>
 
 <!-- Barra lateral à direita -->
 <div id="posts">
 
+<br><br><br><br><br>
 	<ul id="foto-perfil">
 		<li id="foto00"><span>Rodolfo Dirack</span></li>
 	</ul>
 
 	<h3>Rodolfo André Cardoso Neves (Dirack): </h3>
 
-	<p>
-		Formou-se bacharel em geofísica em 2015 pela Universidade Federal do Pará (UFPA), 
-		lá também adquiriu o grau de mestre em geofísica em 2017 e, atualmente,
-		é onde cursa o doutorado, com ênfase em modelagem e inversão de dados sísmicos. 
-		Nascido em 1992 e criado em Belém do Pará, 
+	<p style="text-align: center;">
+		Bacharel em geofísica em 2015 pela Universidade Federal do Pará (UFPA), 
+		Mestre em geofísica em 2017 (UFPA). Doutorando em geofísica 
+		com ênfase em modelagem e inversão de dados sísmicos. 
+	</p>
+	<p style="text-align: center;">
+		Nascido em 1992 em Belém do Pará, 
 		tem a música como hobbie
 		e cursa <a target="_blank" href="https://www.youtube.com/watch?v=5Toe2YWXZpk" 
 		title="Quer ver o Dirack tocando?">Violão Clássico</a> 
@@ -99,18 +86,18 @@
 
 	<h3>Curiosidade: Dirack?</h3>
 
-	<p>
-		O apelido 'Dirack' foi dado pelos seus amigos de universidade: 
-		Victor Barros (Mordekai) e Jeferson Afonso (Cerberuss). É uma referência ao 
-		físico e matemático Paul Dirac um dos pais da mecânica quântica.
+	<p style="text-align: center;">
+		O apelido 'Dirack', dado pelos seus amigos de universidade
+		Victor Barros (Mordekai) e Jeferson Afonso (Cerberuss), é uma referência ao 
+		físico e matemático Paul Dirac.
 	</p>
 
 </div>
 
 <!-- Coluna principal à esquerda -->
 <div id="canvas">
-<br>
-<q>A Geofísica é uma ciência que te permite fazer grandes amigos e viver muitas aventuras.
+<br><br><br><br><br>
+<q style="font-size:large;">A Geofísica é uma ciência que te permite fazer grandes amigos e viver muitas aventuras.
 </q>
 
 	<!-- Album de fotos de Rodolfo Dirack -->
@@ -126,11 +113,79 @@
 		<li id="foto09"><span>Geofísica UFPA 2010 </span></li>
 	</ul>
 	
+<br><br><br><br><br>
 </div>
 
+<!-- Rodapé da Página -->
 <div id="rodape">
-	&copy; 2018, Rodolfo Dirack. Todos os direitos reservados.
+	<div id="img-rodape"></div>
+
+	<div id="links-rodape">
+		<div id="links-rodape-ajuda">
+			<h2>Suporte</h2>
+			<ul>
+				<li>
+					<a href="http://localhost/Site-diracks-lounge/about/contato.html#sobre-geofisicando">Geofisicando</a>
+				</li>
+				<li>
+					<a href="http://localhost/Site-diracks-lounge/about/contato.html#canvas" title="Grupo de programação aplicada à Geofísica (GPGEOF)">GPGEOF</a>
+				</li>
+				<li>Perguntas frequentes</li>
+				<li>
+					<a target="_blank" href="https://www.gnu.org/licenses/quick-guide-gplv3.pt-br.html">Licença de uso (GPL 3)</a>
+				</li>
+			</ul>
+	</div>
+	<div id="links-rodape-sobre">
+		<h2>Sobre</h2>
+			<ul>
+				<li>
+					<a href="about/contato.html#canvas">Quem somos</a>
+				</li>
+				<li>
+					<a href="about/biografia.html#canvas">O Autor</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://apoia.se/geofisicando">Seja membro (APOIASE)</a>
+				</li>
+			</ul>
+	</div>
+	<div id="links-rodape-redes-sociais">
+		<h2>Redes Sociais</h2>
+
+			<ul id="img-redes-sociais">
+				<li>
+					<a target="_blank" href="https://www.youtube.com/c/Geofisicando" title="Geofisicando no Youtube">
+						<img src="../images/youtube.png">
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://www.linkedin.com/in/rodolfo-andr%C3%A9-cardoso-neves-49a0778b/" title="Linkedin">
+						<img src="../images/linkedin.png">
+					</a>
+				</li>
+				<li>
+					<a taget="_blank" href="https://twitter.com/RodolfoDirack" title="Twitter">
+						<img src="../images/twitter.png">
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://www.instagram.com/rodolfodirack/?hl=pt-br" title="Instagram">
+						<img src="../images/instagram.png">
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://www.facebook.com/geofisicando" title="Facebook">
+						<img src="../images/face.png">
+					</a>
+				</li>
+			</ul>
+
+	</div>
 </div>
+&copy; 2018, Rodolfo Dirack. Todos os direitos reservados.
+</div>
+
 
 </body>
 </html>
