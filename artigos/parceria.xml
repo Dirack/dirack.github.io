@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<postagem>
+	<titulo>Nossa nova parceria pode te ajudar a conseguir um emprego!</titulo>
+	<autor> Rodolfo Dirack </autor>
+	<data>2021-05-22</data>
+	<video>https://www.youtube.com/embed/yHHSgT3ik1o</video>
+
+	<p1>Nossa nova parceira é a Workover Academy que se define como "uma plataforma que, através da Jornada do Conhecimento, faz a ponte entre as vagas disponíveis no mercado de Tecnologia e o profissional bem qualificado". Ou seja, além de oferecer vários cursos de programação na plataforma, a Workover ainda pode servir de ponte para que você possa conseguir o seu primeiro emprego como programador!</p1>
+
+<sub>
+
+	<subtitulo>Como funciona a Workover Academy?</subtitulo>
+	<p2>A inscrição na plataforma é completamente gratuita. Existem centenas de cursos de programação gratuitos de linguagens variadas como Python, Shell Script, C e muito mais. Você só paga para ter acesso ao conteúdo Premium se quiser serviços como grupos de mentoria, suporte do professor e/ou suporte da comunidade, Certificado, aulas sem interrupção de anunciantes, aprimorando os seus conhecimentos em TI.</p2>
+</sub>
+<sub>
+	<subtitulo>Como a Workover pode te ajudar a conseguir um emprego?</subtitulo>
+ 	<p2>A Workover possui o objetivo de preparar você para o mercado de trabalho através dos cursos citados anteriormente, bem como te ajudar a conseguir trabalho na área de TI através da plataforma. Basta clicar em “VAGAS” no menu superior da plataforma que você terá acesso a todas as vagas disponíveis. Você poderá também pesquisar por cidade, nível profissional e outras condições da vaga, como trabalho presencial, remoto, cursos e conhecimentos exigidos. </p2>
+</sub>
+<sub>
+	<subtitulo>Os cursos do Geofisicando estão disponíveis na Workover Academy com certificado!</subtitulo>
+	<p2>Também é possível fazer os cursos do canal Geofisicando, como o curso Shell Script profissional: Do básico ao avançado e obter um certificado de conclusão de curso. Além disso, a plataforma da Workover Academy permite gerar o seu currículo automaticamente com todos os cursos que você finalizou na plataforma.</p2>
+	<p2>Oque você está esperando?Faça a sua inscrição!</p2>
+</sub>
+</postagem>
