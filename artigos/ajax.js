@@ -153,8 +153,9 @@ function ajax(){
 
 $(document).ready(function(){
 	setTimeout(function(){
-	var len = $('#texto').height();
-	$('#column-container').css("height",2000);
+	var len = parseFloat($('#texto').height());
+	len = len + 500;
+	$('#column-container').css("height",len);
 	},600);
 });
 
