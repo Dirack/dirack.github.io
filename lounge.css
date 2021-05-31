@@ -34,7 +34,9 @@
 }
 
 /*< Menu de navegação >*/
-
+#menu{
+	text-indent: 0px;
+}
 /* ícone do menu */
 #icone-menu {
 	position: absolute;
