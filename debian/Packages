@@ -1,0 +1,42 @@
+Package: teste
+Version: 0.1
+Architecture: all
+Essential: no
+Maintainer: Rodolfo Dirack
+Depends: less, parted, rsync
+Filename: ./teste_0.1_all.deb
+Size: 800
+MD5sum: 28c624ed92cbbfd8a020f64052f90bb7
+SHA1: cad711067d6ef817b173193613479742c1c12ca7
+SHA256: 1d2f70658524dc94fd9963d803ffc91a3f722a417d3b620ec806c388c3a91e39
+Priority: optional
+Description: Apenas um teste inútil
+
+Package: teste
+Version: 0.2
+Architecture: all
+Essential: no
+Maintainer: Rodolfo Dirack
+Depends: less, parted, rsync
+Filename: ./teste_0.2_all.deb
+Size: 812
+MD5sum: a869cd5249df3ed6daa88d0ee92eb331
+SHA1: 1767a0b980dc556f8595807146e1aca9e87e52ac
+SHA256: 2cba48119324c82772c1e2616c41596e9f2e7e9bfa9dee183e655399a13673c9
+Priority: optional
+Description: Apenas um teste inútil
+
+Package: teste
+Version: 0.3
+Architecture: all
+Essential: no
+Maintainer: Rodolfo Dirack
+Depends: less, parted, rsync
+Filename: ./teste_0.3.all.deb
+Size: 828
+MD5sum: 21fa604374cc39aaad5e1c3da8f4784d
+SHA1: ae402f509c83d2494c5bddc584b06021b8d5cbd9
+SHA256: 1e5fdd28d50b487491206ff7111c1961053d8b3b94d80bdb064e13ea23752974
+Priority: optional
+Description: Apenas um teste inútil
+
