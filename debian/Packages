@@ -47,10 +47,10 @@ Essential: no
 Maintainer: Rodolfo Dirack
 Depends: less, parted, rsync
 Filename: ./teste_0.4_all.deb
-Size: 1324
-MD5sum: adf5badaeedc809bf9f58e8afac1d361
-SHA1: 1a5a1ac50c3905b9e0949b7b519170b928d0f049
-SHA256: b612952ca5c52f6f37ae0fc401189accbb3bbf80256fab1b62b1a32eb62ed7e4
+Size: 1328
+MD5sum: ba32b9a69ed0d0a8b62c3946945f85a2
+SHA1: 3ad75f93c8e2d54cfa564d836a24fcd9e216bf1f
+SHA256: 4b4df9d320292a682a8fb71bc7cc13ca8932c4d6f0c5711335799305dbf53414
 Priority: optional
 Description: Apenas um teste inútil
 
