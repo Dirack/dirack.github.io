@@ -40,3 +40,17 @@ SHA256: 1e5fdd28d50b487491206ff7111c1961053d8b3b94d80bdb064e13ea23752974
 Priority: optional
 Description: Apenas um teste inútil
 
+Package: teste
+Version: 0.4
+Architecture: all
+Essential: no
+Maintainer: Rodolfo Dirack
+Depends: less, parted, rsync
+Filename: ./teste_0.4_all.deb
+Size: 1324
+MD5sum: adf5badaeedc809bf9f58e8afac1d361
+SHA1: 1a5a1ac50c3905b9e0949b7b519170b928d0f049
+SHA256: b612952ca5c52f6f37ae0fc401189accbb3bbf80256fab1b62b1a32eb62ed7e4
+Priority: optional
+Description: Apenas um teste inútil
+
