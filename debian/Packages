@@ -1,3 +1,17 @@
+Package: shellinclude
+Version: 1.0
+Architecture: all
+Essential: no
+Maintainer: Rodolfo A C Neves (Dirack)
+Depends: less, parted, rsync
+Filename: ./shellinclude_1.0_all.deb
+Size: 589580
+MD5sum: 30b7ae8f2a7c0ea05d51c39b6253c4f9
+SHA1: 9031aae563401bab423e5e7400db3178d13f154f
+SHA256: a7cd043b1609e09b9b6f68e324b48cfd35c444d42aba589e218007f6bcced829
+Priority: optional
+Description: Versão beta da biblioteca shellinclude
+
 Package: teste
 Version: 0.1
 Architecture: all
