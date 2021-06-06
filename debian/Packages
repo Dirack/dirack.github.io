@@ -6,9 +6,9 @@ Maintainer: Rodolfo A C Neves (Dirack)
 Depends: less, parted, rsync
 Filename: ./shellinclude_1.0_all.deb
 Size: 589580
-MD5sum: 30b7ae8f2a7c0ea05d51c39b6253c4f9
-SHA1: 9031aae563401bab423e5e7400db3178d13f154f
-SHA256: a7cd043b1609e09b9b6f68e324b48cfd35c444d42aba589e218007f6bcced829
+MD5sum: 0cb116079e7d14a7d43f92d92d9b7abb
+SHA1: c6b039f156c8c67cf7fc7903d9c53d0eaa419b7a
+SHA256: 88e3bef6d202057292b729e4cd4698ddae01ea87ac1d0fad2fdff071a12f81d2
 Priority: optional
 Description: Versão beta da biblioteca shellinclude
 
