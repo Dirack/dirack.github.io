@@ -1,98 +1,14 @@
 Package: shellinclude
-Version: 1.0
-Architecture: all
-Essential: no
-Maintainer: Rodolfo A C Neves (Dirack)
-Depends: less, parted, rsync
-Filename: ./shellinclude_1.0_all.deb
-Size: 14664
-MD5sum: 7bda02c166b903d80ac7e485866191f5
-SHA1: 2690233a1acf805b9c22dd5d1b23dae973f0d4c8
-SHA256: cbdbe25f9f38319e62a43197c2018b207e0e46e6a50c757543c9024bd3f50260
-Priority: optional
-Description: Versão beta da biblioteca shellinclude
-
-Package: teste
 Version: 0.1
 Architecture: all
 Essential: no
-Maintainer: Rodolfo Dirack
-Depends: less, parted, rsync
-Filename: ./teste_0.1_all.deb
-Size: 800
-MD5sum: 28c624ed92cbbfd8a020f64052f90bb7
-SHA1: cad711067d6ef817b173193613479742c1c12ca7
-SHA256: 1d2f70658524dc94fd9963d803ffc91a3f722a417d3b620ec806c388c3a91e39
+Maintainer: Rodolfo A C Neves (Dirack)
+Depends: dialog, lynx
+Filename: ./shellinclude_0.1_all.deb
+Size: 31932
+MD5sum: c32a414565fc6deefbabcd6d3635d2d1
+SHA1: b63f5c66ce8de359dd834282cbd222e823433ab3
+SHA256: 55e99de692c52846d1a658ad2acc345869f380bd8743c8be66683c2f9e768131
 Priority: optional
-Description: Apenas um teste inútil
-
-Package: teste
-Version: 0.2
-Architecture: all
-Essential: no
-Maintainer: Rodolfo Dirack
-Depends: less, parted, rsync
-Filename: ./teste_0.2_all.deb
-Size: 812
-MD5sum: a869cd5249df3ed6daa88d0ee92eb331
-SHA1: 1767a0b980dc556f8595807146e1aca9e87e52ac
-SHA256: 2cba48119324c82772c1e2616c41596e9f2e7e9bfa9dee183e655399a13673c9
-Priority: optional
-Description: Apenas um teste inútil
-
-Package: teste
-Version: 0.3
-Architecture: all
-Essential: no
-Maintainer: Rodolfo Dirack
-Depends: less, parted, rsync
-Filename: ./teste_0.3.all.deb
-Size: 828
-MD5sum: 21fa604374cc39aaad5e1c3da8f4784d
-SHA1: ae402f509c83d2494c5bddc584b06021b8d5cbd9
-SHA256: 1e5fdd28d50b487491206ff7111c1961053d8b3b94d80bdb064e13ea23752974
-Priority: optional
-Description: Apenas um teste inútil
-
-Package: teste
-Version: 0.4
-Architecture: all
-Essential: no
-Maintainer: Rodolfo Dirack
-Depends: less, parted, rsync
-Filename: ./teste_0.4_all.deb
-Size: 1328
-MD5sum: 2cc0b2876ca5d3cab758bc48739f1130
-SHA1: 8de3c9583ad5d5c9d393de7a3759b914354fedde
-SHA256: 34eeb3230bc82a5dd53529e1b8a4ca11abed709cef2026c080109f75d6fdff6c
-Priority: optional
-Description: Apenas um teste inútil
-
-Package: teste
-Version: 0.5
-Architecture: all
-Essential: no
-Maintainer: Rodolfo Dirack
-Depends: less, parted, rsync
-Filename: ./teste_0.5_all.deb
-Size: 1320
-MD5sum: 548b72962fe64992b826834ee525cf2a
-SHA1: 7c36ea5e93692fe8b2875c461326488731c2e991
-SHA256: b4106c288e5a705331becc73cd3ffe14d07d046842a5ddb4727848e91e3bd474
-Priority: optional
-Description: Apenas um teste inútil
-
-Package: teste
-Version: 0.6
-Architecture: all
-Essential: no
-Maintainer: Rodolfo Dirack
-Depends: less, parted, rsync
-Filename: ./teste_0.6_all.deb
-Size: 1656
-MD5sum: b3f7f09e5a727f8a523d53f19408754a
-SHA1: fc91f58d34ebd14f303bd0916b51de626130a28a
-SHA256: 82b4247e0b3e4855ad5e595e08f18c1ba8205ea834d92d9cda70683a3dbc2c87
-Priority: optional
-Description: Apenas um teste inútil
+Description: Biblioteca de scripts utilitários em Shell Script
 
