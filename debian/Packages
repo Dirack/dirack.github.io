@@ -1,14 +1,16 @@
 Package: shellinclude
-Version: 0.1
+Version: 0.1.0
 Architecture: all
 Essential: no
-Maintainer: Rodolfo A C Neves (Dirack)
-Depends: dialog, lynx
-Filename: ./shellinclude_0.1_all.deb
-Size: 31932
-MD5sum: c32a414565fc6deefbabcd6d3635d2d1
-SHA1: b63f5c66ce8de359dd834282cbd222e823433ab3
-SHA256: 55e99de692c52846d1a658ad2acc345869f380bd8743c8be66683c2f9e768131
+Bugs: https://github.com/Dirack/Shellinclude/issues/new?assignees=Dirack&labels=bug&template=bug_report.md&title=%5BBUG%5D
+Maintainer: Rodolfo A C Neves (Dirack) <https://dirack.github.io>
+Depends: dialog (>= 1.3), lynx (>= 2.9)
+Filename: ./shellinclude_0.1.0_all.deb
+Size: 32068
+MD5sum: 0a589cf8d4e2e6cd0b6487856f5f1408
+SHA1: e019f67666fa3db8216744c1a95f9b3bdb54a748
+SHA256: 1794ad9507a3924954384fadf3c10d40216079c3edf418f08fb96c001bf77ee8
 Priority: optional
 Description: Biblioteca de scripts utilitários em Shell Script
+Original-Maintainer: GPGEOF <https://github.com/gpgeof>
 
