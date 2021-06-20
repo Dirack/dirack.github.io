@@ -1,3 +1,19 @@
+Package: pythoninclude
+Version: 0.1.0
+Architecture: all
+Essential: no
+Bugs: https://github.com/Dirack/Shellinclude/issues/new?assignees=Dirack&labels=bug&template=bug_report.md&title=%5BBUG%5D
+Maintainer: Rodolfo A C Neves (Dirack) <https://dirack.github.io>
+Depends: python3 (>= 3.8), pip3 (>= 20.0)
+Filename: ./pythoninclude_0.1.0_all.deb
+Size: 7128
+MD5sum: a5a8faf23f0a6716afcea1192fc54c6c
+SHA1: 8b9f6b0acf8c273195d5ac9bf5877a703e64afbc
+SHA256: d062a7d4d8d0fe4fdef4da06353684f16a0125b57e5db30092095ea36a449db3
+Priority: optional
+Description: Biblioteca de scripts utilitários em Python3
+Original-Maintainer: GPGEOF <https://github.com/gpgeof>
+
 Package: shellinclude
 Version: 0.1.0
 Architecture: all
