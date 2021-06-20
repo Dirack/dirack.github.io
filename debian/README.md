@@ -1,16 +1,16 @@
 # Debian packages repository
 
-This is the [GPGEOF's](https://github.com/gpgeof) packages repository. You can download all the packages available under
+This is the [GPGEOF's](https://github.com/gpgeof) packages repository. You can download all the packages available here under the terms of the
 [GPL3.0 license](https://www.gnu.org/licenses/quick-guide-gplv3.pt-br.html). They
 are open source software, so feel free to share and modify them.
 
 - Maintainer: Rodolfo A C Neves (Dirack) - rodolfo_profissional@hotmail.com
 
-### Packages List
+# Packages List
 
 - shellinclude (0.1.0 - Beta version) [[deb]](https://github.com/Dirack/Shellinclude/releases/download/v0.1-beta.1/shellinclude_0.1.0_all.deb) [[zip]](https://github.com/Dirack/Shellinclude/archive/refs/tags/v0.1-beta.1.zip) [[tar.gz]](https://github.com/Dirack/Shellinclude/archive/refs/tags/v0.1-beta.1.tar.gz)
 
-### How to add this repository to your sources.list?
+# How to add this repository to your sources.list?
 
 To add this repository to your apt repositories add the following line to your '/etc/apt/sources.list' file:
 
