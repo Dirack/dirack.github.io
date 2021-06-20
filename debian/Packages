@@ -30,3 +30,19 @@ Priority: optional
 Description: Biblioteca de scripts utilitários em Shell Script
 Original-Maintainer: GPGEOF <https://github.com/gpgeof>
 
+Package: shellunity
+Version: 0.1.0
+Architecture: all
+Essential: no
+Bugs: https://github.com/Dirack/Shellinclude/issues/new?assignees=Dirack&labels=bug&template=bug_report.md&title=%5BBUG%5D
+Maintainer: Rodolfo A C Neves (Dirack) <https://dirack.github.io>
+Depends: bash
+Filename: ./shellunity_0.1.0_all.deb
+Size: 1772
+MD5sum: 4e1bdcb8b56c89a06d7b658f0b7b65c9
+SHA1: 96b5cb9bc955776c56c0f9083b7b6c7e9865df97
+SHA256: e5cf647768cfa0de7c7bf139d26eeabacdde19ee70b73804939badb76dffa952
+Priority: optional
+Description: Biblioteca de testes unitários em Shell Script
+Original-Maintainer: GPGEOF <https://github.com/gpgeof>
+
