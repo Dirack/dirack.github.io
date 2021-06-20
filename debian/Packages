@@ -4,12 +4,12 @@ Architecture: all
 Essential: no
 Bugs: https://github.com/Dirack/Shellinclude/issues/new?assignees=Dirack&labels=bug&template=bug_report.md&title=%5BBUG%5D
 Maintainer: Rodolfo A C Neves (Dirack) <https://dirack.github.io>
-Depends: python3 (>= 3.8), pip3 (>= 20.0)
+Depends: python3 (>= 3.8), python3-pip (>= 20.0)
 Filename: ./pythoninclude_0.1.0_all.deb
-Size: 7128
-MD5sum: a5a8faf23f0a6716afcea1192fc54c6c
-SHA1: 8b9f6b0acf8c273195d5ac9bf5877a703e64afbc
-SHA256: d062a7d4d8d0fe4fdef4da06353684f16a0125b57e5db30092095ea36a449db3
+Size: 1896
+MD5sum: c56447d31afa100c5ff4dcce557b408c
+SHA1: 6226f641cc7227c830db3165fee7645fa8936494
+SHA256: 57ce948b3a60e546fd1792a9d11a88e3099882d44c4669f76756cfa9fadbd995
 Priority: optional
 Description: Biblioteca de scripts utilitários em Python3
 Original-Maintainer: GPGEOF <https://github.com/gpgeof>
@@ -22,10 +22,10 @@ Bugs: https://github.com/Dirack/Shellinclude/issues/new?assignees=Dirack&labels=
 Maintainer: Rodolfo A C Neves (Dirack) <https://dirack.github.io>
 Depends: dialog (>= 1.3), lynx (>= 2.9)
 Filename: ./shellinclude_0.1.0_all.deb
-Size: 32068
-MD5sum: 0a589cf8d4e2e6cd0b6487856f5f1408
-SHA1: e019f67666fa3db8216744c1a95f9b3bdb54a748
-SHA256: 1794ad9507a3924954384fadf3c10d40216079c3edf418f08fb96c001bf77ee8
+Size: 27020
+MD5sum: 5a026a9266cb0ec9a38890ab5ae94724
+SHA1: 888ba811ea4a4d80a7941d77695a02d5fac13c2a
+SHA256: f017236b3b8c774185fbe57eecc7d4997861df21f5cae4b3872f87ad9d964d55
 Priority: optional
 Description: Biblioteca de scripts utilitários em Shell Script
 Original-Maintainer: GPGEOF <https://github.com/gpgeof>
