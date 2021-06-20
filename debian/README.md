@@ -10,7 +10,8 @@ are open source software, so feel free to share and modify them.
 
 Package   | version | type |  |  |  |
 --------- | ------- | ---- | - | - | - |
-shellinclude | 0.1.0 | Beta version | [[deb]](https://github.com/Dirack/Shellinclude/releases/download/v0.1-beta.1/shellinclude_0.1.0_all.deb) | [[zip]](https://github.com/Dirack/Shellinclude/archive/refs/tags/v0.1-beta.1.zip) | [[tar.gz]](https://github.com/Dirack/Shellinclude/archive/refs/tags/v0.1-beta.1.tar.gz) | 
+shellinclude | 0.1.0 | Beta version | [[deb]](https://github.com/Dirack/Shellinclude/releases/download/v0.1-beta.1/shellinclude_0.1.0_all.deb) | [[zip]](https://github.com/Dirack/Shellinclude/archive/refs/tags/v0.1-beta.1.zip) | [[tar.gz]](https://github.com/Dirack/Shellinclude/archive/refs/tags/v0.1-beta.1.tar.gz) |
+pythoninclude | 0.1.0 | Beta version | [[deb]](https://github.com/Dirack/Pythoninclude/releases/download/v0.1.0-beta.1/pythoninclude_0.1.0_all.deb) | [[zip]](https://github.com/Dirack/Pythoninclude/archive/refs/tags/v0.1.0-beta.1.zip) | [[tar.gz]](https://github.com/Dirack/Pythoninclude/archive/refs/tags/v0.1.0-beta.1.tar.gz) |
 
 # How to add this repository to your sources.list?
 
