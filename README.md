@@ -7,7 +7,7 @@ O nosso Grupo de programação aplicada foi criado em 01/10/2018 por Rodolfo And
 com o intuito de auxiliar os alunos de Geofísica no estudo da programação. Inspirado nos desenvolvedores 
 dos pacotes de processamento sísmico de uso livre e gratuito, MADAGASCAR e SEISMIC UNIX, e nos trabalhos 
 de Sergey Fomel e John Claerbout, tem por princípio o compartilhamento de conhecimento e desenvolvimento 
-'open source'. Está vinculado ao PET-Geofísica (UFPA). 
+'open source'. 
 
 ## Fundador
 Rodolfo André Cardoso Neves (Dirack)
