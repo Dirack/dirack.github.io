@@ -1,3 +1,3 @@
 # Tacutu data
 
-[cmps.rsf](https://drive.google.com/file/d/1Oqp9vtmOSoTMAXiv-gNaZwXwqE4aohLj/view?usp=sharing)
+[cmps.rsf](https://github.com/Dirack/dirack.github.io/releases/download/v0.1-alpha.1/cmps.rsf)
