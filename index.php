@@ -21,8 +21,8 @@ $MENU_ARRAY=array(
 	"HOME"=>"artigos/index.html",
 	"TUTORIAIS"=>"artigos/index.html",
 	"CURSOS"=>"artigos/index.html",
-	"PROGRAMAS"=>"artigos/index.html"
-	"JOGOS"=>"artigos/index.html",
+	"PROGRAMAS"=>"artigos/index.html",
+	"JOGOS"=>"artigos/index.html"
 );
 ?>
 
