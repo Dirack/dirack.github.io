@@ -18,11 +18,11 @@ $ROOT_PATH="./";
 $CSS_PATH="lounge.css";
 $ICON_PATH="icon.ico";
 $MENU_ARRAY=array(
-	"HOME"=>"artigos/index.html",
-	"TUTORIAIS"=>"artigos/index.html",
-	"CURSOS"=>"artigos/index.html",
-	"PROGRAMAS"=>"artigos/index.html",
-	"JOGOS"=>"artigos/index.html"
+	"HOME"=>"artigos/index.php",
+	"TUTORIAIS"=>"artigos/index.php",
+	"CURSOS"=>"artigos/index.php",
+	"PROGRAMAS"=>"artigos/index.php",
+	"JOGOS"=>"artigos/index.php"
 );
 ?>
 
@@ -46,7 +46,7 @@ $MENU_ARRAY=array(
 
 
 <!-- Banner entre o menu de navegação e o corpo da página (Foto do planeta Terra) --> 
-<div id="preheader"></div>
+<!--<div id="preheader"></div>-->
 
 <div id="body-text">
 

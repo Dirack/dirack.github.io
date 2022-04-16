@@ -2,7 +2,7 @@
 
 ?>
 
-<div id="rodape">
+<footer>
 	<div id="img-rodape"></div>
 
 	<div id="links-rodape">
@@ -69,5 +69,6 @@
 	</div>
 </div>
 &copy; 2018, Rodolfo Dirack. Todos os direitos reservados.
-</div>
+</footer
+
 

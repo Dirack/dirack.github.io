@@ -35,7 +35,8 @@
 
 /*< Menu de navegação >*/
 #menu{
-	text-indent: 0px;
+	background-color: #a0d3f8;
+	text-indent: 0;
 }
 /* ícone do menu */
 #icone-menu {
@@ -142,7 +143,6 @@ nav ul li.selected {
 /* BOTÃO: Flutuação */
 li.selected:hover{
     /*background-image: linear-gradient(to bottom, #cf2b4f, #bdb1c2);*/
-    background-color: #4A5C57;
     border-radius: 5px;
 }
 
@@ -155,7 +155,6 @@ nav {
     background-color: #3B4545;
     margin: auto;
     width: 100%;
-    position: fixed;
     z-index: 1;
     height: 75px;
 }
@@ -188,11 +187,12 @@ nav {
 }
 
 #menu-center{
-	width: 100%;
-	margin-left: 22%;
-	/*background-color: blue;*/
-	height: 75px;
-	line-height: 75px;
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	align-items: center;
+	height: 100%;
+	max-width: 960px;
 }
 
 /*nav:hover {
@@ -241,7 +241,6 @@ nav ul li form {
 }
 
 nav ul li a:link, nav ul li a:visited {
-    color: white;
     border-bottom: none;
     font-weight: bold;
 }
@@ -253,7 +252,6 @@ nav ul li a:link, nav ul li a:visited {
 /*< Coluna principal à esquerda com as postagens e artigos >*/
 #canvas {
     text-indent: 0px;
-    background: white top left;
     padding: 10px;
     margin: 10px 0px 10px 100px;
     color: #191919;
@@ -271,7 +269,6 @@ nav ul li a:link, nav ul li a:visited {
 
 #posts {
     height: 90%;
-    background: white top left;
     padding: 10px;
     margin: 10px 55px 0px 0px;
     width: 25%;
@@ -338,10 +335,9 @@ fieldset
 
 /*< Rodapé da página >*/
 
-#rodape {
+footer {
     text-align: center;
-    background-color: #3B4545;
-    color: white;
+    background-color: #a0d3f8;
     margin: auto;
     /*margin-top: 150px;*/
     width: 100%;
@@ -381,11 +377,10 @@ fieldset
 
 #links-rodape-ajuda a, #links-rodape-sobre a, #links-rodape-redes-sociais a{
 	border-bottom: none;
-	color: white;
 }
 
 #links-rodape-ajuda h2, #links-rodape-sobre h2, #links-rodape-redes-sociais h2{
-	color: white;
+	color: black;
 }
 
 #links-rodape-sobre{
@@ -398,10 +393,6 @@ fieldset
 	width: 30%;
 	height: 180px;
 	margin-left: 65%;
-}
-
-#titulo-rodape{
-	color: white;
 }
 
 /*< Formatação >*/
@@ -438,6 +429,7 @@ body {
     margin: 0px;
     font-family: Verdana, sans-serif;
     padding: 0px;
+	background-color: #f5f5f5;
 }
 
 body p {
