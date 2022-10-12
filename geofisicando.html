@@ -1,0 +1,73 @@
+<!doctype html>
+<!--
+    Página Principal do site do Geofisicando
+    
+    Objetivo: Site para a divulgação científica e blog de
+    programação aplicada à geofísica.
+    
+    Autor: Rodolfo A. C. Neves (Dirack) 15/03/2018
+	
+    Email (Manutenção): rodolfo_profissional@hotmail.com
+
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Geofisicando - Programação aplicada à geofísica</title>
+
+	<!--{ Ícone do site }-->
+	<link rel="icon" 
+	      type="image/png" 
+	      href="icon.ico" />
+
+	<link type="text/css" rel="stylesheet" href="geofisicando.css">
+
+	<!-- Funções AJAX alimentar a página -->
+	<script type="text/javascript" src="ajax.js"></script>
+
+	<!-- JQUERY -->
+	<script type="text/javascript" src="login/jquery-3.3.1.min.js"></script>
+</head>
+
+<body> 
+
+	<nav class="navbar">
+		<div class="hamburger__container">
+			<button class="hamburger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</div>
+		<label class="logo">Geofisicando</label>
+		<ul class="navbar__menu">
+			<li class="active">
+				<a href="index.html" title="Voltar para a Home">HOME</a>
+			</li>
+			<li>
+				<a href="comercial/shellscript.html" title="Cursos do Geofisicando na Workover Academy">CURSOS</a>
+			</li>
+			<li>
+				<a href="https://github.com/Geofisicando#-material-de-apoio-dos-cursos-dispon%C3%ADveis" title="Lista de tutoriais disponíveis">TUTORIAIS</a>
+			</li>
+			<li>
+				<a href="https://github.com/gpgeof/gpgeof#projetos" title="Seja nosso apoiado!">CONTRIBUA</a>
+			</li>
+			<li>
+				<a href="https://github.com/gpgeof/gpgeof#projetos" title="Programas desenvolvidos pelo GPGEOF">PROGRAMAS</a>
+			</li>
+			<li>
+				<a href="jogos/index.html#body-text" title="Salão de jogos">JOGOS</a>
+			</li>
+		</ul>
+	</nav><!-- Menu de Navegação principal do site -->
+	<script>
+		const hamburger = document.querySelector('.hamburger')
+		hamburger.addEventListener('click',()=>{
+			hamburger.classList.toggle('is-active');
+		});
+	</script><!-- Evento de clique do menu dropdown -->
+
+</body>
+</html>
