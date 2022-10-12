@@ -39,17 +39,14 @@
 				<span></span>
 				<span></span>
 			</button>
-		</div>
+		</div> <!-- Menu dropdown mobile -->
 		<label class="logo">Geofisicando</label>
 		<ul class="navbar__menu">
-			<li class="active">
-				<a href="index.html" title="Voltar para a Home">HOME</a>
+			<li>
+				<a href="index.html" class="active" title="Voltar para a Home">HOME</a>
 			</li>
 			<li>
 				<a href="comercial/shellscript.html" title="Cursos do Geofisicando na Workover Academy">CURSOS</a>
-			</li>
-			<li>
-				<a href="https://github.com/Geofisicando#-material-de-apoio-dos-cursos-dispon%C3%ADveis" title="Lista de tutoriais disponíveis">TUTORIAIS</a>
 			</li>
 			<li>
 				<a href="https://github.com/gpgeof/gpgeof#projetos" title="Seja nosso apoiado!">CONTRIBUA</a>
@@ -61,13 +58,16 @@
 				<a href="jogos/index.html#body-text" title="Salão de jogos">JOGOS</a>
 			</li>
 		</ul>
-	</nav><!-- Menu de Navegação principal do site -->
+	</nav> <!-- Menu de Navegação principal do site -->
 	<script>
 		const hamburger = document.querySelector('.hamburger')
 		hamburger.addEventListener('click',()=>{
 			hamburger.classList.toggle('is-active');
+			document.querySelector('.navbar__menu').classList.toggle('show');
 		});
-	</script><!-- Evento de clique do menu dropdown -->
+	</script> <!-- Evento de clique do menu dropdown -->
+
+	<div class="preheader"></div><!-- Banner entre o menu de navegação e o corpo da página (Foto do planeta Terra) --> 
 
 </body>
 </html>
